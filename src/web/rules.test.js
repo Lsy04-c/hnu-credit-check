@@ -6,7 +6,7 @@ import path from 'node:path';
 import { evaluatePlan } from './rules.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const planData = JSON.parse(readFileSync(path.join(__dirname, 'data/plan_chem_qiangji_2022.json'), 'utf8'));
+const planData = JSON.parse(readFileSync(path.join(__dirname, 'data/plans/plan_chem_qiangji_2022.json'), 'utf8'));
 
 test('未在方案中找到的课程编号会被记录为未匹配，不静默丢弃', () => {
   const result = evaluatePlan(planData, [{ code: 'ZZ99999', name: '某跨院系选修课', credits: 2 }]);
@@ -26,9 +26,11 @@ test('通识必修类别按匹配到的课程学分求和，并算出缺口', ()
   assert.equal(category.gap, 24);
 });
 
-test('个性培养-特色课程规则：只修满3门必选课共7学分时未达标（要求9学分）', () => {
+test('个性培养-特色课程规则：只修满必选课共7学分时未达标（要求9学分）', () => {
   const transcript = [
-    { code: 'CH10044', name: '科学研究训练实践', credits: 3 },
+    { code: 'CH10044', name: '科学研究训练实践（1）', credits: 1 },
+    { code: 'CH10045', name: '科学研究训练实践（2）', credits: 1 },
+    { code: 'CH10046', name: '科学研究训练实践（3）', credits: 1 },
     { code: 'CH05077', name: '化学基础科学问题研讨', credits: 2 },
     { code: 'CH06058', name: '计算化学', credits: 2 },
   ];
@@ -41,7 +43,9 @@ test('个性培养-特色课程规则：只修满3门必选课共7学分时未�
 
 test('个性培养-特色课程规则：加修一门选修课凑满9学分后达标', () => {
   const transcript = [
-    { code: 'CH10044', name: '科学研究训练实践', credits: 3 },
+    { code: 'CH10044', name: '科学研究训练实践（1）', credits: 1 },
+    { code: 'CH10045', name: '科学研究训练实践（2）', credits: 1 },
+    { code: 'CH10046', name: '科学研究训练实践（3）', credits: 1 },
     { code: 'CH05077', name: '化学基础科学问题研讨', credits: 2 },
     { code: 'CH06058', name: '计算化学', credits: 2 },
     { code: 'CH06106', name: '化学与生活', credits: 2 },

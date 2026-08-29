@@ -66,8 +66,10 @@ function renderResult(evalResult, unparsedLines) {
   if (evalResult.unmatchedCourses.length > 0) {
     const warn = document.createElement('p');
     warn.className = 'warning';
-    const names = evalResult.unmatchedCourses.map(c => `${c.code} ${c.name}`).join('、');
-    warn.textContent = `以下课程未能在培养方案里找到对应类别，可能属于通识选修或跨院系选课，请自行确认归类：${names}`;
+    const names = evalResult.unmatchedCourses
+      .map(c => c.category ? `${c.code} ${c.name}（成绩单标注类别：${c.category}）` : `${c.code} ${c.name}`)
+      .join('、');
+    warn.textContent = `以下课程未能在培养方案里找到对应记录（可能是新版课程编号、通识选修或跨院系选课），请自行确认归类：${names}`;
     container.appendChild(warn);
   }
 }
@@ -114,7 +116,8 @@ async function main() {
     if (!planData) return;
     const text = document.getElementById('transcript-input').value;
     const validCodes = planData.categories.flatMap(c => c.courses.map(course => course.code)).filter(Boolean);
-    const { courses, unparsedLines } = parseTranscriptText(text, validCodes);
+    const categoryNames = planData.categories.map(c => c.name);
+    const { courses, unparsedLines } = parseTranscriptText(text, validCodes, categoryNames);
     const evalResult = evaluatePlan(planData, courses);
     renderResult(evalResult, unparsedLines);
   });

@@ -65,3 +65,48 @@ test('提供已知编号清单时，不在清单里的编号样式文本不会�
   assert.equal(courses.length, 0);
   assert.equal(unparsedLines.length, 1);
 });
+
+test('识别教务系统"竖排导出"格式（一个字段一行，多条记录，含普通必修课）', () => {
+  const validCodes = ['CH04021', 'CH04057'];
+  const text = [
+    '1', '2023-2024-1', 'CH04021', '化学实验室安全技术', '化学化工学院', '77', '1', '6', '3',
+    '考试', '主修', '正常考试', '必修', '专业核心',
+    '3', '2023-2024-1', 'CH04057', '无机化学（1）', '化学化工学院', '70', '3', '48', '2.7',
+    '考试', '主修', '正常考试', '必修', '学类核心',
+  ].join('\n');
+  const { courses, unparsedLines } = parseTranscriptText(text, validCodes);
+  assert.equal(courses.length, 2);
+  assert.equal(courses[0].code, 'CH04021');
+  assert.equal(courses[0].name, '化学实验室安全技术');
+  assert.equal(courses[1].code, 'CH04057');
+  assert.equal(courses[1].name, '无机化学（1）');
+  assert.equal(unparsedLines.length, 0);
+});
+
+test('竖排导出格式：末尾带模块备注的记录（比如通识选修课带模块名）也能正常识别编号和名称', () => {
+  const validCodes = ['GE16074'];
+  const text = [
+    '23', '2023-2024-2', 'GE16074', '西方人文经典导读', '中国语言文学学院', '77', '2', '33', '3',
+    '考试', '主修', '正常考试', '选修', '通识选修', '历史与文明（20级及以后）、人文（17-19级）',
+  ].join('\n');
+  const { courses } = parseTranscriptText(text, validCodes, ['通识选修']);
+  assert.equal(courses.length, 1);
+  assert.equal(courses[0].code, 'GE16074');
+  assert.equal(courses[0].name, '西方人文经典导读');
+  assert.equal(courses[0].category, '通识选修');
+});
+
+test('竖排导出格式：编号是否在培养方案里不影响解析阶段——即使不在清单里的编号也照样切出记录，交给下游匹配判断', () => {
+  const text = [
+    '1', '2023-2024-1', 'CH04021', '化学实验室安全技术', '化学化工学院', '77', '1', '6', '3',
+    '考试', '主修', '正常考试', '必修', '专业核心',
+    '43', '2024-2025-2', 'TB011MY24', '国家安全教育', '马克思主义学院', '85', '1', '4', '3.7',
+    '考查', '主修', '正常考试', '选修', '其它',
+  ].join('\n');
+  // 不传 validCodes 也一样：竖排格式靠位置定位编号，不依赖已知编号清单
+  const { courses, unparsedLines } = parseTranscriptText(text);
+  assert.equal(courses.length, 2);
+  assert.equal(courses[0].code, 'CH04021');
+  assert.equal(courses[1].code, 'TB011MY24');
+  assert.equal(unparsedLines.length, 0);
+});

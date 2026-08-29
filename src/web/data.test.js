@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const planData = JSON.parse(readFileSync(path.join(__dirname, 'data/plan_chem_qiangji_2022.json'), 'utf8'));
+const planData = JSON.parse(readFileSync(path.join(__dirname, 'data/plans/plan_chem_qiangji_2022.json'), 'utf8'));
 
 test('各类别学分要求合计等于毕业总学分', () => {
   const sum = planData.categories.reduce((total, category) => total + category.required_credits, 0);
