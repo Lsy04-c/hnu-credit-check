@@ -385,193 +385,193 @@
           "code": "CH06062",
           "name": "化学前沿",
           "credits": 2,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH06097",
           "name": "中级有机化学（双语）",
           "credits": 2,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH06090",
           "name": "高等有机化学",
           "credits": 2,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH06118",
           "name": "金属有机化学",
           "credits": 2,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH06105",
           "name": "元素有机化学",
           "credits": 2,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH06091",
           "name": "现代有机合成",
           "credits": 2,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH06140",
           "name": "高分子化学（双语）",
           "credits": 2,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH05072",
           "name": "高分子化学实验",
           "credits": 0.5,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH06100",
           "name": "高等无机化学",
           "credits": 2,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH06103",
           "name": "结晶化学",
           "credits": 2,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH06101",
           "name": "现代物理化学",
           "credits": 2,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH06141",
           "name": "量子化学计算原理及应用",
           "credits": 2,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH06059",
           "name": "纳米化学",
           "credits": 2,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH06076",
           "name": "绿色化学",
           "credits": 2,
-          "group": "模块1"
+          "group": "模块1：专业提升"
         },
         {
           "code": "CH06089",
           "name": "药物化学",
           "credits": 2,
-          "group": "模块2"
+          "group": "模块2：化学与药学"
         },
         {
           "code": "CH06093",
           "name": "药物分析",
           "credits": 2,
-          "group": "模块2"
+          "group": "模块2：化学与药学"
         },
         {
           "code": "CH06094",
           "name": "药理学",
           "credits": 2,
-          "group": "模块2"
+          "group": "模块2：化学与药学"
         },
         {
           "code": "CH06102",
           "name": "材料化学",
           "credits": 2,
-          "group": "模块3"
+          "group": "模块3：化学与材料"
         },
         {
           "code": "CH06053",
           "name": "材料研究方法",
           "credits": 2,
-          "group": "模块3"
+          "group": "模块3：化学与材料"
         },
         {
           "code": "CH05067",
           "name": "金属学与金属材料",
           "credits": 2,
-          "group": "模块3"
+          "group": "模块3：化学与材料"
         },
         {
           "code": "CH06099",
           "name": "高分子物理与材料",
           "credits": 2,
-          "group": "模块3"
+          "group": "模块3：化学与材料"
         },
         {
           "code": "CH06087",
           "name": "电化学测量",
           "credits": 2,
-          "group": "模块4"
+          "group": "模块4：化学与能源"
         },
         {
           "code": "CH06095",
           "name": "纳米电化学",
           "credits": 2,
-          "group": "模块4"
+          "group": "模块4：化学与能源"
         },
         {
           "code": "CH06079",
           "name": "电化学催化与合成",
           "credits": 2,
-          "group": "模块4"
+          "group": "模块4：化学与能源"
         },
         {
           "code": "CH06113",
           "name": "电化学能源转化系统",
           "credits": 2,
-          "group": "模块4"
+          "group": "模块4：化学与能源"
         },
         {
           "code": "CH06104",
           "name": "锂离子电池的应用与实践",
           "credits": 2,
-          "group": "模块4"
+          "group": "模块4：化学与能源"
         },
         {
           "code": "CH06114",
           "name": "太阳能转化与利用",
           "credits": 2,
-          "group": "模块4"
+          "group": "模块4：化学与能源"
         },
         {
           "code": "CH06023",
           "name": "化学生物学",
           "credits": 2,
-          "group": "模块5"
+          "group": "模块5：化学与生物"
         },
         {
           "code": "CH06055",
           "name": "生物技术概论",
           "credits": 2,
-          "group": "模块5"
+          "group": "模块5：化学与生物"
         },
         {
           "code": "CH06092",
           "name": "生物有机化学",
           "credits": 2,
-          "group": "模块5"
+          "group": "模块5：化学与生物"
         },
         {
           "code": "CH06142",
           "name": "生物化学（双语）",
           "credits": 2,
-          "group": "模块5"
+          "group": "模块5：化学与生物"
         },
         {
           "code": "CH06143",
           "name": "生物化学实验",
           "credits": 1,
-          "group": "模块5"
+          "group": "模块5：化学与生物"
         }
       ],
       "rules": [
@@ -584,11 +584,11 @@
         {
           "type": "min_credits_in_groups",
           "groups": [
-            "模块1",
-            "模块2",
-            "模块3",
-            "模块4",
-            "模块5"
+            "模块1：专业提升",
+            "模块2：化学与药学",
+            "模块3：化学与材料",
+            "模块4：化学与能源",
+            "模块5：化学与生物"
           ],
           "min": 6,
           "note": "在“模块1”~“模块5”至少需修满6学分，可跨模块组合（原文注）"
