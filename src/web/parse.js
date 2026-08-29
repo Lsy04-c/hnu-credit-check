@@ -22,9 +22,11 @@ function parseDelimitedRows(lines, codeSet) {
 
   for (const line of lines) {
     const tokens = splitLine(line);
-    const codeToken = codeSet
-      ? tokens.find(t => codeSet.has(t))
-      : tokens.find(t => FALLBACK_CODE_RE.test(t));
+    // 已知编号清单优先（精确匹配，不管格式多怪都认得出）；清单里没有的话退回正则猜测——
+    // 不能因为"不在咱们已知的方案/补充课表里"就直接当成整行看不懂，那样会把"确实是一门课，
+    // 只是咱们数据没覆盖到"和"格式乱了解析不出来"混为一谈。
+    const codeToken = (codeSet && tokens.find(t => codeSet.has(t)))
+      || tokens.find(t => FALLBACK_CODE_RE.test(t));
     if (!codeToken) {
       unparsedLines.push(line);
       continue;

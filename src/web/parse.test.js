@@ -59,11 +59,12 @@ test('已知编号清单里带内部空格的编号也能整体识别（Tab分�
   assert.equal(courses[0].code, 'TB001TY24 Ⅱ');
 });
 
-test('提供已知编号清单时，不在清单里的编号样式文本不会被误认成课程', () => {
+test('已知编号清单里没有的编号，退回正则兜底照样解析成课程（是否真在方案里交给下游匹配判断，不在解析这步就丢掉）', () => {
   const validCodes = ['TB001MY24'];
-  const { courses, unparsedLines } = parseTranscriptText('ZZ99999\t某门不存在的课\t2\t90', validCodes);
-  assert.equal(courses.length, 0);
-  assert.equal(unparsedLines.length, 1);
+  const { courses, unparsedLines } = parseTranscriptText('ZZ99999\t某门不认识的课\t2\t90', validCodes);
+  assert.equal(courses.length, 1);
+  assert.equal(courses[0].code, 'ZZ99999');
+  assert.equal(unparsedLines.length, 0);
 });
 
 test('识别教务系统"竖排导出"格式（一个字段一行，多条记录，含普通必修课）', () => {

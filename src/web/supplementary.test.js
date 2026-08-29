@@ -35,3 +35,13 @@ test('四史课程名单：4门课程名称都在', () => {
   assert.equal(sishi.names.length, 4);
   assert.ok(sishi.names.includes('社会主义发展史'));
 });
+
+test('通识选修课程名->模块提示表：覆盖面比编号课表更广，且每个课程名只对应一个模块（不会有歧义猜测）', () => {
+  const hints = load('tongshi_name_hints.json');
+  const modules = Object.values(hints.name_to_module);
+  assert.ok(modules.length > 300);
+  const validModules = new Set(['中华文化与世界文明', '社会科学与现代社会', '科学探索与技术创新', '艺术审美与表达沟通']);
+  for (const m of modules) {
+    assert.ok(validModules.has(m), `出现了不认识的模块名：${m}`);
+  }
+});

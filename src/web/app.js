@@ -68,7 +68,18 @@ function appendElectivePoolRow(table, pool) {
   table.appendChild(row);
 }
 
-function renderResult(evalResult, unparsedLines, sishiCatalog) {
+// "四史"这4门课没有统一课程编号，没法靠编号匹配，但名字是确定的4个——直接在解析出来的全部课程里
+// （不管最后有没有匹配上方案）找名字，找到了就能实锤"这条要求满足了"，不用只是提醒了事
+function findSishiMatch(evalResult, sishiCatalog) {
+  if (!sishiCatalog) return null;
+  const allCourses = [
+    ...evalResult.categories.flatMap(c => c.matchedCourses),
+    ...evalResult.unmatchedCourses,
+  ];
+  return allCourses.find(c => sishiCatalog.names.includes(c.name)) || null;
+}
+
+function renderResult(evalResult, unparsedLines, sishiCatalog, nameHints) {
   const container = document.getElementById('result');
   container.innerHTML = '';
 
@@ -122,11 +133,16 @@ function renderResult(evalResult, unparsedLines, sishiCatalog) {
     }
 
     if (category.name === '通识必修' && sishiCatalog) {
-      appendNoteRow(
-        table,
-        `　"四史"类课程（${sishiCatalog.names.join('/')}）至少选修1门，无统一课程编号，本工具无法自动核实，请自行确认`,
-        'note'
-      );
+      const sishiMatch = findSishiMatch(evalResult, sishiCatalog);
+      if (sishiMatch) {
+        appendNoteRow(table, `　"四史"类课程要求已满足：已修读《${sishiMatch.name}》`);
+      } else {
+        appendNoteRow(
+          table,
+          `　"四史"类课程（${sishiCatalog.names.join('/')}）至少选修1门，没有统一课程编号，成绩单里没找到这4个课程名，请自行确认是否已修读`,
+          'warning-inline'
+        );
+      }
     }
   }
   container.appendChild(table);
@@ -139,10 +155,18 @@ function renderResult(evalResult, unparsedLines, sishiCatalog) {
   }
 
   if (evalResult.unmatchedCourses.length > 0) {
+    const sishiMatch = findSishiMatch(evalResult, sishiCatalog);
     const warn = document.createElement('p');
     warn.className = 'warning';
     const names = evalResult.unmatchedCourses
-      .map(c => c.category ? `${c.code} ${c.name}（成绩单标注类别：${c.category}）` : `${c.code} ${c.name}`)
+      .map(c => {
+        const guessedModule = nameHints && nameHints.name_to_module[c.name];
+        const parts = [`${c.code} ${c.name}`];
+        if (sishiMatch && c.code === sishiMatch.code) parts.push('已用于满足"四史"要求');
+        if (c.category) parts.push(`成绩单标注类别：${c.category}`);
+        if (guessedModule) parts.push(`按课程名推测可能属于通识选修「${guessedModule}」模块，不保证准确`);
+        return parts.length > 1 ? `${parts[0]}（${parts.slice(1).join('；')}）` : parts[0];
+      })
       .join('、');
     warn.textContent = `以下课程未能在培养方案里找到对应记录（可能是新版课程编号、通识选修或跨院系选课），请自行确认归类：${names}`;
     container.appendChild(warn);
@@ -163,6 +187,7 @@ async function main() {
     loadJson('data/supplementary/tongshi_xuanxiu.json'),
     loadJson('data/supplementary/innovation.json'),
     loadJson('data/supplementary/sishi.json'),
+    loadJson('data/supplementary/tongshi_name_hints.json'),
   ]);
 
   const index = await loadIndex();
@@ -207,7 +232,7 @@ async function main() {
     evaluateBtn.disabled = true;
     evaluateBtn.textContent = '核算中...';
     try {
-      const [tongshiCatalog, innovationCatalog, sishiCatalog] = await supplementaryPromise;
+      const [tongshiCatalog, innovationCatalog, sishiCatalog, nameHints] = await supplementaryPromise;
       const supplementaryCatalogs = [tongshiCatalog, innovationCatalog];
 
       const text = document.getElementById('transcript-input').value;
@@ -222,7 +247,7 @@ async function main() {
       const categoryNames = planData.categories.map(c => c.name);
       const { courses, unparsedLines } = parseTranscriptText(text, validCodes, categoryNames);
       const evalResult = evaluatePlan(planData, courses, supplementaryCatalogs);
-      renderResult(evalResult, unparsedLines, sishiCatalog);
+      renderResult(evalResult, unparsedLines, sishiCatalog, nameHints);
     } finally {
       evaluateBtn.disabled = false;
       evaluateBtn.textContent = '核算学分';
