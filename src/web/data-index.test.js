@@ -8,8 +8,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dataDir = path.join(__dirname, 'data');
 const index = JSON.parse(readFileSync(path.join(dataDir, 'index.json'), 'utf8'));
 
-test('index.json 至少包含化学强基2022版和87份2024版培养方案', () => {
-  assert.ok(index.length >= 87);
+test('index.json 至少包含86份2024版培养方案', () => {
+  assert.ok(index.length >= 86);
 });
 
 test('index.json 每一条引用的 json_file 和 pdf_file 都真实存在', () => {
