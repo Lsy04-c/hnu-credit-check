@@ -600,5 +600,12 @@
     "json_file": "plan_marx_2024.json",
     "pdf_file": "5 马院/马克思主义理论.pdf",
     "total_required_credits": 139
+  },
+  {
+    "plan_id": "chem_qiangji_2022",
+    "plan_name": "化学（强基计划）本科培养方案（2022版）",
+    "json_file": "plan_chem_qiangji_2022.json",
+    "pdf_file": "0 化学强基2022版/化学（强基计划）培养方案（2022版）.pdf",
+    "total_required_credits": 140
   }
 ]
