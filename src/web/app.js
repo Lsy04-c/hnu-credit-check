@@ -132,17 +132,12 @@ function renderResult(evalResult, unparsedLines, sishiCatalog, nameHints) {
       }
     }
 
-    if (category.name === '通识必修' && sishiCatalog) {
-      const sishiMatch = findSishiMatch(evalResult, sishiCatalog);
-      if (sishiMatch) {
-        appendNoteRow(table, `　"四史"类课程要求已满足：已修读《${sishiMatch.name}》`);
-      } else {
-        appendNoteRow(
-          table,
-          `　"四史"类课程（${sishiCatalog.names.join('/')}）至少选修1门，没有统一课程编号，成绩单里没找到这4个课程名，请自行确认是否已修读`,
-          'warning-inline'
-        );
-      }
+    if (category.name === '通识必修' && sishiCatalog && !findSishiMatch(evalResult, sishiCatalog)) {
+      appendNoteRow(
+        table,
+        `　"四史"类课程（${sishiCatalog.names.join('/')}）至少选修1门，没有统一课程编号，成绩单里没找到这4个课程名，请自行确认是否已修读`,
+        'warning-inline'
+      );
     }
   }
   container.appendChild(table);

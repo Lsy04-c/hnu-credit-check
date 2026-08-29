@@ -107,6 +107,41 @@
           "code": "TB001TY24Ⅰ",
           "name": "体育Ⅰ",
           "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅱ",
+          "name": "体育Ⅱ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅲ",
+          "name": "体育Ⅲ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅳ",
+          "name": "体育Ⅳ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WZ24",
+          "name": "军事理论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB002WZ24",
+          "name": "军事技能",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XG24",
+          "name": "大学生心理健康教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001GX24",
+          "name": "劳动教育与素养",
+          "credits": 0.0
         }
       ],
       "rules": [],
