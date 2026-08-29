@@ -1,0 +1,673 @@
+{
+  "plan_id": "materials_2024",
+  "plan_name": "材料科学与工程本科培养方案（2024版）",
+  "total_required_credits": 161.0,
+  "categories": [
+    {
+      "name": "通识必修",
+      "required_credits": 38.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "TB001MY24",
+          "name": "马克思主义基本原理",
+          "credits": 3.0
+        },
+        {
+          "code": "TB002MY24",
+          "name": "毛泽东思想和中国特 色社会主义理论体系 概论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB003MY24",
+          "name": "“移动”思政课堂 （思政实践）",
+          "credits": 1.0
+        },
+        {
+          "code": "TB004MY24",
+          "name": "习近平新时代中国特 色社会主义思想概论",
+          "credits": 3.0
+        },
+        {
+          "code": "TB005MY24",
+          "name": "中国近现代史纲要",
+          "credits": 3.0
+        },
+        {
+          "code": "TB006MY24",
+          "name": "思想道德与法治",
+          "credits": 3.0
+        },
+        {
+          "code": "TB007MY24Ⅰ",
+          "name": "形势与政策Ⅰ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅱ",
+          "name": "形势与政策Ⅱ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅲ",
+          "name": "形势与政策Ⅲ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅳ",
+          "name": "形势与政策Ⅳ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅴ",
+          "name": "形势与政策Ⅴ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅵ",
+          "name": "形势与政策Ⅵ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅶ",
+          "name": "形势与政策Ⅶ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅷ",
+          "name": "形势与政策Ⅷ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB011MY24",
+          "name": "国家安全教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WY24Ⅰ",
+          "name": "大学英语Ⅰ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001WY24Ⅱ",
+          "name": "大学英语Ⅱ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001WY24Ⅲ",
+          "name": "大学英语Ⅲ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XK24B",
+          "name": "计算与人工智能 概论B",
+          "credits": 4.0
+        },
+        {
+          "code": "TB001TY24Ⅰ",
+          "name": "体育Ⅰ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅱ",
+          "name": "体育Ⅱ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅲ",
+          "name": "体育Ⅲ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅳ",
+          "name": "体育Ⅳ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WZ24",
+          "name": "军事理论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB002WZ24",
+          "name": "军事技能",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XG24",
+          "name": "大学生心理健康教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001GX24",
+          "name": "劳动教育与素养",
+          "credits": 0.0
+        }
+      ],
+      "rules": [],
+      "note": "另需修读“四史”类思政课程1学分（四门课程中至少修读1门），原文无统一课程编号，无法列入 courses。大学外语实行弹性学分、入校分级、模块课程修读方式。"
+    },
+    {
+      "name": "通识选修",
+      "required_credits": 10,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "根据《湖南大学通识教育选修课程修读办法（2024年修订版）》第七条：不低于10学分，且中华文化与世界文明、社会科学与现代社会、科学探索与技术创新、艺术审美与表达沟通四个模块各至少修读2学分。具体开课课程按学期选课通知浮动，无固定课程编号清单，本工具无法按模块自动校验，需学生自行对照选课记录确认四模块是否各修满2学分"
+        }
+      ],
+      "note": "全校统一政策（非专业特有），课程清单见每学期的选课通知，不做课程级自动校验"
+    },
+    {
+      "name": "专业基础",
+      "required_credits": 29.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZJ001SX24AⅠ",
+          "name": "高等数学AⅠ",
+          "credits": 5.0
+        },
+        {
+          "code": "ZJ001SX24AⅡ",
+          "name": "高等数学AⅡ",
+          "credits": 5.0
+        },
+        {
+          "code": "ZJ002SX24A",
+          "name": "线性代数A",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ003SX24A",
+          "name": "概率论与数理统计A",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ001WD24AⅠ",
+          "name": "普通物理AⅠ",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ001WD24AⅡ",
+          "name": "普通物理AⅡ",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ002WD24AⅠ",
+          "name": "普通物理实验AⅠ",
+          "credits": 1.0
+        },
+        {
+          "code": "ZJ002WD24AⅡ",
+          "name": "普通物理实验AⅡ",
+          "credits": 1.0
+        },
+        {
+          "code": "ZJ002JX24",
+          "name": "工程制图",
+          "credits": 2.0
+        },
+        {
+          "code": "ZJ002DQ24",
+          "name": "电工电子学",
+          "credits": 3.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业核心",
+      "required_credits": 31.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZH101CL24",
+          "name": "材料加工机械设计",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH102CL24",
+          "name": "材料科学基础",
+          "credits": 4.0
+        },
+        {
+          "code": "ZH103CL24",
+          "name": "材料工程基础",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH104CL24Ⅰ",
+          "name": "材料物理化学Ⅰ",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH104CL24Ⅱ",
+          "name": "材料物理化学Ⅱ",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH105CL24",
+          "name": "材料测试技术",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH106CL24",
+          "name": "材料性能学",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH107CL24",
+          "name": "计算材料学",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH108CL24",
+          "name": "材料无机化学",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH109CL24",
+          "name": "材料有机化学",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH110CL24",
+          "name": "固体物理基础",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH001JX24",
+          "name": "工程力学",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH111CL24",
+          "name": "工程材料学",
+          "credits": 2.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "其他实践环节",
+      "required_credits": 25.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZS101CL24",
+          "name": "科技论文检索及写作",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS004GX24A",
+          "name": "工程训练A",
+          "credits": 3.0
+        },
+        {
+          "code": "ZS102CL24Ⅰ",
+          "name": "材料化学基础实验Ⅰ",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS102CL24Ⅱ",
+          "name": "材料化学基础实验Ⅱ",
+          "credits": 0.5
+        },
+        {
+          "code": "ZS102CL24Ⅲ",
+          "name": "材料化学基础实验Ⅲ",
+          "credits": 0.5
+        },
+        {
+          "code": "ZS103CL24Ⅰ",
+          "name": "材料热处理综合 实验Ⅰ",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS103CL24Ⅱ",
+          "name": "材料热处理综合 实验Ⅱ",
+          "credits": 0.5
+        },
+        {
+          "code": "ZS103CL24Ⅲ",
+          "name": "材料热处理综合 实验Ⅲ",
+          "credits": 0.5
+        },
+        {
+          "code": "ZS104CL24Ⅰ",
+          "name": "材料显微分析综合 实验Ⅰ",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS104CL24Ⅱ",
+          "name": "材料显微分析综合 实验Ⅱ",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS105CL24Ⅰ",
+          "name": "材料制备及性能 实验Ⅰ",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS105CL24Ⅱ",
+          "name": "材料制备及性能 实验Ⅱ",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS105CL24Ⅲ",
+          "name": "材料制备及性能 实验Ⅲ",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS106CL24",
+          "name": "材料仿真计算实验",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS108CL24",
+          "name": "材料加工机械设计 课程设计",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS109CL24",
+          "name": "材料工程管理与设计",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS110CL24",
+          "name": "认识实习",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS111CL24",
+          "name": "生产实习",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS112CL24",
+          "name": "毕业设计（论文）",
+          "credits": 5.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业选修",
+      "required_credits": 0.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "DZ101CL24",
+          "name": "液态成型原理与技术",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ102CL24",
+          "name": "塑性加工原理与技术",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ103CL24",
+          "name": "金属固态相变原理",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ104CL24",
+          "name": "粉末冶金原理及新 技术",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ105CL24",
+          "name": "金属功能材料",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ106CL24",
+          "name": "金属表面工程",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ107CL24",
+          "name": "炭材料科学基础",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ108CL24",
+          "name": "陶瓷材料学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ109CL24",
+          "name": "结构陶瓷",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ110CL24",
+          "name": "纳米科学与技术",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ111CL24",
+          "name": "新能源材料与器件",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ112CL24",
+          "name": "炭材料工程技术",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ113CL24Ⅰ",
+          "name": "高分子化学Ⅰ",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ113CL24Ⅱ",
+          "name": "高分子化学Ⅱ",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ114CL24Ⅰ",
+          "name": "高分子物理Ⅰ",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ114CL24Ⅱ",
+          "name": "高分子物理Ⅱ",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ117CL24",
+          "name": "生物医用材料",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ118CL24",
+          "name": "高分子材料测试技术",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ119CL24",
+          "name": "半导体物理",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ120CL24",
+          "name": "光电材料与技术",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ121CL24",
+          "name": "薄膜与电子材料",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ122CL24",
+          "name": "半导体光子学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ123CL24",
+          "name": "微纳加工与表征技术",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ124CL24",
+          "name": "电子封装材料与工艺",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ125CL24",
+          "name": "金属材料前沿*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ126CL24",
+          "name": "材料成形模拟仿真*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ127CL24",
+          "name": "现代焊接技术*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ128CL24",
+          "name": "无损检测技术*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ129CL24",
+          "name": "功能陶瓷与器件*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ130CL24",
+          "name": "电化学原理与应用*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ131CL24",
+          "name": "新型炭材料*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ132CL24",
+          "name": "无机非金属材料前沿*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ133CL24",
+          "name": "高分子材料前沿*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ134CL24",
+          "name": "聚合反应工程基础*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ135CL24",
+          "name": "高分子流变学*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ136CL24",
+          "name": "高分子成型与加工*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ137CL24",
+          "name": "信息功能材料前沿*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ138CL24",
+          "name": "新型显示材料*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ139CL24",
+          "name": "数字与模拟电路*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ140CL24",
+          "name": "电子显微技术*",
+          "credits": 2.0
+        },
+        {
+          "code": "A2413002M",
+          "name": "材料表征方法#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2413001M",
+          "name": "材料科学与工程前沿#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2413006M",
+          "name": "现代材料制备技术#",
+          "credits": 2.0
+        }
+      ],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "专业选修课程修读学分不限（原文注）"
+        }
+      ],
+      "note": "课程列表已全部收录；内部模块如有最低学分要求但原文未明确强制数字，仅保留总要求"
+    },
+    {
+      "name": "跨专业选修",
+      "required_credits": 2.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "修读范围为其他专业的专业核心课程和专业选修课程。修读学分不低于2学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "国际化",
+      "required_credits": 0.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "无最低学分要求。可通过联合培养、境外交流、境外实习实践、高水平国际化课程等方式获得学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "创新创业",
+      "required_credits": 2.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "可通过修读创新创业课程、参加项目或实践成果认定获得。具体见《湖南大学本科生创新创业教育实施方案》（原文注）"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "category_sum_matches_total": false,
+    "category_sum": 137.0,
+    "issues": [
+      "多元发展课程含‘不限’开放项，按最低要求加总后 category_sum=137.0，小于毕业要求161.0。差额由开放池课程补足，符合原文设计。",
+      "通识必修中‘四史’类课程无统一编号，已放入 note。",
+      "部分课程名称可能因表格换行被截断，建议人工核对完整课程名称与学分小计。",
+      "类别边界依赖表格‘课程类别’列标注，跨页合并单元格可能导致个别课程归属偏移，需人工抽查。"
+    ]
+  }
+}

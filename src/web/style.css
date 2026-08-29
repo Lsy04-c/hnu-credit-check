@@ -11,11 +11,26 @@ textarea {
   font-size: 14px;
   box-sizing: border-box;
 }
+select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+}
 button {
   margin-top: 0.5rem;
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
   cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.plan-info {
+  color: #555;
+  margin-top: 0;
 }
 table {
   border-collapse: collapse;

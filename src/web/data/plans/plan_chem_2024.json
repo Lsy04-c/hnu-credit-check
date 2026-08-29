@@ -1,0 +1,693 @@
+{
+  "plan_id": "chem_2024",
+  "plan_name": "化学本科培养方案（2024版）",
+  "total_required_credits": 161,
+  "categories": [
+    {
+      "name": "通识必修",
+      "required_credits": 38,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "TB001MY24",
+          "name": "马克思主义基本原理",
+          "credits": 3.0
+        },
+        {
+          "code": "TB002MY24",
+          "name": "毛泽东思想和中国特色 社会主义理论体系概论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB003MY24",
+          "name": "“移动”思政课堂 （思政实践）",
+          "credits": 1.0
+        },
+        {
+          "code": "TB004MY24",
+          "name": "习近平新时代中国特色 社会主义思想概论",
+          "credits": 3.0
+        },
+        {
+          "code": "TB005MY24",
+          "name": "中国近现代史纲要",
+          "credits": 3.0
+        },
+        {
+          "code": "TB006MY24",
+          "name": "思想道德与法治",
+          "credits": 3.0
+        },
+        {
+          "code": "TB007MY24Ⅰ",
+          "name": "形势与政策Ⅰ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅱ",
+          "name": "形势与政策Ⅱ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅲ",
+          "name": "形势与政策Ⅲ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅳ",
+          "name": "形势与政策Ⅳ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅴ",
+          "name": "形势与政策Ⅴ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅵ",
+          "name": "形势与政策Ⅵ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅶ",
+          "name": "形势与政策Ⅶ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅷ",
+          "name": "形势与政策Ⅷ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB011MY24",
+          "name": "国家安全教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WY24Ⅰ",
+          "name": "大学英语Ⅰ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001WY24Ⅱ",
+          "name": "大学英语Ⅱ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001WY24Ⅲ",
+          "name": "大学英语Ⅲ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XK24B",
+          "name": "计算与人工智能概论B",
+          "credits": 4.0
+        },
+        {
+          "code": "TB001TY24Ⅰ",
+          "name": "体育Ⅰ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅱ",
+          "name": "体育Ⅱ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅲ",
+          "name": "体育Ⅲ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅳ",
+          "name": "体育Ⅳ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WZ24",
+          "name": "军事理论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB002WZ24",
+          "name": "军事技能",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XG24",
+          "name": "大学生心理健康教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001GX24",
+          "name": "劳动教育与素养",
+          "credits": 0.0
+        }
+      ],
+      "rules": [],
+      "note": "另需修读“四史”类思政课程1学分（中国共产党历史、新中国史、改革开放史、社会主义发展史四门课程中至少修读1门，1-6学期完成），原文无统一课程编号，无法列入 courses，只在此说明。大学外语实行弹性学分、入校分级、模块课程的修读方式，设置A、B、C三级，各级别学生按要求修读相应课程，修读学分要求分别为2、4、6学分。"
+    },
+    {
+      "name": "通识选修",
+      "required_credits": 10,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "根据《湖南大学通识教育选修课程修读办法（2024年修订版）》第七条：不低于10学分，且中华文化与世界文明、社会科学与现代社会、科学探索与技术创新、艺术审美与表达沟通四个模块各至少修读2学分。具体开课课程按学期选课通知浮动，无固定课程编号清单，本工具无法按模块自动校验，需学生自行对照选课记录确认四模块是否各修满2学分"
+        }
+      ],
+      "note": "全校统一政策（非专业特有），课程清单见每学期的选课通知，不做课程级自动校验"
+    },
+    {
+      "name": "专业基础",
+      "required_credits": 24,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZJ001SX24AⅠ",
+          "name": "高等数学AⅠ",
+          "credits": 5.0
+        },
+        {
+          "code": "ZJ001SX24AⅡ",
+          "name": "高等数学AⅡ",
+          "credits": 5.0
+        },
+        {
+          "code": "ZJ002SX24A",
+          "name": "线性代数A",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ003SX24A",
+          "name": "概率论与数理统计A",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ001WD24AⅠ",
+          "name": "普通物理AⅠ",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ001WD24AⅡ",
+          "name": "普通物理AⅡ",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ002WD24AⅠ",
+          "name": "普通物理实验AⅠ",
+          "credits": 1.0
+        },
+        {
+          "code": "ZJ002WD24AⅡ",
+          "name": "普通物理实验AⅡ",
+          "credits": 1.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业核心",
+      "required_credits": 33.5,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZH101HG24AⅠ",
+          "name": "无机化学AⅠ",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH101HG24AⅡ",
+          "name": "无机化学AⅡ",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH102HG24BⅠ",
+          "name": "有机化学BⅠ",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH102HG24BⅡ",
+          "name": "有机化学BⅡ",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH103HG24BⅠ",
+          "name": "分析化学BⅠ",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH103HG24BⅡ",
+          "name": "分析化学BⅡ",
+          "credits": 4.0
+        },
+        {
+          "code": "ZH104HG24BⅠ",
+          "name": "物理化学BⅠ",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH104HG24BⅡ",
+          "name": "物理化学BⅡ",
+          "credits": 4.0
+        },
+        {
+          "code": "ZH107HG24B",
+          "name": "结构化学B",
+          "credits": 3.5
+        },
+        {
+          "code": "ZH108HG24",
+          "name": "化学工程基础",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH106HG24",
+          "name": "波谱分析*",
+          "credits": 3.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "其他实践环节",
+      "required_credits": 27.5,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZS101HG24AⅠ",
+          "name": "基础无机化学实验AⅠ",
+          "credits": 1.5
+        },
+        {
+          "code": "ZS101HG24AⅡ",
+          "name": "基础无机化学实验AⅡ",
+          "credits": 1.5
+        },
+        {
+          "code": "ZS102HG24AⅠ",
+          "name": "基础有机化学实验AⅠ",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS102HG24AⅡ",
+          "name": "基础有机化学实验AⅡ",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS103HG24AⅠ",
+          "name": "基础分析化学实验AⅠ",
+          "credits": 1.5
+        },
+        {
+          "code": "ZS103HG24AⅡ",
+          "name": "基础分析化学实验AⅡ",
+          "credits": 1.5
+        },
+        {
+          "code": "ZS104HG24AⅠ",
+          "name": "基础物理化学实验AⅠ",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS104HG24AⅡ",
+          "name": "基础物理化学实验AⅡ",
+          "credits": 1.5
+        },
+        {
+          "code": "ZS001SW24",
+          "name": "基础生物化学实验",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS108HG24",
+          "name": "化学专业实验",
+          "credits": 2.5
+        },
+        {
+          "code": "ZS106HG24",
+          "name": "化学工程基础实验",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS118HG24B",
+          "name": "生产实习B",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS123HG24",
+          "name": "毕业设计（论文）",
+          "credits": 6.0
+        },
+        {
+          "code": "ZS115HG24",
+          "name": "化学实践 （化学专业工程训练）",
+          "credits": 2.5
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业选修",
+      "required_credits": 8,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "DZ101HG24",
+          "name": "化学类专业导论",
+          "credits": 1.0,
+          "group": "限选",
+          "mandatory": true
+        },
+        {
+          "code": "DZ102HG24",
+          "name": "化学实验室安全技术",
+          "credits": 2.0,
+          "group": "限选",
+          "mandatory": true
+        },
+        {
+          "code": "DZ111HG24B",
+          "name": "生物化学B",
+          "credits": 3.0,
+          "group": "限选",
+          "mandatory": true
+        },
+        {
+          "code": "DZ110HG24",
+          "name": "高分子化学",
+          "credits": 2.0,
+          "group": "限选",
+          "mandatory": true
+        },
+        {
+          "code": "DZ116HG24",
+          "name": "化学前沿*",
+          "credits": 2.0,
+          "group": "模块1：技能与视野提高"
+        },
+        {
+          "code": "DZ112HG24",
+          "name": "文献检索与英文写作*",
+          "credits": 2.0,
+          "group": "模块1：技能与视野提高"
+        },
+        {
+          "code": "A2011015M",
+          "name": "化学文献检索与科技论 文写作#",
+          "credits": 2.0,
+          "group": "模块1：技能与视野提高"
+        },
+        {
+          "code": "A2011032M",
+          "name": "化学专业英语写作#",
+          "credits": 2.0,
+          "group": "模块1：技能与视野提高"
+        },
+        {
+          "code": "A2011046M",
+          "name": "化学史与方法论#",
+          "credits": 2.0,
+          "group": "模块1：技能与视野提高"
+        },
+        {
+          "code": "DZ126HG24",
+          "name": "化学信息与化学 计量学*",
+          "credits": 2.0,
+          "group": "模块1：技能与视野提高"
+        },
+        {
+          "code": "A2011013M",
+          "name": "波谱实验与谱图解析#",
+          "credits": 2.0,
+          "group": "模块1：技能与视野提高"
+        },
+        {
+          "code": "A2011047M",
+          "name": "数据分析与科研绘图#",
+          "credits": 2.0,
+          "group": "模块1：技能与视野提高"
+        },
+        {
+          "code": "DZ107HG24",
+          "name": "中级有机化学*",
+          "credits": 2.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "DZ109HG24",
+          "name": "高等有机化学*",
+          "credits": 2.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "DZ104HG24",
+          "name": "金属有机化学*",
+          "credits": 2.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "DZ106HG24",
+          "name": "现代有机合成*",
+          "credits": 2.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "DZ133HG24",
+          "name": "生物有机化学*",
+          "credits": 2.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "A2011005M",
+          "name": "物理有机化学#",
+          "credits": 2.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "DZ108HG24",
+          "name": "高等无机化学*",
+          "credits": 2.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "DZ113HG24",
+          "name": "现代物理化学*",
+          "credits": 2.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "A2011006M",
+          "name": "高等分析化学#",
+          "credits": 2.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "A2011002M",
+          "name": "现代仪器分析基础#",
+          "credits": 2.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "DZ124HG24",
+          "name": "高等分析化学*",
+          "credits": 2.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "A2011008M",
+          "name": "高等高分子化学#",
+          "credits": 3.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "A2011009M",
+          "name": "现代光谱分析#",
+          "credits": 3.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "A2011017M",
+          "name": "现代波谱学#",
+          "credits": 2.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "A2011012M",
+          "name": "高级电化学测量技术#",
+          "credits": 2.0,
+          "group": "模块2：课程进阶"
+        },
+        {
+          "code": "DZ105HG24",
+          "name": "太阳能转化与利用",
+          "credits": 2.0,
+          "group": "模块3：前沿与热点"
+        },
+        {
+          "code": "DZ127HG24",
+          "name": "环境化学*",
+          "credits": 2.0,
+          "group": "模块3：前沿与热点"
+        },
+        {
+          "code": "DZ129HG24",
+          "name": "绿色化学*",
+          "credits": 2.0,
+          "group": "模块3：前沿与热点"
+        },
+        {
+          "code": "DZ103HG24",
+          "name": "电化学测量",
+          "credits": 2.0,
+          "group": "模块3：前沿与热点"
+        },
+        {
+          "code": "DZ130HG24",
+          "name": "纳米电化学",
+          "credits": 2.0,
+          "group": "模块3：前沿与热点"
+        },
+        {
+          "code": "DZ115HG24",
+          "name": "电化学催化与合成",
+          "credits": 2.0,
+          "group": "模块3：前沿与热点"
+        },
+        {
+          "code": "DZ123HG24",
+          "name": "电化学能源转化系统",
+          "credits": 2.0,
+          "group": "模块3：前沿与热点"
+        },
+        {
+          "code": "DZ121HG24",
+          "name": "超分子化学*",
+          "credits": 2.0,
+          "group": "模块3：前沿与热点"
+        },
+        {
+          "code": "DZ119HG24",
+          "name": "药物化学",
+          "credits": 2.0,
+          "group": "模块4：延伸与交叉"
+        },
+        {
+          "code": "DZ120HG24",
+          "name": "材料化学",
+          "credits": 2.0,
+          "group": "模块4：延伸与交叉"
+        },
+        {
+          "code": "DZ128HG24",
+          "name": "金属学与金属材料",
+          "credits": 2.0,
+          "group": "模块4：延伸与交叉"
+        },
+        {
+          "code": "DZ117HG24",
+          "name": "计算化学*",
+          "credits": 2.0,
+          "group": "模块4：延伸与交叉"
+        },
+        {
+          "code": "DZ132HG24",
+          "name": "生物传感与生物分析*",
+          "credits": 2.0,
+          "group": "模块4：延伸与交叉"
+        },
+        {
+          "code": "DZ122HG24",
+          "name": "电化学精饰",
+          "credits": 2.0,
+          "group": "模块4：延伸与交叉"
+        },
+        {
+          "code": "DZ118HG24",
+          "name": "药物分析",
+          "credits": 2.0,
+          "group": "模块4：延伸与交叉"
+        },
+        {
+          "code": "A2011003M",
+          "name": "量子化学#",
+          "credits": 2.0,
+          "group": "模块4：延伸与交叉"
+        },
+        {
+          "code": "DZ125HG24",
+          "name": "高分子物理与材料",
+          "credits": 2.0,
+          "group": "模块4：延伸与交叉"
+        },
+        {
+          "code": "DZ114HG24",
+          "name": "药理学",
+          "credits": 2.0,
+          "group": "模块4：延伸与交叉"
+        }
+      ],
+      "rules": [
+        {
+          "type": "min_credits_in_group",
+          "group": "限选",
+          "min": 8,
+          "note": "限选课程必须修读；专业选修总学分不少于8学分（原文注）"
+        },
+        {
+          "type": "remainder_open",
+          "note": "专业选修课程修读学分不少于8学分。本科生选修本研贯通课程（课程名带#）获得学分，可在本校读研阶段申请相应课程免修（原文注）"
+        }
+      ],
+      "note": "模块1~4仅为备注栏标注的课程分组，原文未给出各模块最低学分要求，因此只保留了总≥8的规则"
+    },
+    {
+      "name": "跨专业选修",
+      "required_credits": 2,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "修读范围为其他专业的专业核心课程和专业选修课程，带*课程为优先推荐修读的跨专业课程。修读学分不低于2学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "国际化",
+      "required_credits": 0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "无最低学分要求。学生可通过以下方式获得国际化课程学分：（1）参加与国（境）外高校合作的联合培养项目；（2）参加国（境）外交流学习并获得课程学分；（3）参加1个月以上的国（境）外实习实践、科学研究等交流项目；（4）修读学院邀请国（境）外一流大学教授来校开设的高水平国际化课程。同一课程或项目不能重复认定和转换学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "创新创业",
+      "required_credits": 2,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "创新创业学分可通过修读各学院开设的创新创业课程、参加创新创业项目或通过创新创业实践成果（大创项目、竞赛获奖、论文发表、专利获批等）认定获得。具体实施细则见《湖南大学本科生创新创业教育实施方案》（原文注）"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "category_sum_matches_total": false,
+    "category_sum": 145.0,
+    "issues": [
+      "多元发展课程原文标注为28学分，但内部‘国际化’为‘不限’，按各子项最低要求加总（专业选修8+跨专业选修2+国际化0+创新创业2=12）后，整体 category_sum=145，小于毕业要求161。差额由开放池课程补足，符合原文设计。",
+      "专业选修类别下 min_credits_in_group('限选', min=8) 的学分总和恰好等于该类别 required_credits（8），需人工对照原文确认这是否是真实设计（限选4门正好8学分，其余模块为可选加分）。",
+      "其他实践环节中部分实验课程在表格跨页处类别标注有合并单元格，已按序号连续与学分合计27.5对齐，建议人工再核一次实验课程归属是否完全正确。",
+      "通识必修中‘四史’类课程无统一编号，已按新规则放入 note，未生成无 code 的课程对象。"
+    ]
+  }
+}

@@ -1,9 +1,18 @@
 import { parseTranscriptText } from './parse.js';
 import { evaluatePlan } from './rules.js';
 
-async function loadPlanData() {
-  const res = await fetch('data/plan_chem_qiangji_2022.json');
+async function loadIndex() {
+  const res = await fetch('data/index.json');
   return res.json();
+}
+
+async function loadPlanData(jsonFile) {
+  const res = await fetch(`data/plans/${encodeURIComponent(jsonFile)}`);
+  return res.json();
+}
+
+function pdfUrl(pdfFile) {
+  return `data/pdf/${pdfFile.split('/').map(encodeURIComponent).join('/')}`;
 }
 
 function appendCell(row, text) {
@@ -64,10 +73,48 @@ function renderResult(evalResult, unparsedLines) {
 }
 
 async function main() {
-  const planData = await loadPlanData();
-  document.getElementById('evaluate-btn').addEventListener('click', () => {
+  const index = await loadIndex();
+  const select = document.getElementById('plan-select');
+  const planInfo = document.getElementById('plan-info');
+  const evaluateBtn = document.getElementById('evaluate-btn');
+
+  index.forEach((entry, i) => {
+    const option = document.createElement('option');
+    option.value = String(i);
+    option.textContent = entry.plan_name;
+    select.appendChild(option);
+  });
+
+  let planData = null;
+
+  select.addEventListener('change', async () => {
+    document.getElementById('result').innerHTML = '';
+    if (select.value === '') {
+      planInfo.innerHTML = '';
+      evaluateBtn.disabled = true;
+      planData = null;
+      return;
+    }
+    const entry = index[Number(select.value)];
+    planInfo.innerHTML = '';
+    const link = document.createElement('a');
+    link.href = pdfUrl(entry.pdf_file);
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = '查看原始培养方案 PDF';
+    planInfo.appendChild(link);
+    planInfo.append(`　｜　毕业最低学分：${entry.total_required_credits}`);
+
+    evaluateBtn.disabled = true;
+    planData = await loadPlanData(entry.json_file);
+    evaluateBtn.disabled = false;
+  });
+
+  evaluateBtn.addEventListener('click', () => {
+    if (!planData) return;
     const text = document.getElementById('transcript-input').value;
-    const { courses, unparsedLines } = parseTranscriptText(text);
+    const validCodes = planData.categories.flatMap(c => c.courses.map(course => course.code)).filter(Boolean);
+    const { courses, unparsedLines } = parseTranscriptText(text, validCodes);
     const evalResult = evaluatePlan(planData, courses);
     renderResult(evalResult, unparsedLines);
   });

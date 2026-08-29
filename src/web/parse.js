@@ -1,4 +1,6 @@
-const CODE_RE = /^[A-Za-z]{2,4}\d{4,6}$/;
+// 兜底正则：没有提供已知编号清单时才会用到。培养方案课程编号格式五花八门（字母数字混排、
+// 带罗马数字后缀等），靠正则猜测远不如直接比对已知编号清单可靠，所以只作为兜底。
+const FALLBACK_CODE_RE = /^(?=.*[A-Za-z])(?=.*[0-9ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ])[A-Za-z0-9ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ]{4,20}$/;
 const CREDIT_RE = /^\d+(\.\d+)?$/;
 
 function splitLine(line) {
@@ -11,14 +13,22 @@ function splitLine(line) {
   return line.split(',').map(s => s.trim()).filter(Boolean);
 }
 
-export function parseTranscriptText(text) {
+/**
+ * @param {string} text 粘贴的原始表格文本
+ * @param {Set<string>|string[]} [validCodes] 当前培养方案里所有合法的课程编号；提供时按精确匹配识别编号，
+ *   比正则猜测可靠得多（能处理各种奇怪格式）。不提供时退回正则兜底猜测。
+ */
+export function parseTranscriptText(text, validCodes) {
+  const codeSet = validCodes ? new Set(validCodes) : null;
   const courses = [];
   const unparsedLines = [];
   const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0);
 
   for (const line of lines) {
     const tokens = splitLine(line);
-    const codeToken = tokens.find(t => CODE_RE.test(t));
+    const codeToken = codeSet
+      ? tokens.find(t => codeSet.has(t))
+      : tokens.find(t => FALLBACK_CODE_RE.test(t));
     if (!codeToken) {
       unparsedLines.push(line);
       continue;

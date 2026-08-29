@@ -1,0 +1,713 @@
+{
+  "plan_id": "civil_eng_2024",
+  "plan_name": "土木工程本科培养方案（2024版）",
+  "total_required_credits": 161.0,
+  "categories": [
+    {
+      "name": "通识必修",
+      "required_credits": 38.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "TB001MY24",
+          "name": "马克思主义基本原理",
+          "credits": 3.0
+        },
+        {
+          "code": "TB002MY24",
+          "name": "毛泽东思想和中国特色 社会主义理论体系概论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB003MY24",
+          "name": "“移动”思政课堂 （思政实践）",
+          "credits": 1.0
+        },
+        {
+          "code": "TB004MY24",
+          "name": "习近平新时代中国特色 社会主义思想概论",
+          "credits": 3.0
+        },
+        {
+          "code": "TB005MY24",
+          "name": "中国近现代史纲要",
+          "credits": 3.0
+        },
+        {
+          "code": "TB006MY24",
+          "name": "思想道德与法治",
+          "credits": 3.0
+        },
+        {
+          "code": "TB007MY24Ⅰ",
+          "name": "形势与政策Ⅰ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅱ",
+          "name": "形势与政策Ⅱ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅲ",
+          "name": "形势与政策Ⅲ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅳ",
+          "name": "形势与政策Ⅳ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅴ",
+          "name": "形势与政策Ⅴ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅵ",
+          "name": "形势与政策Ⅵ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅶ",
+          "name": "形势与政策Ⅶ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅷ",
+          "name": "形势与政策Ⅷ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB011MY24",
+          "name": "国家安全教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WY24Ⅰ",
+          "name": "大学英语Ⅰ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001WY24Ⅱ",
+          "name": "大学英语Ⅱ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001WY24Ⅲ",
+          "name": "大学英语Ⅲ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XK24B",
+          "name": "计算与人工智能概论B",
+          "credits": 4.0
+        },
+        {
+          "code": "TB001TY24Ⅰ",
+          "name": "体育Ⅰ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅱ",
+          "name": "体育Ⅱ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅲ",
+          "name": "体育Ⅲ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅳ",
+          "name": "体育Ⅳ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WZ24",
+          "name": "军事理论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB002WZ24",
+          "name": "军事技能",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XG24",
+          "name": "大学生心理健康教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001GX24",
+          "name": "劳动教育与素养",
+          "credits": 0.0
+        }
+      ],
+      "rules": [],
+      "note": "另需修读“四史”类思政课程1学分（四门课程中至少修读1门），原文无统一课程编号，无法列入 courses。大学外语实行弹性学分、入校分级、模块课程修读方式。"
+    },
+    {
+      "name": "通识选修",
+      "required_credits": 10,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "根据《湖南大学通识教育选修课程修读办法（2024年修订版）》第七条：不低于10学分，且中华文化与世界文明、社会科学与现代社会、科学探索与技术创新、艺术审美与表达沟通四个模块各至少修读2学分。具体开课课程按学期选课通知浮动，无固定课程编号清单，本工具无法按模块自动校验，需学生自行对照选课记录确认四模块是否各修满2学分"
+        }
+      ],
+      "note": "全校统一政策（非专业特有），课程清单见每学期的选课通知，不做课程级自动校验"
+    },
+    {
+      "name": "专业基础",
+      "required_credits": 26.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZJ001SX24Ⅰ",
+          "name": "高等数学AⅠ",
+          "credits": 5.0
+        },
+        {
+          "code": "ZJ001SX24Ⅱ",
+          "name": "高等数学AⅡ",
+          "credits": 5.0
+        },
+        {
+          "code": "ZJ002SX24A",
+          "name": "线性代数A",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ003SX24A",
+          "name": "概率论与数理统计A",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ001WD24AⅠ",
+          "name": "普通物理AⅠ",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ001WD24AⅡ",
+          "name": "普通物理AⅡ",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ002WD24AⅠ",
+          "name": "普通物理实验AⅠ",
+          "credits": 1.0
+        },
+        {
+          "code": "ZJ002WD24AⅡ",
+          "name": "普通物理实验AⅡ",
+          "credits": 1.0
+        },
+        {
+          "code": "ZJ101TM24",
+          "name": "理论力学",
+          "credits": 2.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业核心",
+      "required_credits": 33.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZH101TM24",
+          "name": "材料力学",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH102TM24Ⅰ",
+          "name": "结构力学Ⅰ",
+          "credits": 2.5
+        },
+        {
+          "code": "ZH102TM24Ⅱ",
+          "name": "结构力学Ⅱ",
+          "credits": 2.5
+        },
+        {
+          "code": "ZH149TM24",
+          "name": "土木工程材料 （含普通化学基础）",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH104TM24",
+          "name": "混凝土结构设计原理",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH105TM24",
+          "name": "钢结构设计原理",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH106TM24",
+          "name": "工程地质与土力学",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH107TM24",
+          "name": "地下工程学R",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH110TM24",
+          "name": "道路工程学",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH108TM24",
+          "name": "建筑工程学R",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH109TM24",
+          "name": "桥梁工程学R",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH148TM24",
+          "name": "工程施工技术与项目 管理",
+          "credits": 3.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "其他实践环节",
+      "required_credits": 26.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZS101TM24",
+          "name": "工程图学与BIM基础 实习",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS102TM24",
+          "name": "工程测量实习",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS103TM24",
+          "name": "工程地质实习",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS104TM24",
+          "name": "工程施工技术与项目 管理课程设计",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS105TM24",
+          "name": "混凝土结构设计原理 课程设计",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS106TM24",
+          "name": "钢结构设计原理课程 设计",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS107TM24",
+          "name": "建筑工程学课程设计",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS108TM24",
+          "name": "地下工程学课程设计",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS109TM24",
+          "name": "认识实习（与土木工程总 论课程结合）",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS110TM24",
+          "name": "桥梁工程学课程设计",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS111TM24",
+          "name": "道路工程学课程设计",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS112TM24",
+          "name": "生产实习",
+          "credits": 3.0
+        },
+        {
+          "code": "ZS127TM24",
+          "name": "毕业设计（论文）",
+          "credits": 10.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业选修",
+      "required_credits": 9.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "DZ101TM24",
+          "name": "工程图学与BIM基础",
+          "credits": 3.0
+        },
+        {
+          "code": "DZ102TM24",
+          "name": "工程测量（含无人机航 测、遥感基础）",
+          "credits": 2.0
+        },
+        {
+          "code": "A2401005M",
+          "name": "土木工程测试技术与实 验方法#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2001042M",
+          "name": "结构非线性分析设计#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2001004M",
+          "name": "有限单元法#",
+          "credits": 3.0
+        },
+        {
+          "code": "A2001003M",
+          "name": "弹塑性力学#",
+          "credits": 3.0
+        },
+        {
+          "code": "A2401006M",
+          "name": "人工智能算法与地下工 程应用#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2401017M",
+          "name": "交通数据分析与智能 算法#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2001075M",
+          "name": "道路勘测技术与应用#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2401014M",
+          "name": "交通流理论#",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ169TM24",
+          "name": "智能建造总论",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ134TM24",
+          "name": "智能交通系统",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ135TM24",
+          "name": "可持续建筑技术 （新工科选修金课）",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ131TM24",
+          "name": "结构分析与有限元",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ168TM24",
+          "name": "人工智能与大数据分析（含 深度学习与神经网络）",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ103TM24",
+          "name": "流体力学C（含桥涵水文）",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ104TM24",
+          "name": "土木工程总论*（含法律 法规、环境与可持续发 展、土木工程新质生产 力，院士大师品牌课程）",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ132TM24",
+          "name": "防灾工程学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ175TM24",
+          "name": "钢及组合结构 房屋设计",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ176TM24",
+          "name": "大跨空间结构设计",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ177TM24",
+          "name": "装配式房屋结构设计",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ178TM24",
+          "name": "岩土工程测试与检测",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ179TM24",
+          "name": "土动力学与 地下工程抗震",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ180TM24",
+          "name": "道路工程试验与检测",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ181TM24",
+          "name": "道路养护管理",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ182TM24",
+          "name": "沥青与沥青混合料",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ183TM24",
+          "name": "桥梁工程试验与检测",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ184TM24",
+          "name": "桥梁概念设计与美学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ185TM24",
+          "name": "轨道桥梁",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ186TM24",
+          "name": "功能建筑材料",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ188TM24",
+          "name": "混凝土工程与技术",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ189TM24",
+          "name": "材料计算与模拟",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ133TM24",
+          "name": "运筹学E",
+          "credits": 3.0
+        },
+        {
+          "code": "DZ120TM24",
+          "name": "系统工程",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ127TM24",
+          "name": "工程监理概论",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ128TM24",
+          "name": "工程财务管理",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ153TM24",
+          "name": "BIM技术原理与应用",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ143TM24",
+          "name": "城乡基础设施规划",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ147TM24",
+          "name": "海绵城市与雨洪控制",
+          "credits": 1.0
+        },
+        {
+          "code": "DZ148TM24",
+          "name": "城市固体废物处理与 资源化",
+          "credits": 1.0
+        },
+        {
+          "code": "DZ149TM24",
+          "name": "水环境修复原理与应用",
+          "credits": 1.0
+        },
+        {
+          "code": "DZ164TM24",
+          "name": "建筑环境人工智能",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ165TM24",
+          "name": "智慧城市概论",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ162TM24",
+          "name": "低碳建筑设计方法",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ106TM24",
+          "name": "钢结构房屋设计",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ107TM24",
+          "name": "高层结构设计",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS115TM24",
+          "name": "建筑工程毕业设计基础 （含工程经济与概预算、 计算机辅助设计与应用）",
+          "credits": 1.0
+        },
+        {
+          "code": "DZ108TM24",
+          "name": "地下空间设计",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ109TM24",
+          "name": "基坑与边坡设计",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS116TM24",
+          "name": "地下工程毕业设计基础 （含工程经济与概预算、 计算机辅助设计与应用）",
+          "credits": 1.0
+        },
+        {
+          "code": "DZ110TM24",
+          "name": "交通工程总论",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ111TM24",
+          "name": "路基路面工程",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS117TM24",
+          "name": "道路与交通工程毕业设 计基础（含工程经济与概 预算、计算机辅助设计 与应用）",
+          "credits": 1.0
+        },
+        {
+          "code": "DZ112TM24",
+          "name": "大跨度桥梁",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ113TM24",
+          "name": "钢及组合结构桥梁",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS118TM24",
+          "name": "桥梁工程毕业设计基础 （含工程经济与概预算、 计算机辅助设计与应用）",
+          "credits": 1.0
+        },
+        {
+          "code": "DZ114TM24",
+          "name": "无机胶凝材料学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ115TM24",
+          "name": "材料分析测试方法",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS119TM24",
+          "name": "建筑材料毕业设计基础 （含工程经济与概预算、 计算机辅助设计与应用）",
+          "credits": 1.0
+        }
+      ],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "专业选修课程修读学分不少于9.0学分（原文注）"
+        }
+      ],
+      "note": "课程列表已全部收录；内部模块如有最低学分要求但原文未明确强制数字，仅保留总要求"
+    },
+    {
+      "name": "跨专业选修",
+      "required_credits": 2.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "修读范围为其他专业的专业核心课程和专业选修课程。修读学分不低于2学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "国际化",
+      "required_credits": 0.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "无最低学分要求。可通过联合培养、境外交流、境外实习实践、高水平国际化课程等方式获得学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "创新创业",
+      "required_credits": 2.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "可通过修读创新创业课程、参加项目或实践成果认定获得。具体见《湖南大学本科生创新创业教育实施方案》（原文注）"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "category_sum_matches_total": false,
+    "category_sum": 146.0,
+    "issues": [
+      "多元发展课程含‘不限’开放项，按最低要求加总后 category_sum=146.0，小于毕业要求161.0。差额由开放池课程补足，符合原文设计。",
+      "通识必修中‘四史’类课程无统一编号，已放入 note。",
+      "部分课程名称可能因表格换行被截断，建议人工核对完整课程名称与学分小计。",
+      "类别边界依赖表格‘课程类别’列标注，跨页合并单元格可能导致个别课程归属偏移，需人工抽查。"
+    ]
+  }
+}

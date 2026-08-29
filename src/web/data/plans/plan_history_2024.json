@@ -1,0 +1,788 @@
+{
+  "plan_id": "history_2024",
+  "plan_name": "历史学本科培养方案（2024版）",
+  "total_required_credits": 144.0,
+  "categories": [
+    {
+      "name": "通识必修",
+      "required_credits": 33.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "TB001MY24",
+          "name": "马克思主义基本原理",
+          "credits": 3.0
+        },
+        {
+          "code": "TB002MY24",
+          "name": "毛泽东思想和中国特色社 会主义理论体系概论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB003MY24",
+          "name": "“移动”思政课堂 （思政实践）",
+          "credits": 1.0
+        },
+        {
+          "code": "TB004MY24",
+          "name": "习近平新时代中国特色社 会主义思想概论",
+          "credits": 3.0
+        },
+        {
+          "code": "TB006MY24",
+          "name": "思想道德与法治",
+          "credits": 3.0
+        },
+        {
+          "code": "TB007MY24Ⅰ",
+          "name": "形势与政策Ⅰ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅱ",
+          "name": "形势与政策Ⅱ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅲ",
+          "name": "形势与政策Ⅲ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅳ",
+          "name": "形势与政策Ⅳ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅴ",
+          "name": "形势与政策Ⅴ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅵ",
+          "name": "形势与政策Ⅵ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅶ",
+          "name": "形势与政策Ⅶ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅷ",
+          "name": "形势与政策Ⅷ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB011MY24",
+          "name": "国家安全教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WY24Ⅰ",
+          "name": "大学英语Ⅰ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001WY24Ⅱ",
+          "name": "大学英语Ⅱ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001WY24Ⅲ",
+          "name": "大学英语Ⅲ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XK24C",
+          "name": "计算与人工智能概论C",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001TY24Ⅰ",
+          "name": "体育Ⅰ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅱ",
+          "name": "体育Ⅱ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅲ",
+          "name": "体育Ⅲ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅳ",
+          "name": "体育Ⅳ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WZ24",
+          "name": "军事理论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB002WZ24",
+          "name": "军事技能",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XG24",
+          "name": "大学生心理健康教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001GX24",
+          "name": "劳动教育与素养",
+          "credits": 0.0
+        }
+      ],
+      "rules": [],
+      "note": "另需修读“四史”类思政课程1学分（四门课程中至少修读1门），原文无统一课程编号，无法列入 courses。大学外语实行弹性学分、入校分级、模块课程修读方式。"
+    },
+    {
+      "name": "通识选修",
+      "required_credits": 10,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "根据《湖南大学通识教育选修课程修读办法（2024年修订版）》第七条：不低于10学分，且中华文化与世界文明、社会科学与现代社会、科学探索与技术创新、艺术审美与表达沟通四个模块各至少修读2学分。具体开课课程按学期选课通知浮动，无固定课程编号清单，本工具无法按模块自动校验，需学生自行对照选课记录确认四模块是否各修满2学分"
+        }
+      ],
+      "note": "全校统一政策（非专业特有），课程清单见每学期的选课通知，不做课程级自动校验"
+    },
+    {
+      "name": "专业基础",
+      "required_credits": 25.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZJ165SY24Ⅰ",
+          "name": "历史文选Ⅰ",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ165SY24Ⅱ",
+          "name": "历史文选Ⅱ",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ166SY24",
+          "name": "历史文献学",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ167SY24",
+          "name": "史学概论",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ168SY24",
+          "name": "考古学通论",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ169SY24",
+          "name": "中国史史料选读",
+          "credits": 2.0
+        },
+        {
+          "code": "ZJ170SY24",
+          "name": "中国史学史",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ171SY24",
+          "name": "西方史学史",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ172SY24",
+          "name": "中国历史地理",
+          "credits": 2.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业核心",
+      "required_credits": 37.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZH173SY24Ⅰ",
+          "name": "中国古代史Ⅰ*",
+          "credits": 4.0
+        },
+        {
+          "code": "ZH173SY24Ⅱ",
+          "name": "中国古代史Ⅱ*",
+          "credits": 4.0
+        },
+        {
+          "code": "ZH174SY24",
+          "name": "中国近代史*",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH175SY24",
+          "name": "中国现代史*",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH176SY24",
+          "name": "中华人民共和国史*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH177SY24",
+          "name": "世界上古史*",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH178SY24",
+          "name": "世界中古史*",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH179SY24",
+          "name": "世界近代史*",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH180SY24",
+          "name": "世界现代史*",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH181SY24",
+          "name": "中国思想史*",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH182SY24",
+          "name": "中国经学史*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH183SY24",
+          "name": "中国政治制度史*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH184SY24",
+          "name": "中国经济史*",
+          "credits": 2.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "其他实践环节",
+      "required_credits": 10.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZS185SY24",
+          "name": "学年论文",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS186SY24",
+          "name": "毕业实习",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS187SY24",
+          "name": "毕业论文",
+          "credits": 6.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业选修",
+      "required_credits": 3.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "DZ188SY24",
+          "name": "先秦史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ189SY24",
+          "name": "秦汉史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ190SY24",
+          "name": "魏晋南北朝史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ191SY24",
+          "name": "隋唐五代史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ192SY24",
+          "name": "宋辽金史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ193SY24",
+          "name": "蒙元史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ194SY24",
+          "name": "明史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ195SY24",
+          "name": "清史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ196SY24",
+          "name": "中国北方民族史*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ197SY24",
+          "name": "古代汉语*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ198SY24",
+          "name": "晚清政治与人物*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ199SY24",
+          "name": "中国近现代思想史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ200SY24",
+          "name": "民国政治史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ201SY24",
+          "name": "近代中西文化交流史*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ202SY24",
+          "name": "中国近代学术史*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ203SY24",
+          "name": "中国社会文化史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ204SY24",
+          "name": "中国书院史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ205SY24",
+          "name": "中国古代政治思想史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ206SY24",
+          "name": "中国古代知识与社会",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ207SY24",
+          "name": "中国古代书法史*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ208SY24",
+          "name": "中国古代绘画史*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ209SY24",
+          "name": "中国医学文化史*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ210SY24",
+          "name": "中国古代法制史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ211SY24",
+          "name": "中国教育史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ212SY24",
+          "name": "区域社会史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ213SY24",
+          "name": "艺术商业交流史*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ214SY24",
+          "name": "中国妇女史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ215SY24",
+          "name": "中国道教史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ216SY24",
+          "name": "清代学术史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ217SY24",
+          "name": "明清中西交通史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ218SY24",
+          "name": "中国佛教史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ130SY24",
+          "name": "数字人文导论与实践",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ220SY24",
+          "name": "丝绸之路与中西文化 交流*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ221SY24",
+          "name": "辽金元社会生活史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ222SY24",
+          "name": "艺术史导论*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ223SY24",
+          "name": "道家思想与政治",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ224SY24",
+          "name": "中国古代文化史*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ225SY24",
+          "name": "中国饮食文化史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ226SY24",
+          "name": "GIS与历史地理",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ227SY24",
+          "name": "历史学专业英语",
+          "credits": 1.0
+        },
+        {
+          "code": "DZ228SY24",
+          "name": "敦煌吐鲁番学*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ229SY24",
+          "name": "中国中古文献导读",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ230SY24",
+          "name": "清代考据学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ231SY24",
+          "name": "十三经注疏精读",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ232SY24",
+          "name": "礼学文献选读*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ233SY24",
+          "name": "版本目录学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ234SY24",
+          "name": "全球史概论",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ235SY24",
+          "name": "希腊罗马史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ236SY24",
+          "name": "古代东方文明",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ237SY24",
+          "name": "南亚史*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ238SY24",
+          "name": "英国史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ239SY24",
+          "name": "当代西方史学理论导读",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ240SY24",
+          "name": "西方科技与文明*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ241SY24",
+          "name": "欧洲中世纪史*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ242SY24",
+          "name": "法国史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ243SY24",
+          "name": "德国史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ244SY24",
+          "name": "基督教史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ245SY24",
+          "name": "美国史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ246SY24",
+          "name": "日本儒学史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ247SY24",
+          "name": "西方政治思想史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ248SY24",
+          "name": "西方哲学史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ249SY24",
+          "name": "《历史哲学》导读",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ250SY24",
+          "name": "世界历史中的疾病与医疗",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ251SY24",
+          "name": "文物学专题",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ252SY24",
+          "name": "中国考古学史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ253SY24",
+          "name": "人类学概论",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ254SY24",
+          "name": "楚文物与楚文化*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ255SY24",
+          "name": "陶瓷考古",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ256SY24",
+          "name": "湖南考古重大发现选讲",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ257SY24",
+          "name": "边疆考古与民族史专题",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ258SY24",
+          "name": "汉六朝时期的物质文化 考古",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ259SY24",
+          "name": "古代玉器专题",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ260SY24",
+          "name": "中国古代青铜器鉴赏",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ261SY24",
+          "name": "秦汉数术文献",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ262SY24",
+          "name": "古文字与古史研究专题*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ263SY24",
+          "name": "出土文献与先秦两汉古籍 整理研究",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ264SY24",
+          "name": "文字学概论",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416040M",
+          "name": "中国史研究前沿#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416043M",
+          "name": "晚清史专题#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416044M",
+          "name": "民国史专题#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416046M",
+          "name": "中国古代政治制度与政治 文化#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416048M",
+          "name": "海外汉学研究与传播 专题#",
+          "credits": 2.0
+        },
+        {
+          "code": "B2016003M",
+          "name": "博物馆学概论#",
+          "credits": 2.0
+        },
+        {
+          "code": "B2016004M",
+          "name": "文物学概论#",
+          "credits": 2.0
+        }
+      ],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "专业选修课程修读学分不少于3.0学分（原文注）"
+        }
+      ],
+      "note": "课程列表已全部收录；内部模块如有最低学分要求但原文未明确强制数字，仅保留总要求"
+    },
+    {
+      "name": "跨专业选修",
+      "required_credits": 2.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "修读范围为其他专业的专业核心课程和专业选修课程。修读学分不低于2学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "国际化",
+      "required_credits": 0.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "无最低学分要求。可通过联合培养、境外交流、境外实习实践、高水平国际化课程等方式获得学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "创新创业",
+      "required_credits": 2.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "可通过修读创新创业课程、参加项目或实践成果认定获得。具体见《湖南大学本科生创新创业教育实施方案》（原文注）"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "category_sum_matches_total": false,
+    "category_sum": 122.0,
+    "issues": [
+      "多元发展课程含‘不限’开放项，按最低要求加总后 category_sum=122.0，小于毕业要求144.0。差额由开放池课程补足，符合原文设计。",
+      "通识必修中‘四史’类课程无统一编号，已放入 note。",
+      "部分课程名称可能因表格换行被截断，建议人工核对完整课程名称与学分小计。",
+      "类别边界依赖表格‘课程类别’列标注，跨页合并单元格可能导致个别课程归属偏移，需人工抽查。"
+    ]
+  }
+}

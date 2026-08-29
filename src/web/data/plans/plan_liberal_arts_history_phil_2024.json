@@ -1,0 +1,504 @@
+{
+  "plan_id": "liberal_arts_history_phil_2024",
+  "plan_name": "文科试验班（历史哲学方向）本科培养方案（2024版）",
+  "total_required_credits": 143.0,
+  "categories": [
+    {
+      "name": "通识必修",
+      "required_credits": 21.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "TB004MY24",
+          "name": "习近平新时代中国特 色社会主义思想概论",
+          "credits": 3.0
+        },
+        {
+          "code": "TB006MY24",
+          "name": "思想道德与法治",
+          "credits": 3.0
+        },
+        {
+          "code": "TB007MY24Ⅰ",
+          "name": "形势与政策Ⅰ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅱ",
+          "name": "形势与政策Ⅱ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅲ",
+          "name": "形势与政策Ⅲ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅳ",
+          "name": "形势与政策Ⅳ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅴ",
+          "name": "形势与政策Ⅴ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅵ",
+          "name": "形势与政策Ⅵ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅶ",
+          "name": "形势与政策Ⅶ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅷ",
+          "name": "形势与政策Ⅷ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB011MY24",
+          "name": "国家安全教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001XK24C",
+          "name": "计算与人工智能概论C",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001TY24Ⅰ",
+          "name": "体育Ⅰ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅱ",
+          "name": "体育Ⅱ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅲ",
+          "name": "体育Ⅲ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅳ",
+          "name": "体育Ⅳ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WZ24",
+          "name": "军事理论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB002WZ24",
+          "name": "军事技能",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XG24",
+          "name": "大学生心理健康教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001GX24",
+          "name": "劳动教育与素养",
+          "credits": 0.0
+        }
+      ],
+      "rules": [],
+      "note": "另需修读“四史”类思政课程1学分（四门课程中至少修读1门），原文无统一课程编号，无法列入 courses。大学外语实行弹性学分、入校分级、模块课程修读方式。"
+    },
+    {
+      "name": "通识选修",
+      "required_credits": 9.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "原文通识选修要求9.0学分"
+        }
+      ],
+      "note": "与全校统一模板（10学分）不一致，原文为9.0学分"
+    },
+    {
+      "name": "专业基础",
+      "required_credits": 29.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZJ101SY24",
+          "name": "古代汉语",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ102SY24Ⅰ",
+          "name": "中国通史I",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ102SY24Ⅱ",
+          "name": "中国通史II",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ103SY24",
+          "name": "全球通史",
+          "credits": 4.0
+        },
+        {
+          "code": "ZJ104SY24Ⅰ",
+          "name": "中国哲学史I",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ104SY24Ⅱ",
+          "name": "中国哲学史II",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ105SY24Ⅰ",
+          "name": "西方哲学史I",
+          "credits": 2.0
+        },
+        {
+          "code": "ZJ105SY24Ⅱ",
+          "name": "西方哲学史II",
+          "credits": 2.0
+        },
+        {
+          "code": "ZJ001WX24I",
+          "name": "中国文学史I",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ001WX24II",
+          "name": "中国文学史II",
+          "credits": 3.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业核心",
+      "required_credits": 39.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZH110SY24",
+          "name": "经学通论*",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH111SY24Ⅰ",
+          "name": "《四书》研读I*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH111SY24Ⅱ",
+          "name": "《四书》研读II*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH112SY24",
+          "name": "《易经》研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH113SY24",
+          "name": "《诗经》研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH114SY24",
+          "name": "《尚书》研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH115SY24",
+          "name": "《礼记》研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH116SY24",
+          "name": "《春秋》研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH117SY24",
+          "name": "《四库全书总目》研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH118SY24",
+          "name": "《史记》研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH119SY24",
+          "name": "《汉书》研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH120SY24",
+          "name": "《资治通鉴》研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH121SY24",
+          "name": "《通典》研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH122SY24",
+          "name": "道家经典研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH123SY24Y",
+          "name": "西方汉学经典选读 （全英文授课）*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH124SY24Y",
+          "name": "西方哲学经典选读 （全英文授课）*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH125SY24Y",
+          "name": "西方史学经典选读 （全英文授课）*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH126SY24",
+          "name": "自然科学经典选读*",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH127SY24",
+          "name": "艺术与美学经典选读*",
+          "credits": 2.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "其他实践环节",
+      "required_credits": 10.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZS163SY24I",
+          "name": "游学I",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS163SY24II",
+          "name": "游学II",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS128SY24",
+          "name": "学年论文",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS129SY24",
+          "name": "毕业论文",
+          "credits": 6.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业选修",
+      "required_credits": 6.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "DZ130SY24",
+          "name": "数字人文导论与实践*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ131SY24",
+          "name": "《说文段注》研读",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ132SY24",
+          "name": "古典文献学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ133SY24",
+          "name": "《史通》研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ134SY24",
+          "name": "《朱子语类》研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ135SY24",
+          "name": "《金刚经》《坛经》 研读*",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416040M",
+          "name": "中国史研究前沿#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416041M",
+          "name": "史学理论与史学史#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416042M",
+          "name": "中国古代史史料研读#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416043M",
+          "name": "晚清史专题#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416044M",
+          "name": "民国史专题#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416045M",
+          "name": "中国近代史料学专题#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416046M",
+          "name": "中国古代政治制度与 政治文化#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416047M",
+          "name": "中国思想史专题#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2016079M",
+          "name": "中国经学史专题#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416048M",
+          "name": "海外汉学研究与传播 专题#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416049M",
+          "name": "历史文献学#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2016128M",
+          "name": "古籍整理实践#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416091M",
+          "name": "《四库》学研究#",
+          "credits": 2.0
+        },
+        {
+          "code": "B2016002M",
+          "name": "考古学基础#",
+          "credits": 2.0
+        },
+        {
+          "code": "B2016003M",
+          "name": "博物馆学概论#",
+          "credits": 2.0
+        },
+        {
+          "code": "B2016004M",
+          "name": "文物学概论#",
+          "credits": 2.0
+        },
+        {
+          "code": "B2016005M",
+          "name": "出土文献概论#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2416001M",
+          "name": "哲学前沿问题导论 （书院、马院）#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2016003M",
+          "name": "哲学基本问题与方法 （书院、马院）#",
+          "credits": 2.0
+        }
+      ],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "专业选修课程修读学分不少于6.0学分（原文注）"
+        }
+      ],
+      "note": "课程列表已全部收录；内部模块如有最低学分要求但原文未明确强制数字，仅保留总要求"
+    },
+    {
+      "name": "跨专业选修",
+      "required_credits": 2.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "修读范围为其他专业的专业核心课程和专业选修课程。修读学分不低于2学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "国际化",
+      "required_credits": 0.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "无最低学分要求。可通过联合培养、境外交流、境外实习实践、高水平国际化课程等方式获得学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "创新创业",
+      "required_credits": 2.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "可通过修读创新创业课程、参加项目或实践成果认定获得。具体见《湖南大学本科生创新创业教育实施方案》（原文注）"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "category_sum_matches_total": false,
+    "category_sum": 118.0,
+    "issues": [
+      "通识选修学分要求为9.0，与全校统一模板10不一致",
+      "多元发展课程含‘不限’开放项，按最低要求加总后 category_sum=118.0，小于毕业要求143.0。差额由开放池课程补足，符合原文设计。",
+      "通识必修中‘四史’类课程无统一编号，已放入 note。",
+      "部分课程名称可能因表格换行被截断，建议人工核对完整课程名称与学分小计。",
+      "类别边界依赖表格‘课程类别’列标注，跨页合并单元格可能导致个别课程归属偏移，需人工抽查。"
+    ]
+  }
+}

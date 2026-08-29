@@ -1,0 +1,553 @@
+{
+  "plan_id": "law_2024",
+  "plan_name": "法学本科培养方案（2024版）",
+  "total_required_credits": 151,
+  "categories": [
+    {
+      "name": "通识必修",
+      "required_credits": 36,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "TB001MY24",
+          "name": "马克思主义基本原理",
+          "credits": 3.0
+        },
+        {
+          "code": "TB002MY24",
+          "name": "毛泽东思想和中国特色 社会主义理论体系概论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB003MY24",
+          "name": "“移动”思政课堂 （思政实践）",
+          "credits": 1.0
+        },
+        {
+          "code": "TB004MY24",
+          "name": "习近平新时代中国特色 社会主义思想概论",
+          "credits": 3.0
+        },
+        {
+          "code": "TB005MY24",
+          "name": "中国近现代史纲要",
+          "credits": 3.0
+        },
+        {
+          "code": "TB006MY24",
+          "name": "思想道德与法治",
+          "credits": 3.0
+        },
+        {
+          "code": "TB007MY24Ⅰ",
+          "name": "形势与政策Ⅰ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅱ",
+          "name": "形势与政策Ⅱ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅲ",
+          "name": "形势与政策Ⅲ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅳ",
+          "name": "形势与政策Ⅳ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅴ",
+          "name": "形势与政策Ⅴ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅵ",
+          "name": "形势与政策Ⅵ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅶ",
+          "name": "形势与政策Ⅶ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅷ",
+          "name": "形势与政策Ⅷ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB011MY24",
+          "name": "国家安全教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WY24Ⅰ",
+          "name": "大学英语Ⅰ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001WY24Ⅱ",
+          "name": "大学英语Ⅱ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001WY24Ⅲ",
+          "name": "大学英语Ⅲ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XK24C",
+          "name": "计算与人工智能概论C",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001TY24Ⅰ",
+          "name": "体育Ⅰ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅱ",
+          "name": "体育Ⅱ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅲ",
+          "name": "体育Ⅲ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅳ",
+          "name": "体育Ⅳ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WZ24",
+          "name": "军事理论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB002WZ24",
+          "name": "军事技能",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XG24",
+          "name": "大学生心理健康教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001GX24",
+          "name": "劳动教育与素养",
+          "credits": 0.0
+        }
+      ],
+      "rules": [],
+      "note": "另需修读“四史”类思政课程1学分（四门课程中至少修读1门），原文无统一课程编号，无法列入 courses。本专业通识必修为36学分。大学外语实行弹性学分、入校分级、模块课程修读方式。"
+    },
+    {
+      "name": "通识选修",
+      "required_credits": 10,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "根据《湖南大学通识教育选修课程修读办法（2024年修订版）》第七条：不低于10学分，且中华文化与世界文明、社会科学与现代社会、科学探索与技术创新、艺术审美与表达沟通四个模块各至少修读2学分。具体开课课程按学期选课通知浮动，无固定课程编号清单，本工具无法按模块自动校验，需学生自行对照选课记录确认四模块是否各修满2学分"
+        }
+      ],
+      "note": "全校统一政策（非专业特有），课程清单见每学期的选课通知，不做课程级自动校验"
+    },
+    {
+      "name": "专业基础",
+      "required_credits": 20,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZJ101FX24",
+          "name": "法理学",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ102FX24",
+          "name": "宪法学",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ103FX24",
+          "name": "民法总论",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ104FX24",
+          "name": "习近平法治思想概论",
+          "credits": 2.0
+        },
+        {
+          "code": "ZJ105FX24",
+          "name": "刑法总论",
+          "credits": 4.0
+        },
+        {
+          "code": "ZJ106FX24",
+          "name": "法律职业伦理",
+          "credits": 2.0
+        },
+        {
+          "code": "ZJ107FX24",
+          "name": "中国法律史",
+          "credits": 3.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业核心",
+      "required_credits": 39,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZH101FX24",
+          "name": "合同法",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH102FX24",
+          "name": "物权法",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH103FX24",
+          "name": "刑法分论",
+          "credits": 4.0
+        },
+        {
+          "code": "ZH104FX24",
+          "name": "侵权责任法",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH105FX24",
+          "name": "商法概论",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH106FX24",
+          "name": "知识产权法",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH107FX24",
+          "name": "经济法",
+          "credits": 4.0
+        },
+        {
+          "code": "ZH108FX24",
+          "name": "国际法",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH109FX24",
+          "name": "刑事诉讼法",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH110FX24",
+          "name": "国际经济法",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH111FX24",
+          "name": "环境法",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH112FX24",
+          "name": "民事诉讼法",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH113FX24",
+          "name": "行政法与行政诉讼法",
+          "credits": 4.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "其他实践环节",
+      "required_credits": 16,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZS101FX24",
+          "name": "法学专业指导",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS102FX24",
+          "name": "学年论文",
+          "credits": 3.0
+        },
+        {
+          "code": "ZS103FX24",
+          "name": "毕业论文",
+          "credits": 8.0
+        },
+        {
+          "code": "ZS104FX24",
+          "name": "毕业实习",
+          "credits": 4.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业选修",
+      "required_credits": 0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "DZ101FX24",
+          "name": "婚姻家庭与继承法",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ102FX24",
+          "name": "证券法",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ103FX24",
+          "name": "破产法",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ104FX24",
+          "name": "保险法",
+          "credits": 2.0
+        },
+        {
+          "code": "A2019028M",
+          "name": "公司法专题#",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ105FX24",
+          "name": "财税法",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ106FX24",
+          "name": "消费者权益保护法*",
+          "credits": 2.0
+        },
+        {
+          "code": "A2019031M",
+          "name": "金融法专题#",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ107FX24",
+          "name": "劳动法",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ108FX24",
+          "name": "社会保障法",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ109FX24",
+          "name": "犯罪学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ110FX24",
+          "name": "证据法学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ111FX24",
+          "name": "党内法规",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ112FX24",
+          "name": "民事强制执行法",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ113FX24",
+          "name": "刑事辩护",
+          "credits": 2.0
+        },
+        {
+          "code": "A2019008M",
+          "name": "立法学专题#",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ114FX24",
+          "name": "外国法制史",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ115FX24",
+          "name": "西方法律思想史*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ116FX24",
+          "name": "罗马法",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ117FX24",
+          "name": "法律与文学*",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ118FX24",
+          "name": "国际投资法",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ119FX24",
+          "name": "国际组织法",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ120FX24",
+          "name": "国际贸易法",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ121FX24",
+          "name": "国际私法",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ122FX24",
+          "name": "民法案例研习I",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ123FX24",
+          "name": "民法案例研习 II",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ124FX24",
+          "name": "刑法案例研习I",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ125FX24",
+          "name": "刑法案例研习 II",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ126FX24",
+          "name": "行政法案例研习",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ127FX24",
+          "name": "法学经典导读",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ128FX24",
+          "name": "法社会学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ129FX24",
+          "name": "法律心理学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ130FX24",
+          "name": "模拟法庭",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ131FX24",
+          "name": "出土法律文献研读",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ132FX24",
+          "name": "法律英语",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ133FX24",
+          "name": "法学论文写作与 文献检索",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ134FX24",
+          "name": "人工智能与计算法学",
+          "credits": 2.0
+        }
+      ],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "专业选修课程修读学分不限（原文注）"
+        }
+      ],
+      "note": "原文标注“不限”，required_credits 填0；课程列表已全部收录"
+    },
+    {
+      "name": "跨专业选修",
+      "required_credits": 2,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "修读范围为其他专业的专业核心课程和专业选修课程。修读学分不低于2学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "国际化",
+      "required_credits": 0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "无最低学分要求。可通过联合培养、境外交流、境外实习实践、高水平国际化课程等方式获得学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "创新创业",
+      "required_credits": 2,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "可通过修读创新创业课程、参加项目或实践成果认定获得。具体见《湖南大学本科生创新创业教育实施方案》（原文注）"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "category_sum_matches_total": false,
+    "category_sum": 125,
+    "issues": [
+      "多元发展课程原文标注为30学分，但专业选修为‘不限’、国际化为‘不限’，按最低要求加总后 category_sum=125，小于毕业要求151。差额由开放池课程补足，符合原文设计。",
+      "专业选修原文为‘不限’，required_credits 填0。",
+      "通识必修中‘四史’类课程无统一编号，已放入 note。",
+      "部分课程名称可能因表格换行被截断，建议人工核对。"
+    ]
+  }
+}

@@ -1,0 +1,548 @@
+{
+  "plan_id": "marketing_2024",
+  "plan_name": "市场营销（智慧营销）本科培养方案（2024版）",
+  "total_required_credits": 151.0,
+  "categories": [
+    {
+      "name": "通识必修",
+      "required_credits": 38.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "TB001MY24",
+          "name": "马克思主义基本原理",
+          "credits": 3.0
+        },
+        {
+          "code": "TB002MY24",
+          "name": "毛泽东思想和中国特色 社会主义理论体系概论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB003MY24",
+          "name": "“移动”思政课堂 （思政实践）",
+          "credits": 1.0
+        },
+        {
+          "code": "TB004MY24",
+          "name": "习近平新时代中国特色 社会主义思想概论",
+          "credits": 3.0
+        },
+        {
+          "code": "TB005MY24",
+          "name": "中国近现代史纲要",
+          "credits": 3.0
+        },
+        {
+          "code": "TB006MY24",
+          "name": "思想道德与法治",
+          "credits": 3.0
+        },
+        {
+          "code": "TB007MY24Ⅰ",
+          "name": "形势与政策Ⅰ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅱ",
+          "name": "形势与政策Ⅱ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅲ",
+          "name": "形势与政策Ⅲ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅳ",
+          "name": "形势与政策Ⅳ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅴ",
+          "name": "形势与政策Ⅴ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅵ",
+          "name": "形势与政策Ⅵ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅶ",
+          "name": "形势与政策Ⅶ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB007MY24Ⅷ",
+          "name": "形势与政策Ⅷ",
+          "credits": 0.25
+        },
+        {
+          "code": "TB011MY24",
+          "name": "国家安全教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WY24Ⅰ",
+          "name": "大学英语Ⅰ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001WY24Ⅱ",
+          "name": "大学英语Ⅱ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001WY24Ⅲ",
+          "name": "大学英语Ⅲ",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XK24B",
+          "name": "计算与人工智能概论B",
+          "credits": 4.0
+        },
+        {
+          "code": "TB001TY24Ⅰ",
+          "name": "体育Ⅰ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅱ",
+          "name": "体育Ⅱ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅲ",
+          "name": "体育Ⅲ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001TY24Ⅳ",
+          "name": "体育Ⅳ",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001WZ24",
+          "name": "军事理论",
+          "credits": 2.0
+        },
+        {
+          "code": "TB002WZ24",
+          "name": "军事技能",
+          "credits": 2.0
+        },
+        {
+          "code": "TB001XG24",
+          "name": "大学生心理健康教育",
+          "credits": 1.0
+        },
+        {
+          "code": "TB001GX24",
+          "name": "劳动教育与素养",
+          "credits": 0.0
+        }
+      ],
+      "rules": [],
+      "note": "另需修读“四史”类思政课程1学分（四门课程中至少修读1门），原文无统一课程编号，无法列入 courses。大学外语实行弹性学分、入校分级、模块课程修读方式。"
+    },
+    {
+      "name": "通识选修",
+      "required_credits": 10,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "根据《湖南大学通识教育选修课程修读办法（2024年修订版）》第七条：不低于10学分，且中华文化与世界文明、社会科学与现代社会、科学探索与技术创新、艺术审美与表达沟通四个模块各至少修读2学分。具体开课课程按学期选课通知浮动，无固定课程编号清单，本工具无法按模块自动校验，需学生自行对照选课记录确认四模块是否各修满2学分"
+        }
+      ],
+      "note": "全校统一政策（非专业特有），课程清单见每学期的选课通知，不做课程级自动校验"
+    },
+    {
+      "name": "专业基础",
+      "required_credits": 30.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZJ001SX24CⅠ",
+          "name": "高等数学CⅠ",
+          "credits": 5.0
+        },
+        {
+          "code": "ZJ001SX24CⅡ",
+          "name": "高等数学CⅡ",
+          "credits": 5.0
+        },
+        {
+          "code": "ZJ002SX24B",
+          "name": "线性代数B",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ003SX24B",
+          "name": "概率论与数理统计B",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ001JM24",
+          "name": "经济学原理",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ006GS24",
+          "name": "管理学",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ010GS24",
+          "name": "运筹学",
+          "credits": 3.0
+        },
+        {
+          "code": "ZJ002GS24",
+          "name": "大数据技术与应用",
+          "credits": 2.0
+        },
+        {
+          "code": "ZJ008GS24",
+          "name": "区块链技术与应用",
+          "credits": 2.0
+        },
+        {
+          "code": "ZJ005GS24",
+          "name": "工商管理类专业前沿",
+          "credits": 1.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业核心",
+      "required_credits": 35.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZH024GS24",
+          "name": "计量经济学",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH046GS24",
+          "name": "市场营销学",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH022GS24",
+          "name": "机器学习",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH044GS24",
+          "name": "市场研究设计",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH062GS24Y",
+          "name": "消费者行为学（E）",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH011GS24",
+          "name": "大数据营销",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH053GS24S",
+          "name": "数智定价（S）",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH055GS24S",
+          "name": "数智营销渠道管理（S）",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH007GS24",
+          "name": "产品与品牌数智化",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH041GS24",
+          "name": "商业案例分析基础",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH056GS24",
+          "name": "数字营销沟通",
+          "credits": 3.0
+        },
+        {
+          "code": "ZH001GS24",
+          "name": "PYTHON程序设计",
+          "credits": 2.0
+        },
+        {
+          "code": "ZH040GS24",
+          "name": "写作素养与能力提升",
+          "credits": 2.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "其他实践环节",
+      "required_credits": 10.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "ZS009GS24",
+          "name": "市场研究实训",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS002GS24",
+          "name": "毕业实习",
+          "credits": 2.0
+        },
+        {
+          "code": "ZS001GS24",
+          "name": "毕业设计（论文）",
+          "credits": 6.0
+        }
+      ],
+      "rules": []
+    },
+    {
+      "name": "专业选修",
+      "required_credits": 4.0,
+      "open_pool": false,
+      "courses": [
+        {
+          "code": "DZ040GS24",
+          "name": "会计学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ021GS24",
+          "name": "服务营销",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ081GS24",
+          "name": "社会心理学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ032GS24",
+          "name": "管理沟通",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ075GS24",
+          "name": "商务礼仪",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ027GS24",
+          "name": "公共关系学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ066GS24",
+          "name": "企业伦理学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ062GS24",
+          "name": "企业法律风险管理",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ057GS24",
+          "name": "跨文化管理",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ116GS24",
+          "name": "学术规范与论文写作",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ136GS24",
+          "name": "组织行为学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ067GS24S",
+          "name": "企业战略管理（S）",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ005GS24",
+          "name": "财务管理学",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ119GS24S",
+          "name": "营销经典导读（S）",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ061GS24",
+          "name": "内容营销",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ054GS24",
+          "name": "客户关系管理",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ131GS24",
+          "name": "专业外语",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ060GS24",
+          "name": "零售管理",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ100GS24",
+          "name": "网络营销",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ118GS24",
+          "name": "营销工具与营销效果分析",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ035GS24S",
+          "name": "国际市场营销（S）",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ056GS24",
+          "name": "跨境电商",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ089GS24",
+          "name": "数据库与数据仓库",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ093GS24",
+          "name": "数据资产评估与交易",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ033GS24",
+          "name": "管理信息系统",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ051GS24",
+          "name": "经济计量与STATA应用",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ019GS24",
+          "name": "非结构化营销数据分析 实务",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ070GS24",
+          "name": "人工智能与营销战略",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ085GS24",
+          "name": "数据产品化",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ069GS24",
+          "name": "人工智能营销",
+          "credits": 2.0
+        },
+        {
+          "code": "DZ018GS24",
+          "name": "多元统计分析与SPSS应用",
+          "credits": 2.0
+        },
+        {
+          "code": "A2014042M",
+          "name": "管理研究方法论#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2014005M",
+          "name": "高级计量经济学Ⅰ#",
+          "credits": 2.0
+        },
+        {
+          "code": "A2014056M",
+          "name": "消费心理与行为洞察#",
+          "credits": 2.0
+        }
+      ],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "专业选修课程修读学分不少于4.0学分（原文注）"
+        }
+      ],
+      "note": "课程列表已全部收录；内部模块如有最低学分要求但原文未明确强制数字，仅保留总要求"
+    },
+    {
+      "name": "跨专业选修",
+      "required_credits": 2.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "修读范围为其他专业的专业核心课程和专业选修课程。修读学分不低于2学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "国际化",
+      "required_credits": 0.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "无最低学分要求。可通过联合培养、境外交流、境外实习实践、高水平国际化课程等方式获得学分（原文注）"
+        }
+      ]
+    },
+    {
+      "name": "创新创业",
+      "required_credits": 2.0,
+      "open_pool": true,
+      "courses": [],
+      "rules": [
+        {
+          "type": "remainder_open",
+          "note": "可通过修读创新创业课程、参加项目或实践成果认定获得。具体见《湖南大学本科生创新创业教育实施方案》（原文注）"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "category_sum_matches_total": false,
+    "category_sum": 131.0,
+    "issues": [
+      "多元发展课程含‘不限’开放项，按最低要求加总后 category_sum=131.0，小于毕业要求151.0。差额由开放池课程补足，符合原文设计。",
+      "通识必修中‘四史’类课程无统一编号，已放入 note。",
+      "部分课程名称可能因表格换行被截断，建议人工核对完整课程名称与学分小计。",
+      "类别边界依赖表格‘课程类别’列标注，跨页合并单元格可能导致个别课程归属偏移，需人工抽查。"
+    ]
+  }
+}

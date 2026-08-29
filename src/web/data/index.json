@@ -1,0 +1,611 @@
+[
+  {
+    "plan_id": "ai_2024",
+    "plan_name": "人工智能本科培养方案（2024版）",
+    "json_file": "plan_ai_2024.json",
+    "pdf_file": "13 机器人/人工智能.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "accounting_2024",
+    "plan_name": "会计学本科培养方案（2024版）",
+    "json_file": "plan_accounting_2024.json",
+    "pdf_file": "9 工商/会计学.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "accounting_acca_2024",
+    "plan_name": "会计学（ACCA）本科培养方案（2024版）",
+    "json_file": "plan_accounting_acca_2024.json",
+    "pdf_file": "9 工商/会计学（ACCA）.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "secrecy_tech_2024",
+    "plan_name": "保密技术本科培养方案（2024版）",
+    "json_file": "plan_secrecy_tech_2024.json",
+    "pdf_file": "8 信科/保密技术.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "insurance_2024",
+    "plan_name": "保险学（风险管理实验班）本科培养方案（2024版）",
+    "json_file": "plan_insurance_2024.json",
+    "pdf_file": "3 金统/保险学（风险管理实验班）.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "info_computing_2024",
+    "plan_name": "信息与计算科学本科培养方案（2024版）",
+    "json_file": "plan_info_computing_2024.json",
+    "pdf_file": "1 数学/信息与计算科学 2024版.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "info_security_2024",
+    "plan_name": "信息安全本科培养方案（2024版）",
+    "json_file": "plan_info_security_2024.json",
+    "pdf_file": "8 信科/信息安全.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "info_mgmt_2024",
+    "plan_name": "信息管理与信息系统本科培养方案（2024版）",
+    "json_file": "plan_info_mgmt_2024.json",
+    "pdf_file": "9 工商/信息管理与信息系统.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "energy_storage_2024",
+    "plan_name": "储能科学与工程本科培养方案（2024版）",
+    "json_file": "plan_energy_storage_2024.json",
+    "pdf_file": "7 电气/储能科学与工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "chem_eng_2024",
+    "plan_name": "化学工程与工艺本科培养方案（2024版）",
+    "json_file": "plan_chem_eng_2024.json",
+    "pdf_file": "3 化工/化学工程与工艺.pdf",
+    "total_required_credits": 161
+  },
+  {
+    "plan_id": "chem_top_2024",
+    "plan_name": "化学拔尖班本科培养方案（2024版）",
+    "json_file": "plan_chem_top_2024.json",
+    "pdf_file": "3 化工/化学拔尖班.pdf",
+    "total_required_credits": 161
+  },
+  {
+    "plan_id": "chem_2024",
+    "plan_name": "化学本科培养方案（2024版）",
+    "json_file": "plan_chem_2024.json",
+    "pdf_file": "3 化工/化学.pdf",
+    "total_required_credits": 161
+  },
+  {
+    "plan_id": "chem_biology_2024",
+    "plan_name": "化学生物学本科培养方案（2024版）",
+    "json_file": "plan_chem_biology_2024.json",
+    "pdf_file": "3 化工/化学生物学.pdf",
+    "total_required_credits": 161
+  },
+  {
+    "plan_id": "chem_qiangji_2022",
+    "plan_name": "化学（强基计划）本科培养方案（2022版）",
+    "json_file": "plan_chem_qiangji_2022.json",
+    "pdf_file": "0 化学强基2022版/化学（强基计划）培养方案（2022版）.pdf",
+    "total_required_credits": 140
+  },
+  {
+    "plan_id": "chem_qiangji_2024",
+    "plan_name": "化学（强基计划）本科培养方案（2024版）",
+    "json_file": "plan_chem_qiangji_2024.json",
+    "pdf_file": "3 化工/化学.pdf",
+    "total_required_credits": 161
+  },
+  {
+    "plan_id": "history_2024",
+    "plan_name": "历史学本科培养方案（2024版）",
+    "json_file": "plan_history_2024.json",
+    "pdf_file": "1 书院/历史学.pdf",
+    "total_required_credits": 144.0
+  },
+  {
+    "plan_id": "philosophy_2024",
+    "plan_name": "哲学本科培养方案（2024版）",
+    "json_file": "plan_philosophy_2024.json",
+    "pdf_file": "1 书院/哲学.pdf",
+    "total_required_credits": 140.0
+  },
+  {
+    "plan_id": "intl_trade_2024",
+    "plan_name": "国际经济与贸易（实验班）本科培养方案（2024版）",
+    "json_file": "plan_intl_trade_2024.json",
+    "pdf_file": "2 经贸/国际经济与贸易（实验班）.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "civil_eng_2024",
+    "plan_name": "土木工程本科培养方案（2024版）",
+    "json_file": "plan_civil_eng_2024.json",
+    "pdf_file": "10 土木/土木工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "urban_planning_2024",
+    "plan_name": "城乡规划本科培养方案（2024版）",
+    "json_file": "plan_urban_planning_2024.json",
+    "pdf_file": "9 建规/城乡规划.pdf",
+    "total_required_credits": 191.0
+  },
+  {
+    "plan_id": "urban_mgmt_2024",
+    "plan_name": "城市管理本科培养方案（2024版）",
+    "json_file": "plan_urban_mgmt_2024.json",
+    "pdf_file": "10 公管/城市管理.pdf",
+    "total_required_credits": 149.0
+  },
+  {
+    "plan_id": "bigdata_mgmt_2024",
+    "plan_name": "大数据管理与应用本科培养方案（2024版）",
+    "json_file": "plan_bigdata_mgmt_2024.json",
+    "pdf_file": "9 工商/大数据管理与应用.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "industrial_eng_2024",
+    "plan_name": "工业工程本科培养方案（2024版）",
+    "json_file": "plan_industrial_eng_2024.json",
+    "pdf_file": "5 机械/工业工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "industrial_design_2024",
+    "plan_name": "工业设计本科培养方案（2024版）",
+    "json_file": "plan_industrial_design_2024.json",
+    "pdf_file": "12 设计/工业设计.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "business_2024",
+    "plan_name": "工商管理本科培养方案（2024版）",
+    "json_file": "plan_business_2024.json",
+    "pdf_file": "9 工商/工商管理.pdf",
+    "total_required_credits": 151
+  },
+  {
+    "plan_id": "eng_mech_2024",
+    "plan_name": "工程力学（力学实验班）本科培养方案（2024版）",
+    "json_file": "plan_eng_mech_2024.json",
+    "pdf_file": "5 机械/工程力学（力学实验班）.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "eng_mgmt_2024",
+    "plan_name": "工程管理本科培养方案（2024版）",
+    "json_file": "plan_eng_mgmt_2024.json",
+    "pdf_file": "10 土木/工程管理.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "marketing_2024",
+    "plan_name": "市场营销（智慧营销）本科培养方案（2024版）",
+    "json_file": "plan_marketing_2024.json",
+    "pdf_file": "9 工商/市场营销（智慧营销）.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "advertising_2024",
+    "plan_name": "广告学本科培养方案（2024版）",
+    "json_file": "plan_advertising_2024.json",
+    "pdf_file": "8 新传/广告学.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "broadcasting_2024",
+    "plan_name": "广播电视编导本科培养方案（2024版）",
+    "json_file": "plan_broadcasting_2024.json",
+    "pdf_file": "8 新传/广播电视编导.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "applied_chem_2024",
+    "plan_name": "应用化学本科培养方案（2024版）",
+    "json_file": "plan_applied_chem_2024.json",
+    "pdf_file": "3 化工/应用化学.pdf",
+    "total_required_credits": 161
+  },
+  {
+    "plan_id": "applied_physics_2024",
+    "plan_name": "应用物理学本科培养方案（2024版）",
+    "json_file": "plan_applied_physics_2024.json",
+    "pdf_file": "2 物电/应用物理学.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "architecture_2024",
+    "plan_name": "建筑学本科培养方案（2024版）",
+    "json_file": "plan_architecture_2024.json",
+    "pdf_file": "9 建规/建筑学 2024版.pdf",
+    "total_required_credits": 191.0
+  },
+  {
+    "plan_id": "building_env_2024",
+    "plan_name": "建筑环境与能源应用工程（低碳建筑实验班）本科培养方案（2024版）",
+    "json_file": "plan_building_env_2024.json",
+    "pdf_file": "10 土木/建筑环境与能源应用工程（低碳建筑实验班）.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "microelectronics_2024",
+    "plan_name": "微电子科学与工程本科培养方案（2024版）",
+    "json_file": "plan_microelectronics_2024.json",
+    "pdf_file": "15 半导体/微电子科学与工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "anchoring_2024",
+    "plan_name": "播音与主持艺术本科培养方案（2024版）",
+    "json_file": "plan_anchoring_2024.json",
+    "pdf_file": "8 新传/播音与主持艺术.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "digital_media_2024",
+    "plan_name": "数字媒体技术本科培养方案（2024版）",
+    "json_file": "plan_digital_media_2024.json",
+    "pdf_file": "8 信科/数字媒体技术.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "digital_economy_2024",
+    "plan_name": "数字经济本科培养方案（2024版）",
+    "json_file": "plan_digital_economy_2024.json",
+    "pdf_file": "2 经贸/数字经济.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "math_applied_2024",
+    "plan_name": "数学与应用数学本科培养方案（2024版）",
+    "json_file": "plan_math_applied_2024.json",
+    "pdf_file": "1 数学/数学与应用数学.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "data_science_2024",
+    "plan_name": "数据科学与大数据技术本科培养方案（2024版）",
+    "json_file": "plan_data_science_2024.json",
+    "pdf_file": "8 信科/数据科学与大数据技术.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "liberal_arts_history_phil_2024",
+    "plan_name": "文科试验班（历史哲学方向）本科培养方案（2024版）",
+    "json_file": "plan_liberal_arts_history_phil_2024.json",
+    "pdf_file": "1 书院/文科试验班（历史哲学方向）.pdf",
+    "total_required_credits": 143.0
+  },
+  {
+    "plan_id": "liberal_arts_lit_2024",
+    "plan_name": "文科试验班（文学方向）本科培养方案（2024版）",
+    "json_file": "plan_liberal_arts_lit_2024.json",
+    "pdf_file": "1 书院/文科试验班（文学方向）.pdf",
+    "total_required_credits": 143.0
+  },
+  {
+    "plan_id": "journalism_2024",
+    "plan_name": "新闻学本科培养方案（2024版）",
+    "json_file": "plan_journalism_2024.json",
+    "pdf_file": "8 新传/新闻学.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "japanese_2024",
+    "plan_name": "日语本科培养方案（2024版）",
+    "json_file": "plan_japanese_2024.json",
+    "pdf_file": "7 外语/日语.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "smart_mfg_2024",
+    "plan_name": "智能制造工程本科培养方案（2024版）",
+    "json_file": "plan_smart_mfg_2024.json",
+    "pdf_file": "5 机械/智能制造工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "smart_construction_2024",
+    "plan_name": "智能建造本科培养方案（2024版）",
+    "json_file": "plan_smart_construction_2024.json",
+    "pdf_file": "10 土木/智能建造.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "ai_science_2024",
+    "plan_name": "智能科学与技术本科培养方案（2024版）",
+    "json_file": "plan_ai_science_2024.json",
+    "pdf_file": "8 信科/智能科学与技术.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "smart_vehicle_2024",
+    "plan_name": "智能车辆工程本科培养方案（2024版）",
+    "json_file": "plan_smart_vehicle_2024.json",
+    "pdf_file": "5 机械/智能车辆工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "robotics_2024",
+    "plan_name": "机器人工程本科培养方案（2024版）",
+    "json_file": "plan_robotics_2024.json",
+    "pdf_file": "13 机器人/机器人工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "mech_design_2024",
+    "plan_name": "机械设计制造及其自动化本科培养方案（2024版）",
+    "json_file": "plan_mech_design_2024.json",
+    "pdf_file": "5 机械/机械设计制造及其自动化.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "materials_2024",
+    "plan_name": "材料科学与工程本科培养方案（2024版）",
+    "json_file": "plan_materials_2024.json",
+    "pdf_file": "6 材料/材料科学与工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "chinese_lit_2024",
+    "plan_name": "汉语言文学本科培养方案（2024版）",
+    "json_file": "plan_chinese_lit_2024.json",
+    "pdf_file": "6 文学/汉语言文学.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "law_2024",
+    "plan_name": "法学本科培养方案（2024版）",
+    "json_file": "plan_law_2024.json",
+    "pdf_file": "4 法学/法学.pdf",
+    "total_required_credits": 151
+  },
+  {
+    "plan_id": "measurement_control_2024",
+    "plan_name": "测控技术与仪器本科培养方案（2024版）",
+    "json_file": "plan_measurement_control_2024.json",
+    "pdf_file": "7 电气/测控技术与仪器.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "iot_2024",
+    "plan_name": "物联网工程本科培养方案（2024版）",
+    "json_file": "plan_iot_2024.json",
+    "pdf_file": "8 信科/物联网工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "env_eng_2024",
+    "plan_name": "环境工程本科培养方案（2024版）",
+    "json_file": "plan_env_eng_2024.json",
+    "pdf_file": "11 环工/环境工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "env_sci_2024",
+    "plan_name": "环境科学本科培养方案（2024版）",
+    "json_file": "plan_env_sci_2024.json",
+    "pdf_file": "11 环工/环境科学.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "science_experimental_2024",
+    "plan_name": "理科试验班本科培养方案（2024版）",
+    "json_file": "plan_science_experimental_2024.json",
+    "pdf_file": "1 数学/理科试验班.pdf",
+    "total_required_credits": 146.0
+  },
+  {
+    "plan_id": "biomed_eng_2024",
+    "plan_name": "生物医学工程本科培养方案（2024版）",
+    "json_file": "plan_biomed_eng_2024.json",
+    "pdf_file": "4 生物/生物医学工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "biotech_2024",
+    "plan_name": "生物技术本科培养方案（2024版）",
+    "json_file": "plan_biotech_2024.json",
+    "pdf_file": "4 生物/生物技术.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "electronic_info_2024",
+    "plan_name": "电子信息工程本科培养方案（2024版）",
+    "json_file": "plan_electronic_info_2024.json",
+    "pdf_file": "7 电气/电子信息工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "ecommerce_2024",
+    "plan_name": "电子商务本科培养方案（2024版）",
+    "json_file": "plan_ecommerce_2024.json",
+    "pdf_file": "9 工商/电子商务.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "electronic_sci_2024",
+    "plan_name": "电子科学与技术本科培养方案（2024版）",
+    "json_file": "plan_electronic_sci_2024.json",
+    "pdf_file": "2 物电/电子科学与技术.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "electrical_eng_2024",
+    "plan_name": "电气工程及其自动化本科培养方案（2024版）",
+    "json_file": "plan_electrical_eng_2024.json",
+    "pdf_file": "7 电气/电气工程及其自动化.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "actuarial_2024",
+    "plan_name": "精算学本科培养方案（2024版）",
+    "json_file": "plan_actuarial_2024.json",
+    "pdf_file": "3 金统/精算学.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "economics_2024",
+    "plan_name": "经济学本科培养方案（2024版）",
+    "json_file": "plan_economics_2024.json",
+    "pdf_file": "2 经贸/经济学.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "econ_stats_2024",
+    "plan_name": "经济统计学本科培养方案（2024版）",
+    "json_file": "plan_econ_stats_2024.json",
+    "pdf_file": "3 金统/经济统计学.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "water_supply_2024",
+    "plan_name": "给排水科学与工程本科培养方案（2024版）",
+    "json_file": "plan_water_supply_2024.json",
+    "pdf_file": "10 土木/给排水科学与工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "statistics_2024",
+    "plan_name": "统计学本科培养方案（2024版）",
+    "json_file": "plan_statistics_2024.json",
+    "pdf_file": "3 金统/统计学.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "energy_power_2024",
+    "plan_name": "能源与动力工程（未来能源与动力创新实验班）本科培养方案（2024版）",
+    "json_file": "plan_energy_power_2024.json",
+    "pdf_file": "5 机械/能源与动力工程（未来能源与动力创新实验班）.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "automation_2024",
+    "plan_name": "自动化本科培养方案（2024版）",
+    "json_file": "plan_automation_2024.json",
+    "pdf_file": "7 电气/自动化 2024版.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "english_2024",
+    "plan_name": "英语本科培养方案（2024版）",
+    "json_file": "plan_english_2024.json",
+    "pdf_file": "7 外语/英语.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "english_ai_2024",
+    "plan_name": "英语（语言智能实验班）本科培养方案（2024版）",
+    "json_file": "plan_english_ai_2024.json",
+    "pdf_file": "7 外语/英语.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "pharmacy_2024",
+    "plan_name": "药学本科培养方案（2024版）",
+    "json_file": "plan_pharmacy_2024.json",
+    "pdf_file": "14 医学/药学.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "public_admin_2024",
+    "plan_name": "行政管理本科培养方案（2024版）",
+    "json_file": "plan_public_admin_2024.json",
+    "pdf_file": "10 公管/行政管理.pdf",
+    "total_required_credits": 149.0
+  },
+  {
+    "plan_id": "cs_2024",
+    "plan_name": "计算机科学与技术本科培养方案（2024版）",
+    "json_file": "plan_cs_2024.json",
+    "pdf_file": "8 信科/计算机科学与技术.pdf",
+    "total_required_credits": 161
+  },
+  {
+    "plan_id": "cs_top_2024",
+    "plan_name": "计算机科学拔尖学生培养基地本科培养方案（2024版）",
+    "json_file": "plan_cs_top_2024.json",
+    "pdf_file": "8 信科/计算机科学拔尖学生培养基地.pdf",
+    "total_required_credits": 142.0
+  },
+  {
+    "plan_id": "finance_mgmt_2024",
+    "plan_name": "财务管理本科培养方案（2024版）",
+    "json_file": "plan_finance_mgmt_2024.json",
+    "pdf_file": "9 工商/财务管理.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "finance_eng_2024",
+    "plan_name": "财务管理（金融工程）本科培养方案（2024版）",
+    "json_file": "plan_finance_eng_2024.json",
+    "pdf_file": "9 工商/财务管理.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "public_finance_2024",
+    "plan_name": "财政学本科培养方案（2024版）",
+    "json_file": "plan_public_finance_2024.json",
+    "pdf_file": "2 经贸/财政学.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "vehicle_eng_2024",
+    "plan_name": "车辆工程本科培养方案（2024版）",
+    "json_file": "plan_vehicle_eng_2024.json",
+    "pdf_file": "5 机械/车辆工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "software_eng_2024",
+    "plan_name": "软件工程本科培养方案（2024版）",
+    "json_file": "plan_software_eng_2024.json",
+    "pdf_file": "8 信科/软件工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "comm_eng_2024",
+    "plan_name": "通信工程本科培养方案（2024版）",
+    "json_file": "plan_comm_eng_2024.json",
+    "pdf_file": "8 信科/通信工程.pdf",
+    "total_required_credits": 161.0
+  },
+  {
+    "plan_id": "finance_2024",
+    "plan_name": "金融学本科培养方案（2024版）",
+    "json_file": "plan_finance_2024.json",
+    "pdf_file": "3 金统/金融学.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "finance_engineering_2024",
+    "plan_name": "金融学（金融工程）本科培养方案（2024版）",
+    "json_file": "plan_finance_engineering_2024.json",
+    "pdf_file": "3 金统/金融学.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "fintech_2024",
+    "plan_name": "金融科技本科培养方案（2024版）",
+    "json_file": "plan_fintech_2024.json",
+    "pdf_file": "3 金统/金融科技.pdf",
+    "total_required_credits": 151.0
+  },
+  {
+    "plan_id": "marx_2024",
+    "plan_name": "马克思主义理论本科培养方案（2024版）",
+    "json_file": "plan_marx_2024.json",
+    "pdf_file": "5 马院/马克思主义理论.pdf",
+    "total_required_credits": 139
+  }
+]
