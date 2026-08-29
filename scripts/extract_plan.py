@@ -30,19 +30,24 @@ def call_glm(prompt, pdf_text, api_key):
         {"role": "system", "content": prompt},
         {"role": "user", "content": f"以下是待提取的培养方案原文：\n\n{pdf_text}"},
     ]
-    resp = requests.post(
-        API_URL,
-        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-        json={
-            "model": MODEL,
-            "messages": messages,
-            "temperature": 0.1,
-            "max_tokens": 65536,
-            "thinking": {"type": "enabled"},
-        },
-        timeout=300,
-    )
-    resp.raise_for_status()
+    print("已发送请求，等待模型响应中（正常几十秒到一两分钟，不是卡住）...", file=sys.stderr)
+    try:
+        resp = requests.post(
+            API_URL,
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            json={
+                "model": MODEL,
+                "messages": messages,
+                "temperature": 0.1,
+                "max_tokens": 16384,
+            },
+            timeout=180,
+        )
+    except requests.exceptions.RequestException as e:
+        raise RuntimeError(f"请求 GLM API 时网络出错（{type(e).__name__}）：{e}") from e
+
+    if resp.status_code != 200:
+        raise RuntimeError(f"GLM API 返回错误，状态码 {resp.status_code}：{resp.text}")
     return resp.json()["choices"][0]["message"]["content"]
 
 
