@@ -1,0 +1,1267 @@
+{
+  "category": "通识选修",
+  "source": "附件2：2026-2027学年秋季学期通识教育选修课选课说明.xlsx",
+  "coverage_note": "仅覆盖2026-2027学年秋季学期实际开课的课程，历史学期修读的通识选修课不一定能在此匹配上，匹配不到不代表没修，只是没法自动核实",
+  "courses": [
+    {
+      "code": "TW047SY24",
+      "name": "中国哲学简史",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW003SY24",
+      "name": "古代中国的世界认识",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TS011GS24",
+      "name": "能源与气候政策",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS009JT24",
+      "name": "风险管理与保险",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS002JT24M",
+      "name": "金融与现代社会",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS002JM24",
+      "name": "资源环境与可持续发展",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS002GG24",
+      "name": "国家治理的艺术：公共管理",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS001XC24",
+      "name": "媒介与社会",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS001GS24",
+      "name": "管理的思与行",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TK007CL24",
+      "name": "传感器与万物互联",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK004JQ24",
+      "name": "人工智能通识：从原理到哲学",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK001XK24",
+      "name": "量子科技世界",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK001SW24M",
+      "name": "食品安全与人类健康",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK001JX24",
+      "name": "3D打印与科技文明",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK001JQ24",
+      "name": "智能机器人创新设计",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK001GS24M",
+      "name": "社会创业",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TY038YJ24M",
+      "name": "从音乐到影像",
+      "credits": 1.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY037YJ24M",
+      "name": "戏剧鉴赏",
+      "credits": 1.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY036YJ24M",
+      "name": "艺术的启示",
+      "credits": 1.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY035YJ24M",
+      "name": "艺术导论",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY034YJ24",
+      "name": "湖湘民族舞蹈文化",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY033YJ24",
+      "name": "中国古诗词艺术歌曲鉴赏",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY032YJ24",
+      "name": "探寻中国民族歌剧之美",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY031YJ24",
+      "name": "舞蹈审美与创意实践",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY030YJ24",
+      "name": "校园歌曲创作",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY029YJ24",
+      "name": "中外钢琴艺术评析与欣赏",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY027YJ24",
+      "name": "中国民族民间舞蹈鉴赏",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY026YJ24",
+      "name": "中国民族民间舞蹈基础",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY025YJ24",
+      "name": "中国民歌鉴赏",
+      "credits": 1.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY025SW24",
+      "name": "科技英语写作技巧",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY024YJ24",
+      "name": "长笛演奏基础",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY023YJ24",
+      "name": "杂技艺术鉴赏",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY021YJ24",
+      "name": "小提琴演奏基础",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY017YJ24",
+      "name": "戏剧表演基础",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY014YJ24Ⅰ",
+      "name": "声乐艺术Ⅰ",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY013YJ24",
+      "name": "声乐演唱与舞台实践",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY012WY24",
+      "name": "中国故事全球化表达",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY011YJ24",
+      "name": "莎士比亚戏剧作品赏析",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY011XC24",
+      "name": "如何讲好中国故事",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY011WX24M",
+      "name": "走近大诗人",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY011JG24",
+      "name": "建筑美学与跨媒介AI艺术实践",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY010WY24",
+      "name": "跨文化交际与实务",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY010WX24M",
+      "name": "批判性思维",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY010JG24M",
+      "name": "当水墨邂逅油彩",
+      "credits": 1.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY009YJ24",
+      "name": "麓山有“戏”",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY009XC24M",
+      "name": "中国电影经典影片鉴赏",
+      "credits": 1.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY009JG24",
+      "name": "中国园林艺术与创意表现",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY008WY24",
+      "name": "英语论辩演讲艺术",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY008JG24M",
+      "name": "艺术与审美",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY007YJ24",
+      "name": "交响音乐赏析",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY007JG24M",
+      "name": "中国现代美术12讲",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY006YJ24",
+      "name": "基础乐理与视唱",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY006XC24",
+      "name": "音乐欣赏",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY006WX24",
+      "name": "公务文书写作",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY006SJ24M",
+      "name": "中国传世名画鉴赏",
+      "credits": 1.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY005TY24",
+      "name": "匹克球运动",
+      "credits": 1.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY005SJ24",
+      "name": "中国传统造物设计与文化",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY005JG24M",
+      "name": "中外美术评析与欣赏",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY004YJ24",
+      "name": "非遗中的音乐艺术",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY004TY24",
+      "name": "飞盘运动与文化欣赏",
+      "credits": 1.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY004JG24M",
+      "name": "色彩密码",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY003YJ24Ⅰ",
+      "name": "合唱艺术Ⅰ",
+      "credits": 1.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY003JG24",
+      "name": "湖南传统建筑艺术",
+      "credits": 1.5,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY002TS24M",
+      "name": "信息素养与实践——给你一双学术慧眼",
+      "credits": 1.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY001YJ24Ⅲ",
+      "name": "大学生高水平艺术团训练与表演Ⅲ",
+      "credits": 1.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY001XC24",
+      "name": "广告文案创意写作",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY001WX24",
+      "name": "写作与表达系列课程：古典日记与现代人生",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY001WD24",
+      "name": "昆曲艺术欣赏",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY001TY24",
+      "name": "体育美学",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY001SX24",
+      "name": "逻辑思维与表达",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY001JW24",
+      "name": "岳麓讲坛：艺术与人生",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY001JG24",
+      "name": "室内设计原理",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY001GX24",
+      "name": "陶瓷造型设计与制作",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TY005WY24",
+      "name": "沟通会话俄罗斯",
+      "credits": 2.0,
+      "group": "艺术审美与表达沟通"
+    },
+    {
+      "code": "TW051SY24M",
+      "name": "《春秋》导读",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW048SY24M",
+      "name": "中国古典哲学名著选读",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW046SY24",
+      "name": "文物与中华传统文化",
+      "credits": 1.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW044SY24M",
+      "name": "走进《周易》的世界",
+      "credits": 1.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW042SY24",
+      "name": "中国近代历史人物选讲",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW038SY24",
+      "name": "中国传统文化与古代书院",
+      "credits": 1.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW035SY24",
+      "name": "先秦道家文选",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW020SY24",
+      "name": "湖湘饮食文化",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW019WX24M",
+      "name": "诺贝尔文学奖作品导读",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW014SY24",
+      "name": "佛教与中国传统文化",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW012SY24",
+      "name": "东亚玉器文明",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW011WX24",
+      "name": "西方人文经典导读",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW006WY24M",
+      "name": "英国小说",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW005WX24",
+      "name": "美学散步",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW005JG24M",
+      "name": "中国古建筑文化与鉴赏",
+      "credits": 1.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW005GS24M",
+      "name": "走进故宫",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW004WX24",
+      "name": "汉字与文化",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW004JG24M",
+      "name": "中国历史地理",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW004GS24M",
+      "name": "世界著名博物馆艺术经典",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW003WY24",
+      "name": "中日文明交流与互鉴",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW003WX24",
+      "name": "古典诗词与人生",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW003JM24M",
+      "name": "中西文化比较与跨文化交际",
+      "credits": 1.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW003GS24M",
+      "name": "博物馆中的中国社会经济史",
+      "credits": 1.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW002XC24M",
+      "name": "世界文明专题（古代部分）",
+      "credits": 1.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW002JW24",
+      "name": "岳麓讲坛A：中国传统文化",
+      "credits": 1.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW001WD24",
+      "name": "音乐中的数学物理之美",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW001TY24",
+      "name": "中华传统体育文化",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW001SJ24",
+      "name": "文化交流与设计艺术之一带一路（双语）",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW001JW24",
+      "name": "岳麓讲坛：中国传统文化",
+      "credits": 2.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW001JT24M",
+      "name": "欧洲一体化",
+      "credits": 1.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TW001FX24",
+      "name": "《理想国》导读",
+      "credits": 1.0,
+      "group": "中华文化与世界文明"
+    },
+    {
+      "code": "TS017JM24M",
+      "name": "应对气候变化的中国视角",
+      "credits": 1.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS016JM24M",
+      "name": "博弈论基础",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS015JM24M",
+      "name": "中国道路的经济解释",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS014GS24M",
+      "name": "社会调查与研究方法",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS013GS24M",
+      "name": "公司理财",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS013FX24M",
+      "name": "经济法理论与实务",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS012FX24M",
+      "name": "法律思维与法学经典阅读",
+      "credits": 1.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS011JT24M",
+      "name": "透过性别看世界",
+      "credits": 1.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS011FX24M",
+      "name": "法与社会",
+      "credits": 1.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS010GS24M",
+      "name": "企业伦理",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS009JM24",
+      "name": "政府账本的解读与监督密码",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS009GS24M",
+      "name": "消费者行为学",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS008JM24",
+      "name": "行为经济学",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS008FX24",
+      "name": "应对气候变化：中国的政策与法律",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS007GS24M",
+      "name": "市场营销学",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS006JM24",
+      "name": "国际贸易与区域化发展",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS006FX24",
+      "name": "生态环境保护法",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS005GS24",
+      "name": "企业法律风险管理",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS005FX24",
+      "name": "知识产权法",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS004JM24",
+      "name": "财税文化漫谈",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS003XC24M",
+      "name": "精读《乌合之众：大众心理研究》",
+      "credits": 1.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS003MY24",
+      "name": "美国政府与政治",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS003JT24M",
+      "name": "国际金融学",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS002WY24",
+      "name": "国际商务文化与沟通",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS002JX24M",
+      "name": "批判性思维",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS001YY24",
+      "name": "大学生健康教育",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS001WZ24Ⅰ",
+      "name": "军事教学法Ⅰ",
+      "credits": 1.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS001JX24",
+      "name": "工程与社会",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS001HG24M",
+      "name": "科学研究方法与论文写作",
+      "credits": 1.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS001GG24",
+      "name": "人口的奥秘：现代人口学通识",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TS001FZ24",
+      "name": "走进非洲：全球南方发展与中非合作",
+      "credits": 2.0,
+      "group": "社会科学与现代社会"
+    },
+    {
+      "code": "TK030SW24M",
+      "name": "生命伦理学：生命医学科技与伦理",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK027SW24",
+      "name": "生命科学探索实践",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK026SW24",
+      "name": "生物安全",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK024SW24",
+      "name": "疫苗免疫与健康",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK022TM24M",
+      "name": "无人机设计导论",
+      "credits": 1.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK021JX24M",
+      "name": "科学素养培育及提升",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK020TM24",
+      "name": "自然风景的地质魅力",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK020JX24M",
+      "name": "海洋的前世今生",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK019XK24M",
+      "name": "动手学AI：人工智能通识与实践（理工版）",
+      "credits": 1.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK019SW24M",
+      "name": "生物材料伴我行",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK019JX24M",
+      "name": "魅力科学",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK018XK24M",
+      "name": "动手学AI：人工智能通识与实践（社科版）",
+      "credits": 1.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK017YX24",
+      "name": "解码衰老与抗衰前沿",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK017XK24M",
+      "name": "信息素养通识教程：数字化生存的必修课",
+      "credits": 1.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK017TM24",
+      "name": "智能交通与安全",
+      "credits": 1.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK017JX24M",
+      "name": "科学通史",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK016YX24",
+      "name": "中国流行疾病与健康",
+      "credits": 1.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK016TM24",
+      "name": "灾害防御与避险应急",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK016SW24",
+      "name": "生命的力量",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK015YX24",
+      "name": "饮食营养与健康",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK015TM24",
+      "name": "应用数据分析与建模介绍",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK015SW24",
+      "name": "生命传记",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK014YX24",
+      "name": "细胞命运与人类疾病",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK014TM24",
+      "name": "无人机应用技术",
+      "credits": 1.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK014SW24",
+      "name": "生活中的植物学",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK014JX24",
+      "name": "制造科学技术与人类社会发展",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK014HG24M",
+      "name": "化学与中国文明",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK013YX24",
+      "name": "细胞的秘密",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK013SW24",
+      "name": "身边的微生物",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK013JX24",
+      "name": "新能源汽车环保概论",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK013HG24M",
+      "name": "名侦探柯南与化学探秘",
+      "credits": 1.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK012HG24M",
+      "name": "改变世界的化学",
+      "credits": 1.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK012DQ24M",
+      "name": "漫谈数学与军事",
+      "credits": 1.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK011YX24",
+      "name": "生活中的免疫学",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK011TM24",
+      "name": "土木工程与人类文明",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK011HG24",
+      "name": "水科学",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK011CL24M",
+      "name": "对话诺奖大师",
+      "credits": 1.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK010YX24",
+      "name": "身边的传染病",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK010XK24",
+      "name": "深度学习发展历程与实践",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK010TM24",
+      "name": "土木工程防灾概论",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK010HG24",
+      "name": "生活中的药学",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK009XK24",
+      "name": "计算机先进技术",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK009TM24",
+      "name": "土木工程的过去、现在和未来",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK009SW24",
+      "name": "基因组学与人类健康",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK008YX24",
+      "name": "模式生物的世界",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK008TM24",
+      "name": "水的社会循环与可持续发展",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK007YX24",
+      "name": "基因与人类健康",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK007SW24",
+      "name": "动物病毒与人类健康",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK007JX24",
+      "name": "神奇的仿生机械",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK006YX24",
+      "name": "漫话诺贝尔奖与生命科学",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK006SW24",
+      "name": "走进生命的人工智能时代",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK005YX24",
+      "name": "干细胞与生命健康",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK005TM24",
+      "name": "桥梁历史、文化与技术",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK005SW24",
+      "name": "走进生物学",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK005JX24",
+      "name": "工程项目管理",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK005CL24",
+      "name": "现代生活中的材料赏析",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK004YX24",
+      "name": "生命的密码学",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK004TM24",
+      "name": "桥梁发展史",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK004JX24",
+      "name": "电动汽车概论",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK004CL24",
+      "name": "炭材料与人类文明",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK003YX24",
+      "name": "医学丰碑漫谈",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK003TM24",
+      "name": "电影中的地质力学基本原理",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK003SW24",
+      "name": "RNA与人类健康",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK003HJ24",
+      "name": "环境学概论",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK003HG24",
+      "name": "化学前沿讲座",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK003BD24M",
+      "name": "走进量子世界-从薛定谔猫到量子计算机",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK002XK24",
+      "name": "ACM大学生程序设计",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK002WD24",
+      "name": "宇宙简史",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK002SW24",
+      "name": "DNA外的遗传密码",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK002JX24",
+      "name": "技术与社会发展",
+      "credits": 1.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK002HJ24",
+      "name": "环境生态学导论",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK002GS24M",
+      "name": "战略管理",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK001WA24",
+      "name": "网络攻防实战探索",
+      "credits": 2.0,
+      "group": "科学探索与技术创新"
+    },
+    {
+      "code": "TK001JW24",
+      "name": "岳麓讲坛：创新与创业",
+      "credits": 1.0,
+      "group": "科学探索与技术创新"
+    }
+  ]
+}

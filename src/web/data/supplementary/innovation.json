@@ -1,0 +1,172 @@
+{
+  "category": "创新创业",
+  "source": "创新创业课程明细表_2026-2027秋季.xlsx",
+  "coverage_note": "仅覆盖2026-2027学年秋季学期实际开课的创新创业课程；此外还可以通过大创计划结题、学科竞赛获奖、论文/专利/软著等实践成果认定学分（最多4学分），这部分无法自动核实，需自行申请认定",
+  "courses": [
+    {
+      "code": "DC001SW24",
+      "name": "创新创业基础",
+      "credits": 2.0
+    },
+    {
+      "code": "DC002SW24",
+      "name": "生物医药创新创业",
+      "credits": 2.0
+    },
+    {
+      "code": "DC103JM24",
+      "name": "新文科创新创业实践",
+      "credits": 2.0
+    },
+    {
+      "code": "DC003YX24",
+      "name": "医用功能材料与器件创新创业实践",
+      "credits": 2.0
+    },
+    {
+      "code": "DC026SJ24",
+      "name": "工业设计驱动创新创业",
+      "credits": 2.0
+    },
+    {
+      "code": "DC251JX24",
+      "name": "大学生方程式赛车创新工程实践基础",
+      "credits": 2.0
+    },
+    {
+      "code": "DC252JX24",
+      "name": "大学生方程式赛车创新工程实践进阶",
+      "credits": 2.0
+    },
+    {
+      "code": "DC007JX24",
+      "name": "智能制造学科竞赛创新实践",
+      "credits": 2.0
+    },
+    {
+      "code": "DC001JX24M",
+      "name": "创新创业",
+      "credits": 2.0
+    },
+    {
+      "code": "DC003JX24M",
+      "name": "创新工程实践",
+      "credits": 3.0
+    },
+    {
+      "code": "DC008JX24",
+      "name": "全国大学生先进成图大赛专题训练与实践",
+      "credits": 2.0
+    },
+    {
+      "code": "DC109JX24",
+      "name": "全国大学生智能汽车竞赛创新训练",
+      "credits": 2.0
+    },
+    {
+      "code": "DC009JX24M",
+      "name": "创新、发明与专利实务",
+      "credits": 2.0
+    },
+    {
+      "code": "DC001HG24M",
+      "name": "产业用化学助剂开发及创业",
+      "credits": 2.0
+    },
+    {
+      "code": "DC106JQ24",
+      "name": "AI智能体赋能的创新创业实践",
+      "credits": 3.0
+    },
+    {
+      "code": "DC107JQ24M",
+      "name": "设计思维与创新设计",
+      "credits": 1.0
+    },
+    {
+      "code": "DC012DQ24M",
+      "name": "脑洞大开背后的创新思维",
+      "credits": 2.0
+    },
+    {
+      "code": "DC013DQ24M",
+      "name": "创新创业实战",
+      "credits": 2.0
+    },
+    {
+      "code": "DC001MY24",
+      "name": "向党学创业",
+      "credits": 2.0
+    },
+    {
+      "code": "DC001JW24",
+      "name": "创新创业理论与实践",
+      "credits": 1.0
+    },
+    {
+      "code": "DC009GS24",
+      "name": "创新创业模拟营销",
+      "credits": 2.0
+    },
+    {
+      "code": "DC005GS24M",
+      "name": "公益创业学",
+      "credits": 2.0
+    },
+    {
+      "code": "DC006GS24M",
+      "name": "内部创业基础",
+      "credits": 2.0
+    },
+    {
+      "code": "DC008GS24",
+      "name": "创业经营模拟",
+      "credits": 2.0
+    },
+    {
+      "code": "DC109GS24M",
+      "name": "创业创新领导力",
+      "credits": 2.0
+    },
+    {
+      "code": "DC101XC24",
+      "name": "AIGC数智媒体创作",
+      "credits": 2.0
+    },
+    {
+      "code": "DC001XC24",
+      "name": "新媒体创作与实践",
+      "credits": 2.0
+    },
+    {
+      "code": "DC102CL24",
+      "name": "基于创新的创业",
+      "credits": 2.0
+    },
+    {
+      "code": "DC001JG24",
+      "name": "数字视觉创新与创业",
+      "credits": 2.0
+    },
+    {
+      "code": "DC102FX24",
+      "name": "现代创业法律体系与风险控制",
+      "credits": 4.0
+    },
+    {
+      "code": "DC103TM24",
+      "name": "全国大学生数字化创新设计竞赛专题训练与实践",
+      "credits": 2.0
+    },
+    {
+      "code": "DC104TM24",
+      "name": "创新思维与创业实践",
+      "credits": 1.0
+    },
+    {
+      "code": "DC001ZG24",
+      "name": "科创训练实践",
+      "credits": 2.0
+    }
+  ]
+}

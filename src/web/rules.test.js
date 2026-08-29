@@ -92,3 +92,73 @@ test('同一门课程重复出现时学分只计一次，不会翻倍', () => {
   const category = result.categories.find(c => c.name === '学类核心');
   assert.equal(category.achieved, 3);
 });
+
+test('缺的必修课会按具体课程名单列出来，而不只是给个学分缺口数字', () => {
+  const result = evaluatePlan(planData, []);
+  const category = result.categories.find(c => c.name === '通识必修');
+  const missingCodes = category.missingRequiredCourses.map(c => c.code);
+  assert.ok(missingCodes.includes('GE01150'));
+  assert.ok(missingCodes.includes('GE01185'));
+});
+
+test('已经修过的必修课不会出现在缺课名单里', () => {
+  const result = evaluatePlan(planData, [
+    { code: 'GE01150', name: '毛泽东思想和中国特色社会主义理论体系概论', credits: 3 },
+  ]);
+  const category = result.categories.find(c => c.name === '通识必修');
+  const missingCodes = category.missingRequiredCourses.map(c => c.code);
+  assert.ok(!missingCodes.includes('GE01150'));
+});
+
+test('选修池里的课程（有 group 但不是 mandatory）不会被列进缺课名单', () => {
+  const result = evaluatePlan(planData, []);
+  const category = result.categories.find(c => c.name === '个性培养');
+  const missingCodes = category.missingRequiredCourses.map(c => c.code);
+  // 模块1里的"化学前沿"是选修池成员，不是必选，不该被点名
+  assert.ok(!missingCodes.includes('CH06062'));
+  // 特色课程里的"科学研究训练实践（1）"是 mandatory:true，应该被点名
+  assert.ok(missingCodes.includes('CH10044'));
+});
+
+test('开放池类别（open_pool:true）提供补充课表后，能真实核算出已修学分，不再永远是0', () => {
+  const openPoolPlan = {
+    total_required_credits: 10,
+    categories: [
+      { name: '通识选修', required_credits: 10, open_pool: true, courses: [], rules: [] },
+    ],
+  };
+  const supplementary = [
+    {
+      category: '通识选修',
+      courses: [
+        { code: 'TW047SY24', name: '中国哲学简史', credits: 2, group: '中华文化与世界文明' },
+        { code: 'TS013GS24M', name: '公司理财', credits: 2, group: '社会科学与现代社会' },
+      ],
+    },
+  ];
+  const transcript = [
+    { code: 'TW047SY24', name: '中国哲学简史', credits: 2 },
+    { code: 'TS013GS24M', name: '公司理财', credits: 2 },
+  ];
+  const result = evaluatePlan(openPoolPlan, transcript, supplementary);
+  const category = result.categories.find(c => c.name === '通识选修');
+  assert.equal(category.achieved, 4);
+  assert.deepEqual(
+    category.groupBreakdown.sort((a, b) => a.group.localeCompare(b.group)),
+    [
+      { group: '中华文化与世界文明', achieved: 2 },
+      { group: '社会科学与现代社会', achieved: 2 },
+    ].sort((a, b) => a.group.localeCompare(b.group))
+  );
+});
+
+test('补充课表不会覆盖方案原文里已经枚举好的课程', () => {
+  const supplementary = [
+    { category: '通识必修', courses: [{ code: 'GE01150', name: '被补充课表冒名顶替的假课程', credits: 999 }] },
+  ];
+  // 通识必修 open_pool:false，补充课表不该对它生效
+  const result = evaluatePlan(planData, [{ code: 'GE01150', name: '毛泽东思想和中国特色社会主义理论体系概论', credits: 3 }], supplementary);
+  const category = result.categories.find(c => c.name === '通识必修');
+  const matched = category.matchedCourses.find(c => c.code === 'GE01150');
+  assert.equal(matched.credits, 3);
+});

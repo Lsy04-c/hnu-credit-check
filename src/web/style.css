@@ -48,3 +48,11 @@ th, td {
   padding: 0.5rem;
   border-radius: 4px;
 }
+td.warning-inline {
+  color: #a15c00;
+  background: #fff6e5;
+}
+td.note {
+  color: #666;
+  font-size: 0.9em;
+}

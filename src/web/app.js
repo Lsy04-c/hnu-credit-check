@@ -11,6 +11,11 @@ async function loadPlanData(jsonFile) {
   return res.json();
 }
 
+async function loadJson(path) {
+  const res = await fetch(path);
+  return res.json();
+}
+
 function pdfUrl(pdfFile) {
   return `data/pdf/${pdfFile.split('/').map(encodeURIComponent).join('/')}`;
 }
@@ -21,7 +26,17 @@ function appendCell(row, text) {
   row.appendChild(td);
 }
 
-function renderResult(evalResult, unparsedLines) {
+function appendNoteRow(table, text, className) {
+  const row = document.createElement('tr');
+  const td = document.createElement('td');
+  td.colSpan = 4;
+  if (className) td.className = className;
+  td.textContent = text;
+  row.appendChild(td);
+  table.appendChild(row);
+}
+
+function renderResult(evalResult, unparsedLines, sishiCatalog) {
   const container = document.getElementById('result');
   container.innerHTML = '';
 
@@ -44,14 +59,36 @@ function renderResult(evalResult, unparsedLines) {
     table.appendChild(row);
 
     for (const rule of category.rules) {
-      if (rule.type === 'remainder_open') continue;
-      const ruleRow = document.createElement('tr');
-      const td = document.createElement('td');
-      td.colSpan = 4;
-      const label = rule.type === 'min_credits_in_group' ? rule.group : rule.groups.join('/');
-      td.textContent = `　规则：${label} 至少 ${rule.min} 学分，已修 ${rule.achieved} 学分 —— ${rule.met ? '已达标' : '未达标'}`;
-      ruleRow.appendChild(td);
-      table.appendChild(ruleRow);
+      const label = rule.type === 'min_credits_in_group' ? rule.group
+        : rule.type === 'min_credits_in_groups' ? rule.groups.join('/')
+        : null;
+      if (label) {
+        appendNoteRow(table, `　规则：${label} 至少 ${rule.min} 学分，已修 ${rule.achieved} 学分 —— ${rule.met ? '已达标' : '未达标'}`);
+      } else if (rule.note) {
+        appendNoteRow(table, `　说明：${rule.note}`, 'note');
+      }
+    }
+
+    if (category.groupBreakdown) {
+      for (const g of category.groupBreakdown) {
+        appendNoteRow(table, `　模块「${g.group}」已修 ${g.achieved} 学分`);
+      }
+      if (category.usedSupplementary) {
+        appendNoteRow(table, '　（以上模块数据只能核实到补充课表覆盖的学期，历史学期修读的课程可能无法识别，不代表没修）', 'note');
+      }
+    }
+
+    if (category.missingRequiredCourses.length > 0) {
+      const names = category.missingRequiredCourses.map(c => c.name).join('、');
+      appendNoteRow(table, `　还没修的必修课程：${names}`, 'warning-inline');
+    }
+
+    if (category.name === '通识必修' && sishiCatalog) {
+      appendNoteRow(
+        table,
+        `　"四史"类课程（${sishiCatalog.names.join('/')}）至少选修1门，无统一课程编号，本工具无法自动核实，请自行确认`,
+        'note'
+      );
     }
   }
   container.appendChild(table);
@@ -87,6 +124,13 @@ async function main() {
     select.appendChild(option);
   });
 
+  const [tongshiCatalog, innovationCatalog, sishiCatalog] = await Promise.all([
+    loadJson('data/supplementary/tongshi_xuanxiu.json'),
+    loadJson('data/supplementary/innovation.json'),
+    loadJson('data/supplementary/sishi.json'),
+  ]);
+  const supplementaryCatalogs = [tongshiCatalog, innovationCatalog];
+
   let planData = null;
 
   select.addEventListener('change', async () => {
@@ -115,11 +159,18 @@ async function main() {
   evaluateBtn.addEventListener('click', () => {
     if (!planData) return;
     const text = document.getElementById('transcript-input').value;
-    const validCodes = planData.categories.flatMap(c => c.courses.map(course => course.code)).filter(Boolean);
+    const openPoolCategoryNames = new Set(planData.categories.filter(c => c.open_pool).map(c => c.name));
+    const supplementaryCodes = supplementaryCatalogs
+      .filter(catalog => openPoolCategoryNames.has(catalog.category))
+      .flatMap(catalog => catalog.courses.map(course => course.code));
+    const validCodes = [
+      ...planData.categories.flatMap(c => c.courses.map(course => course.code)).filter(Boolean),
+      ...supplementaryCodes,
+    ];
     const categoryNames = planData.categories.map(c => c.name);
     const { courses, unparsedLines } = parseTranscriptText(text, validCodes, categoryNames);
-    const evalResult = evaluatePlan(planData, courses);
-    renderResult(evalResult, unparsedLines);
+    const evalResult = evaluatePlan(planData, courses, supplementaryCatalogs);
+    renderResult(evalResult, unparsedLines, sishiCatalog);
   });
 }
 
