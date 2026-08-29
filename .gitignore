@@ -1,3 +1,10 @@
 .env
 *.key
 __pycache__/
+.DS_Store
+
+# 培养方案原始 PDF 与未经人工审核的批量提取结果：涉及学校多专业官方文件的批量重新分发，
+# 是否公开需要单独决定，默认不进公开仓库
+data/pdf/
+data/pending/
+data/tongshi_xuanxiu_*.json

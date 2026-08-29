@@ -33,8 +33,14 @@ def call_glm(prompt, pdf_text, api_key):
     resp = requests.post(
         API_URL,
         headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-        json={"model": MODEL, "messages": messages, "temperature": 0.1},
-        timeout=180,
+        json={
+            "model": MODEL,
+            "messages": messages,
+            "temperature": 0.1,
+            "max_tokens": 65536,
+            "thinking": {"type": "enabled"},
+        },
+        timeout=300,
     )
     resp.raise_for_status()
     return resp.json()["choices"][0]["message"]["content"]
@@ -45,7 +51,15 @@ def parse_json_response(raw_text):
     if cleaned.startswith("```"):
         cleaned = re.sub(r"^```[a-zA-Z]*\n", "", cleaned)
         cleaned = re.sub(r"\n```$", "", cleaned)
-    return json.loads(cleaned)
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError as original_error:
+        # 兜底：模型有时会在 JSON 前后夹带说明文字，取第一个 { 到最后一个 } 之间的内容再试一次
+        start = cleaned.find("{")
+        end = cleaned.rfind("}")
+        if start == -1 or end == -1 or start >= end:
+            raise original_error
+        return json.loads(cleaned[start:end + 1])
 
 
 def main():
