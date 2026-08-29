@@ -23,6 +23,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Inject cache-busting build version
+        run: |
+          sed -i "s/__BUILD_VERSION__/${{ github.sha }}/g" src/web/index.html src/web/app.js
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

@@ -162,3 +162,22 @@ test('补充课表不会覆盖方案原文里已经枚举好的课程', () => {
   const matched = category.matchedCourses.find(c => c.code === 'GE01150');
   assert.equal(matched.credits, 3);
 });
+
+test('选修池课程会按模块列出方案原文里的全部可选课程，并标出学生已经修过哪些', () => {
+  const result = evaluatePlan(planData, [{ code: 'CH06062', name: '化学前沿', credits: 2 }]);
+  const category = result.categories.find(c => c.name === '个性培养');
+  const module1 = category.electivePools.find(p => p.group === '模块1：专业提升');
+  assert.ok(module1);
+  assert.ok(module1.courses.length > 1);
+  const taken = module1.courses.find(c => c.code === 'CH06062');
+  const notTaken = module1.courses.find(c => c.code !== 'CH06062');
+  assert.equal(taken.taken, true);
+  assert.equal(notTaken.taken, false);
+});
+
+test('必选课程（mandatory:true）不会出现在选修池清单里', () => {
+  const result = evaluatePlan(planData, []);
+  const category = result.categories.find(c => c.name === '个性培养');
+  const allElectiveCodes = category.electivePools.flatMap(p => p.courses.map(c => c.code));
+  assert.ok(!allElectiveCodes.includes('CH10044')); // 特色课程里 mandatory:true 的必选课
+});

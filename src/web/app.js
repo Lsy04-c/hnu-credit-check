@@ -1,18 +1,26 @@
-import { parseTranscriptText } from './parse.js';
-import { evaluatePlan } from './rules.js';
+import { parseTranscriptText } from './parse.js?v=__BUILD_VERSION__';
+import { evaluatePlan } from './rules.js?v=__BUILD_VERSION__';
+
+// 每次部署时 GitHub Actions 会把这个占位符替换成当次 commit 的哈希值，让浏览器把每次更新都当成
+// 全新的文件请求，不会因为缓存了旧版数据文件而看不到最新修复（本地直接打开跑不会替换，属于预期）。
+const BUILD_VERSION = '__BUILD_VERSION__';
+
+function withVersion(path) {
+  return `${path}?v=${BUILD_VERSION}`;
+}
 
 async function loadIndex() {
-  const res = await fetch('data/index.json');
+  const res = await fetch(withVersion('data/index.json'));
   return res.json();
 }
 
 async function loadPlanData(jsonFile) {
-  const res = await fetch(`data/plans/${encodeURIComponent(jsonFile)}`);
+  const res = await fetch(withVersion(`data/plans/${encodeURIComponent(jsonFile)}`));
   return res.json();
 }
 
 async function loadJson(path) {
-  const res = await fetch(path);
+  const res = await fetch(withVersion(path));
   return res.json();
 }
 
@@ -32,6 +40,30 @@ function appendNoteRow(table, text, className) {
   td.colSpan = 4;
   if (className) td.className = className;
   td.textContent = text;
+  row.appendChild(td);
+  table.appendChild(row);
+}
+
+function appendElectivePoolRow(table, pool) {
+  const row = document.createElement('tr');
+  const td = document.createElement('td');
+  td.colSpan = 4;
+
+  const takenCount = pool.courses.filter(c => c.taken).length;
+  const details = document.createElement('details');
+  const summary = document.createElement('summary');
+  summary.textContent = `　「${pool.group}」可选课程（共${pool.courses.length}门，已修${takenCount}门，点击展开）`;
+  details.appendChild(summary);
+
+  const list = document.createElement('ul');
+  for (const c of pool.courses) {
+    const li = document.createElement('li');
+    li.textContent = `${c.taken ? '✓ ' : ''}${c.name}（${c.credits}学分）`;
+    if (c.taken) li.className = 'taken';
+    list.appendChild(li);
+  }
+  details.appendChild(list);
+  td.appendChild(details);
   row.appendChild(td);
   table.appendChild(row);
 }
@@ -81,6 +113,12 @@ function renderResult(evalResult, unparsedLines, sishiCatalog) {
     if (category.missingRequiredCourses.length > 0) {
       const names = category.missingRequiredCourses.map(c => c.name).join('、');
       appendNoteRow(table, `　还没修的必修课程：${names}`, 'warning-inline');
+    }
+
+    if (category.electivePools) {
+      for (const pool of category.electivePools) {
+        appendElectivePoolRow(table, pool);
+      }
     }
 
     if (category.name === '通识必修' && sishiCatalog) {

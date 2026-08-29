@@ -56,3 +56,14 @@ td.note {
   color: #666;
   font-size: 0.9em;
 }
+details summary {
+  cursor: pointer;
+  color: #2a6ebb;
+}
+details ul {
+  margin: 0.5rem 0 0.5rem 1.5rem;
+  padding: 0;
+}
+details li.taken {
+  color: #2a8f4c;
+}

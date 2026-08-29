@@ -80,6 +80,21 @@ function buildGroupBreakdown(categoryMatchedCourses) {
   return [...byGroup.entries()].map(([group, achieved]) => ({ group, achieved }));
 }
 
+// 方案原文里枚举出来的"选修池"课程（有 group、不是 mandatory）——按 group 分组列出全部可选课程，
+// 并标出学生已经修过哪些，方便学生直接看"这个模块具体能选什么"，不用回去翻 PDF。
+// 只用方案原文自己枚举的课程（不含补充课表），因为通识选修这类补充课表动辄两三百门，列出来不实用，
+// 那类类别已经有 groupBreakdown 给模块学分小计。
+function buildElectivePools(category, matchedCodes) {
+  const electiveCourses = category.courses.filter(c => c.group && c.mandatory !== true);
+  if (electiveCourses.length === 0) return null;
+  const byGroup = new Map();
+  for (const c of electiveCourses) {
+    if (!byGroup.has(c.group)) byGroup.set(c.group, []);
+    byGroup.get(c.group).push({ code: c.code, name: c.name, credits: c.credits, taken: matchedCodes.has(c.code) });
+  }
+  return [...byGroup.entries()].map(([group, courses]) => ({ group, courses }));
+}
+
 export function evaluatePlan(planData, transcriptCourses, supplementaryCatalogs) {
   const { matched, unmatched } = matchCourses(planData, transcriptCourses, supplementaryCatalogs);
 
@@ -100,6 +115,7 @@ export function evaluatePlan(planData, transcriptCourses, supplementaryCatalogs)
       matchedCourses: categoryMatchedCourses,
       missingRequiredCourses,
       groupBreakdown: buildGroupBreakdown(categoryMatchedCourses),
+      electivePools: buildElectivePools(category, matchedCodes),
       usedSupplementary,
       rules: evaluateCategoryRules(category, categoryMatchedCourses),
     };
