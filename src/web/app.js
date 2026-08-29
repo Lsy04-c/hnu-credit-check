@@ -79,7 +79,7 @@ function findSishiMatch(evalResult, sishiCatalog) {
   return allCourses.find(c => sishiCatalog.names.includes(c.name)) || null;
 }
 
-function renderResult(evalResult, unparsedLines, sishiCatalog, nameHints) {
+function renderResult(evalResult, unparsedLines, sishiCatalog) {
   const container = document.getElementById('result');
   container.innerHTML = '';
 
@@ -119,6 +119,9 @@ function renderResult(evalResult, unparsedLines, sishiCatalog, nameHints) {
       if (category.usedSupplementary) {
         appendNoteRow(table, '　（以上模块数据只能核实到补充课表覆盖的学期，历史学期修读的课程可能无法识别，不代表没修）', 'note');
       }
+      if (category.usedNameMatch) {
+        appendNoteRow(table, '　（部分课程是按课程名称匹配的，不是靠课程编号确认——通常是老版编号的课，名字对得上就当作已修，但不排除极小概率撞名）', 'note');
+      }
     }
 
     if (category.missingRequiredCourses.length > 0) {
@@ -155,11 +158,9 @@ function renderResult(evalResult, unparsedLines, sishiCatalog, nameHints) {
     warn.className = 'warning';
     const names = evalResult.unmatchedCourses
       .map(c => {
-        const guessedModule = nameHints && nameHints.name_to_module[c.name];
         const parts = [`${c.code} ${c.name}`];
         if (sishiMatch && c.code === sishiMatch.code) parts.push('已用于满足"四史"要求');
         if (c.category) parts.push(`成绩单标注类别：${c.category}`);
-        if (guessedModule) parts.push(`按课程名推测可能属于通识选修「${guessedModule}」模块，不保证准确`);
         return parts.length > 1 ? `${parts[0]}（${parts.slice(1).join('；')}）` : parts[0];
       })
       .join('、');
@@ -183,7 +184,11 @@ async function main() {
     loadJson('data/supplementary/innovation.json'),
     loadJson('data/supplementary/sishi.json'),
     loadJson('data/supplementary/tongshi_name_hints.json'),
-  ]);
+  ]).then(([tongshiCatalog, innovationCatalog, sishiCatalog, tongshiDirectory]) => ({
+    codeCatalogs: [tongshiCatalog, innovationCatalog],
+    nameCatalogs: [{ category: '通识选修', courses: tongshiDirectory.courses }],
+    sishiCatalog,
+  }));
 
   const index = await loadIndex();
   select.disabled = false;
@@ -227,12 +232,11 @@ async function main() {
     evaluateBtn.disabled = true;
     evaluateBtn.textContent = '核算中...';
     try {
-      const [tongshiCatalog, innovationCatalog, sishiCatalog, nameHints] = await supplementaryPromise;
-      const supplementaryCatalogs = [tongshiCatalog, innovationCatalog];
+      const { codeCatalogs, nameCatalogs, sishiCatalog } = await supplementaryPromise;
 
       const text = document.getElementById('transcript-input').value;
       const openPoolCategoryNames = new Set(planData.categories.filter(c => c.open_pool).map(c => c.name));
-      const supplementaryCodes = supplementaryCatalogs
+      const supplementaryCodes = codeCatalogs
         .filter(catalog => openPoolCategoryNames.has(catalog.category))
         .flatMap(catalog => catalog.courses.map(course => course.code));
       const validCodes = [
@@ -241,8 +245,8 @@ async function main() {
       ];
       const categoryNames = planData.categories.map(c => c.name);
       const { courses, unparsedLines } = parseTranscriptText(text, validCodes, categoryNames);
-      const evalResult = evaluatePlan(planData, courses, supplementaryCatalogs);
-      renderResult(evalResult, unparsedLines, sishiCatalog, nameHints);
+      const evalResult = evaluatePlan(planData, courses, codeCatalogs, nameCatalogs);
+      renderResult(evalResult, unparsedLines, sishiCatalog);
     } finally {
       evaluateBtn.disabled = false;
       evaluateBtn.textContent = '核算学分';

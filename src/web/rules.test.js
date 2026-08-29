@@ -181,3 +181,30 @@ test('必选课程（mandatory:true）不会出现在选修池清单里', () => 
   const allElectiveCodes = category.electivePools.flatMap(p => p.courses.map(c => c.code));
   assert.ok(!allElectiveCodes.includes('CH10044')); // 特色课程里 mandatory:true 的必选课
 });
+
+test('编号课表查不到时，按课程名兜底匹配（比如老编号的成绩单条目），真实计入已修学分', () => {
+  const openPoolPlan = {
+    total_required_credits: 10,
+    categories: [
+      { name: '通识选修', required_credits: 10, open_pool: true, courses: [], rules: [] },
+    ],
+  };
+  const nameCatalogs = [
+    { category: '通识选修', courses: [{ name: '西方人文经典导读', module: '中华文化与世界文明', credits: 2 }] },
+  ];
+  // 老编号（GE16074），不在任何编号课表里，只能靠名字匹配
+  const transcript = [{ code: 'GE16074', name: '西方人文经典导读', credits: 2 }];
+  const result = evaluatePlan(openPoolPlan, transcript, [], nameCatalogs);
+  const category = result.categories.find(c => c.name === '通识选修');
+  assert.equal(category.achieved, 2);
+  assert.equal(category.usedNameMatch, true);
+  assert.equal(result.unmatchedCourses.length, 0);
+});
+
+test('按课程名匹配只对开放池类别生效，不会误伤方案原文已经枚举好的课程', () => {
+  const nameCatalogs = [
+    { category: '通识必修', courses: [{ name: '假冒的课', module: '随便', credits: 999 }] },
+  ];
+  const result = evaluatePlan(planData, [{ code: 'ZZ99999', name: '假冒的课', credits: 2 }], [], nameCatalogs);
+  assert.equal(result.unmatchedCourses.length, 1); // 通识必修 open_pool:false，名字匹配不该对它生效
+});

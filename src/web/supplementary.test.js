@@ -36,12 +36,15 @@ test('四史课程名单：4门课程名称都在', () => {
   assert.ok(sishi.names.includes('社会主义发展史'));
 });
 
-test('通识选修课程名->模块提示表：覆盖面比编号课表更广，且每个课程名只对应一个模块（不会有歧义猜测）', () => {
-  const hints = load('tongshi_name_hints.json');
-  const modules = Object.values(hints.name_to_module);
-  assert.ok(modules.length > 300);
+test('通识选修课程简介目录（按名字兜底匹配用）：覆盖面比编号课表更广，每条都有模块和学分，模块名合法', () => {
+  const catalog = load('tongshi_name_hints.json');
+  assert.ok(catalog.courses.length > 300);
   const validModules = new Set(['中华文化与世界文明', '社会科学与现代社会', '科学探索与技术创新', '艺术审美与表达沟通']);
-  for (const m of modules) {
-    assert.ok(validModules.has(m), `出现了不认识的模块名：${m}`);
+  for (const c of catalog.courses) {
+    assert.ok(c.name);
+    assert.ok(validModules.has(c.module), `出现了不认识的模块名：${c.module}`);
+    assert.equal(typeof c.credits, 'number');
   }
+  const names = catalog.courses.map(c => c.name);
+  assert.equal(new Set(names).size, names.length, '课程名不应该重复（否则按名字匹配会有歧义）');
 });

@@ -23,20 +23,50 @@ function buildCourseIndex(planData, supplementaryCatalogs) {
   return index;
 }
 
-export function matchCourses(planData, transcriptCourses, supplementaryCatalogs) {
+// 按课程名匹配的补充课表（没有编号，比如通识选修课程简介那种）——只在编号完全查不到时才用来兜底，
+// 且只对"开放池"类别生效。名字匹配的可靠性不如编号（万一撞名），所以匹配结果会标 matchedByName:true，
+// 供上层决定要不要额外提示"这是按名字匹配的，不是编号确认"。
+function buildNameIndex(planData, nameCatalogs) {
+  const index = new Map();
+  const openPoolCategoryNames = new Set(
+    planData.categories.filter(c => c.open_pool).map(c => c.name)
+  );
+  for (const catalog of nameCatalogs || []) {
+    if (!openPoolCategoryNames.has(catalog.category)) continue;
+    for (const course of catalog.courses) {
+      if (index.has(course.name)) continue;
+      index.set(course.name, {
+        name: course.name,
+        credits: course.credits,
+        group: course.module,
+        categoryName: catalog.category,
+        fromSupplementary: true,
+        matchedByName: true,
+      });
+    }
+  }
+  return index;
+}
+
+export function matchCourses(planData, transcriptCourses, supplementaryCatalogs, nameCatalogs) {
   const index = buildCourseIndex(planData, supplementaryCatalogs);
-  const seenCodes = new Set();
+  const nameIndex = buildNameIndex(planData, nameCatalogs);
+  const seenKeys = new Set();
   const matched = [];
   const unmatched = [];
 
   for (const tc of transcriptCourses) {
-    const planCourse = index.get(tc.code);
+    let planCourse = index.get(tc.code);
+    if (!planCourse && tc.name) {
+      planCourse = nameIndex.get(tc.name);
+    }
     if (!planCourse) {
       unmatched.push(tc);
       continue;
     }
-    if (seenCodes.has(tc.code)) continue;
-    seenCodes.add(tc.code);
+    const dedupKey = planCourse.code || `name:${planCourse.name}`;
+    if (seenKeys.has(dedupKey)) continue;
+    seenKeys.add(dedupKey);
     matched.push(planCourse);
   }
 
@@ -95,8 +125,8 @@ function buildElectivePools(category, matchedCodes) {
   return [...byGroup.entries()].map(([group, courses]) => ({ group, courses }));
 }
 
-export function evaluatePlan(planData, transcriptCourses, supplementaryCatalogs) {
-  const { matched, unmatched } = matchCourses(planData, transcriptCourses, supplementaryCatalogs);
+export function evaluatePlan(planData, transcriptCourses, supplementaryCatalogs, nameCatalogs) {
+  const { matched, unmatched } = matchCourses(planData, transcriptCourses, supplementaryCatalogs, nameCatalogs);
 
   const categories = planData.categories.map(category => {
     const categoryMatchedCourses = matched.filter(c => c.categoryName === category.name);
@@ -106,7 +136,8 @@ export function evaluatePlan(planData, transcriptCourses, supplementaryCatalogs)
     const missingRequiredCourses = category.courses.filter(
       c => isIndividuallyRequired(c) && !matchedCodes.has(c.code)
     );
-    const usedSupplementary = categoryMatchedCourses.some(c => c.fromSupplementary);
+    const usedSupplementary = categoryMatchedCourses.some(c => c.fromSupplementary && !c.matchedByName);
+    const usedNameMatch = categoryMatchedCourses.some(c => c.matchedByName);
     return {
       name: category.name,
       required,
@@ -117,6 +148,7 @@ export function evaluatePlan(planData, transcriptCourses, supplementaryCatalogs)
       groupBreakdown: buildGroupBreakdown(categoryMatchedCourses),
       electivePools: buildElectivePools(category, matchedCodes),
       usedSupplementary,
+      usedNameMatch,
       rules: evaluateCategoryRules(category, categoryMatchedCourses),
     };
   });
