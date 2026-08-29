@@ -112,24 +112,30 @@ function renderResult(evalResult, unparsedLines, sishiCatalog) {
 }
 
 async function main() {
-  const index = await loadIndex();
   const select = document.getElementById('plan-select');
   const planInfo = document.getElementById('plan-info');
   const evaluateBtn = document.getElementById('evaluate-btn');
 
+  select.disabled = true;
+  select.options[0].textContent = '加载专业列表中...';
+
+  // 补充课表（通识选修/创新创业本学期课表）在后台加载，不卡住页面变得可操作——
+  // 只有真正点"核算学分"、且这些数据确实要用到的时候才去等它加载完
+  const supplementaryPromise = Promise.all([
+    loadJson('data/supplementary/tongshi_xuanxiu.json'),
+    loadJson('data/supplementary/innovation.json'),
+    loadJson('data/supplementary/sishi.json'),
+  ]);
+
+  const index = await loadIndex();
+  select.disabled = false;
+  select.options[0].textContent = '请选择...';
   index.forEach((entry, i) => {
     const option = document.createElement('option');
     option.value = String(i);
     option.textContent = entry.plan_name;
     select.appendChild(option);
   });
-
-  const [tongshiCatalog, innovationCatalog, sishiCatalog] = await Promise.all([
-    loadJson('data/supplementary/tongshi_xuanxiu.json'),
-    loadJson('data/supplementary/innovation.json'),
-    loadJson('data/supplementary/sishi.json'),
-  ]);
-  const supplementaryCatalogs = [tongshiCatalog, innovationCatalog];
 
   let planData = null;
 
@@ -152,25 +158,37 @@ async function main() {
     planInfo.append(`　｜　毕业最低学分：${entry.total_required_credits}`);
 
     evaluateBtn.disabled = true;
+    evaluateBtn.textContent = '加载中...';
     planData = await loadPlanData(entry.json_file);
     evaluateBtn.disabled = false;
+    evaluateBtn.textContent = '核算学分';
   });
 
-  evaluateBtn.addEventListener('click', () => {
+  evaluateBtn.addEventListener('click', async () => {
     if (!planData) return;
-    const text = document.getElementById('transcript-input').value;
-    const openPoolCategoryNames = new Set(planData.categories.filter(c => c.open_pool).map(c => c.name));
-    const supplementaryCodes = supplementaryCatalogs
-      .filter(catalog => openPoolCategoryNames.has(catalog.category))
-      .flatMap(catalog => catalog.courses.map(course => course.code));
-    const validCodes = [
-      ...planData.categories.flatMap(c => c.courses.map(course => course.code)).filter(Boolean),
-      ...supplementaryCodes,
-    ];
-    const categoryNames = planData.categories.map(c => c.name);
-    const { courses, unparsedLines } = parseTranscriptText(text, validCodes, categoryNames);
-    const evalResult = evaluatePlan(planData, courses, supplementaryCatalogs);
-    renderResult(evalResult, unparsedLines, sishiCatalog);
+    evaluateBtn.disabled = true;
+    evaluateBtn.textContent = '核算中...';
+    try {
+      const [tongshiCatalog, innovationCatalog, sishiCatalog] = await supplementaryPromise;
+      const supplementaryCatalogs = [tongshiCatalog, innovationCatalog];
+
+      const text = document.getElementById('transcript-input').value;
+      const openPoolCategoryNames = new Set(planData.categories.filter(c => c.open_pool).map(c => c.name));
+      const supplementaryCodes = supplementaryCatalogs
+        .filter(catalog => openPoolCategoryNames.has(catalog.category))
+        .flatMap(catalog => catalog.courses.map(course => course.code));
+      const validCodes = [
+        ...planData.categories.flatMap(c => c.courses.map(course => course.code)).filter(Boolean),
+        ...supplementaryCodes,
+      ];
+      const categoryNames = planData.categories.map(c => c.name);
+      const { courses, unparsedLines } = parseTranscriptText(text, validCodes, categoryNames);
+      const evalResult = evaluatePlan(planData, courses, supplementaryCatalogs);
+      renderResult(evalResult, unparsedLines, sishiCatalog);
+    } finally {
+      evaluateBtn.disabled = false;
+      evaluateBtn.textContent = '核算学分';
+    }
   });
 }
 
