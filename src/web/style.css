@@ -1,0 +1,35 @@
+body {
+  font-family: -apple-system, "PingFang SC", sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.6;
+}
+textarea {
+  width: 100%;
+  font-family: monospace;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: left;
+}
+.warning {
+  color: #a15c00;
+  background: #fff6e5;
+  padding: 0.5rem;
+  border-radius: 4px;
+}

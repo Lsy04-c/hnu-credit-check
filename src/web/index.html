@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>培养方案学分自助核查</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>培养方案学分自助核查</h1>
+<p>当前支持：化学（强基计划）本科培养方案（2022版）。核算全程在你的浏览器本地完成，不会上传或保存任何数据。</p>
+
+<label for="transcript-input">
+  第一步：打开教务系统的"已修课程"页面，框选表格并复制（Ctrl/Cmd+C），粘贴到下面的文本框
+</label>
+<textarea id="transcript-input" rows="12" placeholder="把复制的已修课程表格粘贴在这里"></textarea>
+<div>
+  <button id="evaluate-btn">核算学分</button>
+</div>
+
+<div id="result"></div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
