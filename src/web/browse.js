@@ -144,15 +144,10 @@ async function main() {
 
   const coverageNote = document.getElementById('coverage-note');
   const totalPlans = data.plans.length;
-  const seasonKnown = allRows.filter((r) => r.season).length;
-  const seasonGuessed = allRows.filter((r) => r.season && r.seasonIsGuess).length;
   coverageNote.textContent =
-    `共收录 ${totalPlans} 个专业、${allRows.length} 条专业选修课程记录` +
-    '（少数专业的"专业选修"类别在培养方案里未逐一列出具体课程，未纳入此页；' +
-    '考核方式为本地从 PDF 原文自动识别，未逐条人工核对，仅供参考；' +
-    `开课学期识别到 ${seasonKnown} 条（${((seasonKnown / allRows.length) * 100).toFixed(0)}%），` +
-    `其中 ${seasonGuessed} 条是按培养方案里"第几学期"推算的（见上方说明），` +
-    `${seasonKnown - seasonGuessed} 条按实际课表匹配到；标"未知"的两类数据都没覆盖到）。`;
+    `共收录 ${totalPlans} 个专业、${allRows.length} 门专业选修课` +
+    '（个别专业的选修课在培养方案里没有列出具体课程名单，暂时收录不到；' +
+    '考核方式、开课学期都是从培养方案原文自动识别的，没有逐条人工核对，仅供参考）。';
 
   const campusesPresent = CAMPUS_ORDER.filter((c) => allRows.some((r) => r.campus === c));
 
