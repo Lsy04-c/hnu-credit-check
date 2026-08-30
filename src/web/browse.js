@@ -37,6 +37,61 @@ function flattenCourses(plans) {
   return rows;
 }
 
+// 同一门课（同一个课程编号）常常会出现在好几个相关专业的培养方案里
+// （比如"会计学"和"会计学（ACCA）"共享同一批专业选修课），逐条摆出来会
+// 显得又长又重复，按课程编号合并成一行，"所属专业"改成显示全部专业。
+function mode(values) {
+  const counts = new Map();
+  for (const v of values) counts.set(v, (counts.get(v) || 0) + 1);
+  let best = values[0];
+  let bestCount = 0;
+  for (const [v, c] of counts) {
+    if (c > bestCount) {
+      best = v;
+      bestCount = c;
+    }
+  }
+  return best;
+}
+
+function mergeDuplicateCourses(rows) {
+  const byCode = new Map();
+  for (const row of rows) {
+    if (!byCode.has(row.code)) byCode.set(row.code, []);
+    byCode.get(row.code).push(row);
+  }
+
+  const merged = [];
+  for (const instances of byCode.values()) {
+    const first = instances[0];
+    const names = [...new Set(instances.map((i) => i.name))];
+    // 带 * 的名字说明至少有一个专业把它标成官方推荐的跨专业课程，优先展示这个版本
+    const name = names.find((n) => n.includes('*')) || names[0];
+
+    // 只要有一个专业的培养方案把它标成"限选"，就说明开课院系确实卡了名额，
+    // 只对自己专业开放——其他专业的培养方案里没标限选，只是没体现这个限制，
+    // 不代表真的能选。只要出现过一次限选，就按限选处理，不当成"随便选"。
+    const crossCollege = instances.every((i) => i.crossCollege);
+
+    merged.push({
+      code: first.code,
+      name,
+      credits: mode(instances.map((i) => i.credits)),
+      group: mode(instances.map((i) => i.group)),
+      examType: mode(instances.map((i) => i.examType)),
+      season: mode(instances.map((i) => i.season)),
+      seasonIsGuess: mode(instances.map((i) => i.seasonIsGuess)),
+      crossCollege,
+      recommended: instances.some((i) => i.recommended),
+      campus: first.campus,
+      college: first.college,
+      campusNote: first.campusNote,
+      planNames: [...new Set(instances.map((i) => i.planName))],
+    });
+  }
+  return merged;
+}
+
 function examLabel(examType) {
   if (examType === '考试') return '考试';
   if (examType === '考查') return '考查';
@@ -128,7 +183,7 @@ function renderTable(container, rows) {
     tr.appendChild(groupTd);
 
     const planTd = document.createElement('td');
-    planTd.textContent = row.planName;
+    planTd.textContent = row.planNames.join('、');
     tr.appendChild(planTd);
 
     tbody.appendChild(tr);
@@ -140,7 +195,7 @@ function renderTable(container, rows) {
 async function main() {
   const data = await loadJson('data/elective_browse.json');
   const campusMap = await loadJson('data/campus_map.json');
-  const allRows = flattenCourses(data.plans);
+  const allRows = mergeDuplicateCourses(flattenCourses(data.plans));
 
   const coverageNote = document.getElementById('coverage-note');
   const totalPlans = data.plans.length;
@@ -241,19 +296,23 @@ async function main() {
     }
 
     if (crossFilter.value === 'yes') {
-      rows = rows.filter((r) => r.crossCollege);
+      rows = rows.filter((r) => r.crossCollege === true);
     } else if (crossFilter.value === 'no') {
-      rows = rows.filter((r) => !r.crossCollege);
+      rows = rows.filter((r) => r.crossCollege === false);
     }
 
     const keyword = keywordFilter.value.trim();
     if (keyword) {
       rows = rows.filter(
-        (r) => r.name.includes(keyword) || r.planName.includes(keyword)
+        (r) => r.name.includes(keyword) || r.planNames.some((n) => n.includes(keyword))
       );
     }
 
-    resultCount.textContent = `共 ${rows.length} 条`;
+    // 官方推荐的跨专业课程排在最前面，方便想跨专业选课的同学优先看到；
+    // 组内顺序不变（sort 是稳定排序）。
+    rows = [...rows].sort((a, b) => Number(b.recommended) - Number(a.recommended));
+
+    resultCount.textContent = `共 ${rows.length} 门`;
     renderTable(resultTable, rows);
   }
 
