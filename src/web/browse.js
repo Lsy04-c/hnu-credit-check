@@ -24,7 +24,8 @@ function flattenCourses(plans) {
         season: course.season, // '秋季' | '春季' | '秋春' | null
         semester: course.semester, // 1-8（第几学期）| null
         seasonIsGuess: course.season_is_guess, // true=按学期奇偶推算，false=按实际课表匹配
-        crossCollege: course.cross_college, // true=可跨专业选修，false=仅本专业学生可选
+        crossCollege: course.cross_college, // true=其他专业学生可选，false=表格标了"限选"，仅本专业
+        recommended: course.recommended, // true=课程名带*，官方推荐优先修读的跨专业课程
         planId: plan.plan_id,
         planName: plan.plan_name,
         campus: plan.campus,
@@ -60,8 +61,9 @@ function seasonClass(season) {
   return 'season-known';
 }
 
-function crossCollegeLabel(crossCollege) {
-  return crossCollege ? '可跨专业选' : '仅本专业';
+function crossCollegeLabel(row) {
+  if (!row.crossCollege) return '限选·仅本专业';
+  return row.recommended ? '可跨专业选·官方推荐' : '可跨专业选';
 }
 
 function crossCollegeClass(crossCollege) {
@@ -102,7 +104,7 @@ function renderTable(container, rows) {
     tr.appendChild(nameTd);
 
     const crossTd = document.createElement('td');
-    crossTd.textContent = crossCollegeLabel(row.crossCollege);
+    crossTd.textContent = crossCollegeLabel(row);
     crossTd.className = crossCollegeClass(row.crossCollege);
     tr.appendChild(crossTd);
 

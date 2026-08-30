@@ -2,12 +2,12 @@
 从 87 份培养方案 JSON + 原始 PDF 生成"全校专业选修课浏览"用的合并数据文件
 src/web/data/elective_browse.json。
 
-考核方式（考试/考查）、开课学期（第几学期）现有 plans/*.json 里都没有这两个字段，
-只有原始 PDF 表格里有。这里用课程编号（code）在 PDF 文本（pdftotext -layout）里
-定位所在行，在其后几行的窗口内找"考试"/"考查"关键字，再找紧跟其后的 1-8 单个数字
-作为"第几学期"。code 在同一份 PDF 里唯一，试点在化学/数学/会计/建筑/机械/法学等
-6 个不同学院的 PDF 上验证过考核方式 100% 命中；学期数字全量跑了 87 份，2463 条课程
-只有 1 条没提取到，具体见开发记录。
+考核方式（考试/考查）、开课学期（第几学期）、是否限选，现有 plans/*.json 里都没有
+这几个字段，只有原始 PDF 表格里有。这里用课程编号（code）在 PDF 文本
+（pdftotext -layout）里定位所在行，在其后几行的窗口内找"考试"/"考查"关键字、紧跟
+其后的 1-8 单个数字（第几学期）、以及"限选"这个词。code 在同一份 PDF 里唯一，
+试点在化学/数学/会计/建筑/机械/法学等 6 个不同学院的 PDF 上验证过考核方式 100%
+命中；学期数字和限选标记全量跑了 87 份、2463 条课程，具体见开发记录。
 
 开课学期只精确到"第几学期"（1-8），季节（秋/春）由学期数的奇偶推算——单数学期
 （1/3/5/7）是每学年上学期即秋季，双数学期是下学期即春季，这是全国高校通用的学期
@@ -15,6 +15,12 @@ src/web/data/elective_browse.json。
 标"推测"，不是"确认"；同一门课不同届学生实际上课的学期可能因版本变化而与新版
 培养方案不同（开发过程中跟 2024-2025-1/2025-2026-1 秋季课表 + 2023-2024-2 春季
 课表交叉验证时发现过 2 处这样的版本漂移），仅供参考。
+
+是否可跨专业选（cross_college）看的是表格里的"限选"标记，不是课程名里的 *。
+每份培养方案对"跨专业选修"类别的备注原话是"学生可修读其他专业的专业课程，带*
+课程为优先推荐修读的跨专业课程"——* 只是官方推荐的优先名单，不代表不带 * 就选不了；
+真正被排除在外、只对本专业学生开放的，是表格里单独标"限选"的那批课（通常还带
+mandatory，是本专业内部的强制选修课）。* 单独存成 recommended 字段。
 
 用法：
     python3 scripts/build_elective_browse.py
@@ -90,12 +96,21 @@ def pdftext(path):
     return result.stdout
 
 
-def extract_exam_type_and_semester(codes, pdf_text):
+def extract_course_fields(codes, pdf_text):
     """
-    返回 {code: (exam_type, semester)}。exam_type 是 "考试"/"考查"/None，
-    semester 是 1-8 的整数（第几学期）或 None。两者都是在同一段"课程编号所在行
-    之后几行"的窗口里找的，semester 具体是紧跟在"考试"/"考查"关键字后面出现的
-    第一个 1-8 单数字（PDF 表格里"考核方式"和"开课学期"是相邻两列）。
+    返回 {code: (exam_type, semester, restricted)}。
+    exam_type 是 "考试"/"考查"/None；semester 是 1-8 的整数（第几学期）或 None；
+    restricted 表示这门课在原文里是否标了"限选"——87 份培养方案统一注明
+    "*代表跨专业选修课程"，但备注原话是"学生可修读其他专业的专业课程，带*课程为
+    优先推荐修读的跨专业课程"：*只是官方推荐的优先名单，不代表没带*就不能跨专业选；
+    真正明确排除在外、只对本专业学生开放的，是表格里单独标"限选"的那一小撮课程
+    （这批课通常还带 mandatory 标记，是本专业的必修性质选修课）。
+
+    窗口取"课程编号所在行"到"下一门课编号所在行之前"（不含下一行），避免两门课
+    紧挨着时，属于下一门课自己的"限选"标记被错误地算到上一门课头上——早期用包含
+    下一行的宽窗口时出过这个问题。semester 优先在"考试"/"考查"关键字之后找，找不到
+    时退回到课程编号自己所在的那一行找最后一个 1-8 单数字兜底（应对课程名太长换行、
+    "考核方式"被挤到下一行、和编号本身不在同一逻辑列的极少数情况）。
     """
     lines = pdf_text.split("\n")
     # 个别 PDF 的字体渲染会在课程编号中间插入多余空格（如 "DZ122 JQ24"），
@@ -113,7 +128,7 @@ def extract_exam_type_and_semester(codes, pdf_text):
     ordered = sorted(code_line.items(), key=lambda kv: kv[1])
     for idx, (code, lineno) in enumerate(ordered):
         next_lineno = ordered[idx + 1][1] if idx + 1 < len(ordered) else lineno + 6
-        window = lines[lineno: min(next_lineno + 1, lineno + 6)]
+        window = lines[lineno: min(next_lineno, lineno + 6)]
         joined = "\n".join(window)
 
         exam_match = re.search(r"考试|考查", joined)
@@ -125,11 +140,18 @@ def extract_exam_type_and_semester(codes, pdf_text):
             sem_match = re.search(r"\b([1-8])\b", tail)
             if sem_match:
                 semester = int(sem_match.group(1))
+        if semester is None:
+            own_line = lines[lineno]
+            own_matches = re.findall(r"\b([1-8])\b", own_line)
+            if own_matches:
+                semester = int(own_matches[-1])
 
-        results[code] = (exam_type, semester)
+        restricted = "限选" in joined
+
+        results[code] = (exam_type, semester, restricted)
 
     for code in codes:
-        results.setdefault(code, (None, None))
+        results.setdefault(code, (None, None, False))
     return results
 
 
@@ -165,11 +187,11 @@ def main():
         pdf_path = os.path.join(PDF_ROOT, entry["pdf_file"])
         text = pdftext(pdf_path)
         codes = [c["code"] for c in cat["courses"]]
-        extracted = extract_exam_type_and_semester(codes, text)
+        extracted = extract_course_fields(codes, text)
 
         courses = []
         for c in cat["courses"]:
-            exam_type, semester = extracted.get(c["code"], (None, None))
+            exam_type, semester, restricted = extracted.get(c["code"], (None, None, False))
             if exam_type is None:
                 stats_no_keyword += 1
 
@@ -187,10 +209,13 @@ def main():
                 else:
                     stats_season_unknown += 1
 
-            # 每份培养方案都有备注"*代表跨专业选修课程，#代表本研贯通课程"（87份逐一核对过，
-            # 表述文字略有差异但含义一致）。不带 * 的专业选修课程默认只对本专业学生开放，
-            # 其他专业的学生选不了；带 * 的才是官方标注的可跨专业选课程。
-            cross_college = "*" in c["name"]
+            # 每份培养方案都有备注"*代表跨专业选修课程，#代表本研贯通课程"，但对"跨专业选修"
+            # 类别本身的说明是"学生可修读其他专业的专业课程，带*课程为优先推荐修读的跨专业课程"——
+            # 也就是说 * 只是官方推荐的优先名单，不代表不带 * 就选不了。真正明确排除在外、
+            # 只对本专业学生开放的，是表格里单独标"限选"的那批课（通常还带 mandatory）。
+            # 所以 cross_college（能不能选）看 restricted，recommended（是否官方推荐优先）看 *。
+            cross_college = not restricted
+            recommended = "*" in c["name"]
 
             courses.append(
                 {
@@ -202,7 +227,8 @@ def main():
                     "semester": semester,  # 1-8（第几学期）| None
                     "season": season,  # "秋季" | "春季" | "秋春" | None(未知)
                     "season_is_guess": season_is_guess,  # True=按学期奇偶推算，False=按实际课表匹配
-                    "cross_college": cross_college,  # True=可跨专业选修（课程名带*），False=仅本专业学生可选
+                    "cross_college": cross_college,  # True=其他专业学生可以选，False=表格里标了"限选"，仅本专业
+                    "recommended": recommended,  # True=课程名带*，官方优先推荐的跨专业选修课程
                 }
             )
         stats_total_courses += len(courses)
@@ -231,8 +257,9 @@ def main():
                 "（season_is_guess=true）；极少数提取不到学期数字的课程会退回按课程名匹配"
                 "2024-2025-1/2025-2026-1秋季课表和2023-2024-2春季课表的结果（season_is_guess=false，"
                 "这部分是从实际课表里查到的，但覆盖面很有限）。两种情况都仅供参考，具体开课学期请以教务系统为准。"
-                "cross_college 字段来自 87 份培养方案统一的备注'*代表跨专业选修课程'：课程名带*才是官方"
-                "标注的可跨专业选修课程，不带*的默认只对本专业学生开放，其他专业学生选不了。",
+                "cross_college 字段看的是表格里的'限选'标记，不是课程名里的*：标'限选'的课只对本专业"
+                "学生开放，其余默认其他专业学生都能选。recommended 字段才是课程名带*，代表官方推荐"
+                "优先修读的跨专业课程（不是'能不能选'，是'官方推不推荐'）。",
                 "plans": plans_out,
             },
             f,
@@ -250,9 +277,12 @@ def main():
           f"（{stats_season_from_semester/stats_total_courses:.1%}），"
           f"{stats_season_from_schedule} 条按实际课表兜底，"
           f"{stats_season_unknown} 条未知")
-    cross_count = sum(1 for p in plans_out for c in p["courses"] if c["cross_college"])
-    print(f"可跨专业选修（课程名带*）：{cross_count}/{stats_total_courses}"
-          f"（{cross_count/stats_total_courses:.1%}），其余默认仅本专业学生可选")
+    restricted_count = sum(1 for p in plans_out for c in p["courses"] if not c["cross_college"])
+    recommended_count = sum(1 for p in plans_out for c in p["courses"] if c["recommended"])
+    print(f"限选（仅本专业可选）：{restricted_count}/{stats_total_courses}"
+          f"（{restricted_count/stats_total_courses:.1%}），其余默认其他专业学生都能选")
+    print(f"官方推荐跨专业选修（课程名带*）：{recommended_count}/{stats_total_courses}"
+          f"（{recommended_count/stats_total_courses:.1%}）")
 
 
 if __name__ == "__main__":
