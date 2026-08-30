@@ -56,9 +56,11 @@ export function matchCourses(planData, transcriptCourses, supplementaryCatalogs,
   const unmatched = [];
 
   for (const tc of transcriptCourses) {
-    let planCourse = index.get(tc.code);
-    if (!planCourse && tc.name) {
-      planCourse = nameIndex.get(tc.name);
+    // 名字优先、编号兜底：编号每年换、只覆盖当学期开课清单，课程名跨届更稳定，
+    // 能认出的范围更广（比如老编号的课，名字对得上就不用等编号库更新）。
+    let planCourse = tc.name ? nameIndex.get(tc.name) : undefined;
+    if (!planCourse) {
+      planCourse = index.get(tc.code);
     }
     if (!planCourse) {
       unmatched.push(tc);

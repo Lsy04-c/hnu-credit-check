@@ -208,3 +208,30 @@ test('按课程名匹配只对开放池类别生效，不会误伤方案原文�
   const result = evaluatePlan(planData, [{ code: 'ZZ99999', name: '假冒的课', credits: 2 }], [], nameCatalogs);
   assert.equal(result.unmatchedCourses.length, 1); // 通识必修 open_pool:false，名字匹配不该对它生效
 });
+
+test('匹配顺序：名字优先，编号兜底——同一条记录名字和编号能各自查到不同结果时，以名字匹配为准', () => {
+  const openPoolPlan = {
+    total_required_credits: 10,
+    categories: [
+      { name: '通识选修', required_credits: 10, open_pool: true, courses: [], rules: [] },
+    ],
+  };
+  const codeCatalogs = [
+    {
+      category: '通识选修',
+      courses: [{ code: 'TW999XX24', name: '某门课的编号版信息', credits: 1, group: '艺术审美与表达沟通' }],
+    },
+  ];
+  const nameCatalogs = [
+    {
+      category: '通识选修',
+      courses: [{ name: '某门课的编号版信息', module: '中华文化与世界文明', credits: 2 }],
+    },
+  ];
+  // 编号和名字都能各自匹配到，但学分/模块不一样，用来验证到底谁生效
+  const transcript = [{ code: 'TW999XX24', name: '某门课的编号版信息', credits: 1 }];
+  const result = evaluatePlan(openPoolPlan, transcript, codeCatalogs, nameCatalogs);
+  const category = result.categories.find(c => c.name === '通识选修');
+  assert.equal(category.achieved, 2); // 名字匹配那份的学分（2），不是编号匹配那份的（1）
+  assert.equal(category.groupBreakdown[0].group, '中华文化与世界文明'); // 名字匹配那份的模块
+});
