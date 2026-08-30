@@ -94,7 +94,7 @@
     "plan_id": "chem_qiangji_2024",
     "plan_name": "化学（强基计划）本科培养方案（2024版）",
     "json_file": "plan_chem_qiangji_2024.json",
-    "pdf_file": "3 化工/化学.pdf",
+    "pdf_file": "3 化工/化学 强基计划.pdf",
     "total_required_credits": 161
   },
   {
@@ -500,7 +500,7 @@
     "plan_id": "english_ai_2024",
     "plan_name": "英语（语言智能实验班）本科培养方案（2024版）",
     "json_file": "plan_english_ai_2024.json",
-    "pdf_file": "7 外语/英语.pdf",
+    "pdf_file": "7 外语/英语（语言智能实验班）.pdf",
     "total_required_credits": 151.0
   },
   {
@@ -542,7 +542,7 @@
     "plan_id": "finance_eng_2024",
     "plan_name": "财务管理（金融工程）本科培养方案（2024版）",
     "json_file": "plan_finance_eng_2024.json",
-    "pdf_file": "9 工商/财务管理.pdf",
+    "pdf_file": "9 工商/财务管理（金融工程）.pdf",
     "total_required_credits": 151.0
   },
   {
@@ -584,7 +584,7 @@
     "plan_id": "finance_engineering_2024",
     "plan_name": "金融学（金融工程）本科培养方案（2024版）",
     "json_file": "plan_finance_engineering_2024.json",
-    "pdf_file": "3 金统/金融学.pdf",
+    "pdf_file": "3 金统/金融学（金融工程）.pdf",
     "total_required_credits": 151.0
   },
   {
