@@ -166,12 +166,12 @@
       "open_pool": false,
       "courses": [
         {
-          "code": "ZJ001SX24Ⅰ",
+          "code": "ZJ001SX24AⅠ",
           "name": "高等数学AⅠ",
           "credits": 5.0
         },
         {
-          "code": "ZJ001SX24Ⅱ",
+          "code": "ZJ001SX24AⅡ",
           "name": "高等数学AⅡ",
           "credits": 5.0
         },

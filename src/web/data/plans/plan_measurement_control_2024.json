@@ -166,12 +166,12 @@
       "open_pool": false,
       "courses": [
         {
-          "code": "ZJ001SX24Ⅰ",
+          "code": "ZJ001SX24AⅠ",
           "name": "高等数学AⅠ",
           "credits": 5.0
         },
         {
-          "code": "ZJ001SX24Ⅱ",
+          "code": "ZJ001SX24AⅡ",
           "name": "高等数学AⅡ",
           "credits": 5.0
         },
@@ -191,22 +191,22 @@
           "credits": 2.0
         },
         {
-          "code": "ZJ001WD24Ⅰ",
+          "code": "ZJ001WD24AⅠ",
           "name": "普通物理AⅠ",
           "credits": 3.0
         },
         {
-          "code": "ZJ001WD24Ⅱ",
+          "code": "ZJ001WD24AⅡ",
           "name": "普通物理AⅡ",
           "credits": 3.0
         },
         {
-          "code": "ZJ002WD24Ⅰ",
+          "code": "ZJ002WD24AⅠ",
           "name": "普通物理实验AⅠ",
           "credits": 1.0
         },
         {
-          "code": "ZJ002WD24Ⅱ",
+          "code": "ZJ002WD24AⅡ",
           "name": "普通物理实验AⅡ",
           "credits": 1.0
         },
