@@ -239,32 +239,32 @@
           "credits": 3.0
         },
         {
-          "code": "ZH104DQ24",
+          "code": "ZH804JQ24",
           "name": "电子技术基础II",
           "credits": 3.0
         },
         {
-          "code": "ZH109DQ24",
+          "code": "ZH809JQ24",
           "name": "传感与检测技术",
           "credits": 2.0
         },
         {
-          "code": "ZH105DQ24",
+          "code": "ZH805JQ24",
           "name": "自动控制原理",
           "credits": 3.0
         },
         {
-          "code": "ZH106DQ24",
+          "code": "ZH806JQ24",
           "name": "信号与系统",
           "credits": 3.0
         },
         {
-          "code": "ZH108DQ24",
+          "code": "ZH808JQ24",
           "name": "电力电子技术基础",
           "credits": 3.0
         },
         {
-          "code": "ZH107DQ24",
+          "code": "ZH807JQ24",
           "name": "微机原理及应用",
           "credits": 2.0
         },
@@ -297,8 +297,8 @@
       "rules": []
     },
     {
-      "name": "其他实践环节",
-      "required_credits": 17.0,
+      "name": "实践环节",
+      "required_credits": 14.0,
       "open_pool": false,
       "courses": [
         {
@@ -312,27 +312,17 @@
           "credits": 1.0
         },
         {
-          "code": "ZS103DQ24",
+          "code": "ZS803JQ24",
           "name": "电子技术实验II",
           "credits": 1.0
         },
         {
-          "code": "ZS104DQ24",
+          "code": "ZS804JQ24",
           "name": "微机应用系统综合 设计",
           "credits": 1.0
         },
         {
-          "code": "ZS105DQ24",
-          "name": "专业写作与科技交流",
-          "credits": 1.0
-        },
-        {
-          "code": "ZS106DQ24",
-          "name": "科研和生产实习",
-          "credits": 2.0
-        },
-        {
-          "code": "ZS107DQ24",
+          "code": "ZS807JQ24",
           "name": "毕业设计 （含毕业实习）",
           "credits": 10.0
         }
@@ -370,22 +360,21 @@
           "credits": 2.0
         },
         {
-          "code": "DZ307DQ24",
-          "name": "工业互联网技术及 应用",
-          "credits": 2.0
-        },
-        {
           "code": "ZS005GX24",
           "name": "工程技术综合训练",
-          "credits": 3.0
+          "credits": 3.0,
+          "mandatory": true,
+          "group": "限选"
         },
         {
           "code": "ZS006GX24",
           "name": "工程智能创新训练",
-          "credits": 2.0
+          "credits": 2.0,
+          "mandatory": true,
+          "group": "限选"
         },
         {
-          "code": "DZ101DQ24",
+          "code": "DZ801JQ24",
           "name": "电子技术综合设计",
           "credits": 1.0
         },
@@ -460,12 +449,12 @@
           "credits": 2.0
         },
         {
-          "code": "DZ319DQ24",
+          "code": "DZ819JQ24",
           "name": "嵌入式系统及其应用*",
           "credits": 2.0
         },
         {
-          "code": "DZ320DQ24",
+          "code": "DZ820JQ24",
           "name": "智能信息处理",
           "credits": 2.0
         },
@@ -480,32 +469,32 @@
           "credits": 2.0
         },
         {
-          "code": "DZ604DQ24",
+          "code": "DZ604JQ24",
           "name": "智能电网储能应用",
           "credits": 2.0
         },
         {
-          "code": "DZ509DQ24",
+          "code": "DZ809JQ24",
           "name": "MATLAB程序设计",
           "credits": 2.0
         },
         {
-          "code": "DZ239DQ24",
+          "code": "DZ839JQ24",
           "name": "高电压绝缘",
           "credits": 2.0
         },
         {
-          "code": "DZ609DQ24",
+          "code": "DZ609JQ24",
           "name": "电池健康管理",
           "credits": 2.0
         },
         {
-          "code": "DZ504DQ24",
+          "code": "DZ804JQ24",
           "name": "智能无损检测",
           "credits": 2.0
         },
         {
-          "code": "DZ403DQ24",
+          "code": "DZ803JQ24",
           "name": "信息论与编码技术",
           "credits": 2.0
         }

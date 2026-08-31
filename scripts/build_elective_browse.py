@@ -263,6 +263,10 @@ def main():
             # 也就是说 * 只是官方推荐的优先名单，不代表不带 * 就选不了。真正明确排除在外、
             # 只对本专业学生开放的，是表格里单独标"限选"的那批课（通常还带 mandatory）。
             # 所以 cross_college（能不能选）看 restricted，recommended（是否官方推荐优先）看 *。
+            # restricted 优先信任 plans/*.json 里人工核实过的 mandatory+group=='限选'（比如自动化
+            # 培养方案表格里"专业限选"备注是合并单元格，pdftotext 抽取时容易只贴到某一行，
+            # 漏标同组的其他课）；JSON 里没标的课再退回 PDF 文本里"限选"关键字的自动识别。
+            restricted = restricted or (c.get("mandatory") is True and c.get("group") == "限选")
             cross_college = not restricted
             recommended = "*" in c["name"]
 
