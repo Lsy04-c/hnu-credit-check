@@ -18,6 +18,11 @@ import sys
 
 import openpyxl
 
+try:
+    import xlrd
+except ImportError:  # 只有处理旧版 .xls 时才需要
+    xlrd = None
+
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "schedule_raw")
 
 
@@ -79,6 +84,41 @@ def extract_semester_course_list(path):
     return title, rows
 
 
+def extract_course_list_xls(path):
+    """
+    形如"2026-2027-1课程清单 (仅供选课参考).xls"的旧版 Excel 课程清单 -> 专业选修行。
+    跟"全校课程清单（仅供选课用）.xlsx"结构基本一致（有独立的"课程分类"列），只是
+    中间多插了一列"学生院系"，列序整体往后挪了一位，且是老版 .xls 格式要用 xlrd 读。
+    """
+    if xlrd is None:
+        raise RuntimeError("读取 .xls 需要 xlrd，先 pip install xlrd")
+    wb = xlrd.open_workbook(path)
+    sh = wb.sheet_by_index(0)
+    title = sh.row_values(0)[0]
+
+    rows = []
+    for r in range(2, sh.nrows):
+        row = sh.row_values(r)
+        if row[5] != "专业选修":
+            continue
+        rows.append(
+            {
+                "code": row[3],
+                "name": row[4],
+                "category": row[5],
+                "teacher": row[6],
+                "class_name": row[7],
+                "college": row[9],
+                "credits": row[10],
+                "total_hours": row[11],
+                "exam_type": row[16],
+                "class_size": row[17],
+                "schedule_text": row[18],
+            }
+        )
+    return title, rows
+
+
 def extract_master_schedule(path, known_codes):
     """全校总课表.xlsx -> 课程编号命中 known_codes 的行（没有独立类别列，靠编码匹配）"""
     wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
@@ -110,15 +150,23 @@ def extract_master_schedule(path, known_codes):
 def main():
     parser = argparse.ArgumentParser(description="提取全校课表里的专业选修行")
     parser.add_argument("--single", metavar="XLSX", help="单学期课表（如'24春全校课表'），有独立课程分类列")
-    parser.add_argument("--out-name", metavar="NAME", help="--single 模式下的输出文件名（不含.json）")
+    parser.add_argument(
+        "--single-xls",
+        metavar="XLS",
+        help="旧版 .xls 格式的单学期课程清单（如'2026-2027-1课程清单'），有独立课程分类列",
+    )
+    parser.add_argument("--out-name", metavar="NAME", help="--single/--single-xls 模式下的输出文件名（不含.json）")
     parser.add_argument("course_list_xlsx", nargs="?", help="全校课程清单（仅供选课用）.xlsx")
     parser.add_argument("master_schedule_xlsx", nargs="?", help="全校总课表.xlsx")
     args = parser.parse_args()
 
     os.makedirs(OUT_DIR, exist_ok=True)
 
-    if args.single:
-        title, rows = extract_semester_course_list(args.single)
+    if args.single or args.single_xls:
+        if args.single_xls:
+            title, rows = extract_course_list_xls(args.single_xls)
+        else:
+            title, rows = extract_semester_course_list(args.single)
         out_name = args.out_name or "single_semester_elective"
         out_path = os.path.join(OUT_DIR, f"{out_name}.json")
         with open(out_path, "w", encoding="utf-8") as f:

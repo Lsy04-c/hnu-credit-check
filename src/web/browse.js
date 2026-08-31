@@ -21,11 +21,10 @@ function flattenCourses(plans) {
         credits: course.credits,
         group: course.group,
         examType: course.exam_type, // '考试' | '考查' | null
-        season: course.season, // '秋季' | '春季' | '秋春' | null
-        semester: course.semester, // 1-8（第几学期）| null
-        seasonIsGuess: course.season_is_guess, // true=按学期奇偶推算，false=按实际课表匹配
+        teacher: course.teacher, // 这学期的上课老师，多个班用"、"分隔，null=没查到
         crossCollege: course.cross_college, // true=其他专业学生可选，false=表格标了"限选"，仅本专业
         recommended: course.recommended, // true=课程名带*，官方推荐优先修读的跨专业课程
+        openFall2026: course.open_fall_2026, // true=在2026-2027-1（当前学期）课程清单里查到，这学期确定开
         planId: plan.plan_id,
         planName: plan.plan_name,
         campus: plan.campus,
@@ -73,16 +72,20 @@ function mergeDuplicateCourses(rows) {
     // 不代表真的能选。只要出现过一次限选，就按限选处理，不当成"随便选"。
     const crossCollege = instances.every((i) => i.crossCollege);
 
+    // 同一门课在不同专业的培养方案里查到的上课老师应该是一样的（都是这学期这门课
+    // 的真实排课），但保险起见还是去重合并一下，而不是只取第一个。
+    const teachers = [...new Set(instances.flatMap((i) => (i.teacher ? i.teacher.split('、') : [])))];
+
     merged.push({
       code: first.code,
       name,
       credits: mode(instances.map((i) => i.credits)),
       group: mode(instances.map((i) => i.group)),
       examType: mode(instances.map((i) => i.examType)),
-      season: mode(instances.map((i) => i.season)),
-      seasonIsGuess: mode(instances.map((i) => i.seasonIsGuess)),
+      teacher: teachers.length > 0 ? teachers.join('、') : null,
       crossCollege,
       recommended: instances.some((i) => i.recommended),
+      openFall2026: instances.some((i) => i.openFall2026),
       campus: first.campus,
       college: first.college,
       campusNote: first.campusNote,
@@ -102,18 +105,6 @@ function examClass(examType) {
   if (examType === '考试') return 'exam-yes';
   if (examType === '考查') return 'exam-no';
   return 'exam-unknown';
-}
-
-function seasonLabel(row) {
-  if (row.season === '秋春') return '秋春都开';
-  if (row.season !== '秋季' && row.season !== '春季') return '未知';
-  if (row.seasonIsGuess) return `推测·${row.season}`;
-  return `${row.season}（据实际课表）`;
-}
-
-function seasonClass(season) {
-  if (!season) return 'season-unknown';
-  return 'season-known';
 }
 
 function crossCollegeLabel(row) {
@@ -143,7 +134,7 @@ function renderTable(container, rows) {
       <th>跨专业</th>
       <th>学分</th>
       <th>考核方式</th>
-      <th>开课学期</th>
+      <th>上课老师</th>
       <th>所属模块</th>
       <th>所属专业</th>
     </tr>
@@ -172,10 +163,9 @@ function renderTable(container, rows) {
     examTd.className = examClass(row.examType);
     tr.appendChild(examTd);
 
-    const seasonTd = document.createElement('td');
-    seasonTd.textContent = seasonLabel(row);
-    seasonTd.className = seasonClass(row.season);
-    tr.appendChild(seasonTd);
+    const teacherTd = document.createElement('td');
+    teacherTd.textContent = row.teacher || '—';
+    tr.appendChild(teacherTd);
 
     const groupTd = document.createElement('td');
     groupTd.textContent = row.group || '—';
@@ -195,14 +185,19 @@ function renderTable(container, rows) {
 async function main() {
   const data = await loadJson('data/elective_browse.json');
   const campusMap = await loadJson('data/campus_map.json');
-  const allRows = mergeDuplicateCourses(flattenCourses(data.plans));
+  const merged = mergeDuplicateCourses(flattenCourses(data.plans));
+  const totalMerged = merged.length;
+  // 只保留能在这学期（2026-2027-1）课程清单里查到的课程——往年的课表只能说明
+  // "以前开过"，不能保证今年也开，只有当前学期的清单才是真的确定这学期开课。
+  const allRows = merged.filter((r) => r.openFall2026);
 
   const coverageNote = document.getElementById('coverage-note');
   const totalPlans = data.plans.length;
   coverageNote.textContent =
-    `共收录 ${totalPlans} 个专业、${allRows.length} 门专业选修课` +
-    '（个别专业的选修课在培养方案里没有列出具体课程名单，暂时收录不到；' +
-    '考核方式、开课学期都是从培养方案原文自动识别的，没有逐条人工核对，仅供参考）。';
+    `共收录 ${totalPlans} 个专业、${allRows.length} 门这学期（2026-2027-1）确定开课的专业选修课` +
+    `（培养方案里能匹配到的专业选修课共 ${totalMerged} 门，其中能在这学期课程清单里查到的有` +
+    `${allRows.length} 门，只展示这部分；查不到不代表不开课，只是课程名没对上，或者这学期` +
+    '确实没排，个别专业的选修课在培养方案里也没有列出具体课程名单，暂时收录不到）。';
 
   const campusesPresent = CAMPUS_ORDER.filter((c) => allRows.some((r) => r.campus === c));
 
@@ -304,7 +299,10 @@ async function main() {
     const keyword = keywordFilter.value.trim();
     if (keyword) {
       rows = rows.filter(
-        (r) => r.name.includes(keyword) || r.planNames.some((n) => n.includes(keyword))
+        (r) =>
+          r.name.includes(keyword) ||
+          (r.teacher && r.teacher.includes(keyword)) ||
+          r.planNames.some((n) => n.includes(keyword))
       );
     }
 

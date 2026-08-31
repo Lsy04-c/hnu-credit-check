@@ -9,12 +9,13 @@ src/web/data/elective_browse.json。
 试点在化学/数学/会计/建筑/机械/法学等 6 个不同学院的 PDF 上验证过考核方式 100%
 命中；学期数字和限选标记全量跑了 87 份、2463 条课程，具体见开发记录。
 
-开课学期只精确到"第几学期"（1-8），季节（秋/春）由学期数的奇偶推算——单数学期
-（1/3/5/7）是每学年上学期即秋季，双数学期是下学期即春季，这是全国高校通用的学期
-编号惯例。这是"根据培养方案里定的教学计划推出来的季节"，不是从实际排课表核实的，
-标"推测"，不是"确认"；同一门课不同届学生实际上课的学期可能因版本变化而与新版
-培养方案不同（开发过程中跟 2024-2025-1/2025-2026-1 秋季课表 + 2023-2024-2 春季
-课表交叉验证时发现过 2 处这样的版本漂移），仅供参考。
+开课学期优先按课程名匹配真实课表（当前学期 2026-2027-1 + 2024-2025-1 秋季、
+2023-2024-2 春季，见 load_season_map），查到就是"确认"（season_is_guess=false）；
+查不到时才退回到培养方案里"第几学期"（1-8）的奇偶推算——单数学期（1/3/5/7）是
+每学年上学期即秋季，双数学期是下学期即春季，这是全国高校通用的学期编号惯例，属于
+"推测"（season_is_guess=true），不是从实际排课表核实的。同一门课不同届学生实际
+上课的学期可能因版本变化而跟新版培养方案不同（开发过程中交叉验证时发现过这样的
+版本漂移），两种情况都仅供参考。
 
 是否可跨专业选（cross_college）看的是表格里的"限选"标记，不是课程名里的 *。
 每份培养方案对"跨专业选修"类别的备注原话是"学生可修读其他专业的专业课程，带*
@@ -38,7 +39,11 @@ INDEX_PATH = os.path.join(ROOT, "src", "web", "data", "index.json")
 CAMPUS_MAP_PATH = os.path.join(ROOT, "src", "web", "data", "campus_map.json")
 OUT_PATH = os.path.join(ROOT, "src", "web", "data", "elective_browse.json")
 SCHEDULE_RAW_DIR = os.path.join(ROOT, "data", "schedule_raw")
-FALL_SCHEDULE_PATH = os.path.join(SCHEDULE_RAW_DIR, "course_list_elective.json")
+FALL_2026_SCHEDULE_PATH = os.path.join(SCHEDULE_RAW_DIR, "fall_2026_elective.json")  # 2026-2027-1，当前学期
+FALL_SCHEDULE_PATHS = [
+    os.path.join(SCHEDULE_RAW_DIR, "course_list_elective.json"),  # 2024-2025-1
+    FALL_2026_SCHEDULE_PATH,
+]
 SPRING_SCHEDULE_PATH = os.path.join(SCHEDULE_RAW_DIR, "spring_2024_elective.json")
 
 CATEGORY_NAME = "专业选修"
@@ -55,36 +60,75 @@ def normalize_course_name(name):
 
 def load_season_map():
     """
-    从秋季课表（2024-2025-1）和春季课表（2023-2024-2）按课程编码分出"只在秋季/
-    只在春季/秋春都开"三类，再按课程名归并成 name -> season 的映射，供下面按名字
-    合并进培养方案课程用。
+    从秋季课表（2024-2025-1 + 2026-2027-1 当前学期）和春季课表（2023-2024-2）按
+    课程名分出"只在秋季/只在春季/秋春都开"三类，得到 name -> season 的映射。这是从
+    真实排课表里查到的数据，比培养方案里"第几学期"的奇偶推算更硬——main() 里两者
+    都有时优先用这里的结果。
 
-    这两份课表来自不同学年，本身只能反映"这几年这门课开在哪个学期"，不代表所有
-    专业选修课程都会被覆盖到——没匹配上的会标 None（未知学期），不瞎猜。
+    按课程名（而不是课程编号）分类：同一门课在不同学年的教务系统编码可能不一样
+    （比如"最优化理论与方法"在 2024 秋是 FI06108，2026 秋是 DZ405SX24M，2023 春
+    是 MA05018，三个编码互不相同），按编号取交集会把这种情况错判成"只在秋季"和
+    "只在春季"两条独立记录，处理顺序一晚就把秋季的记录覆盖掉了——按课程名归并
+    才是对的。
+
+    秋季用了两个不同学年的课表取并集，尽量多覆盖一些课程；这几份课表本身只能反映
+    "这几年这门课开在哪个学期"，不代表所有专业选修课程都会被覆盖到——没匹配上的会
+    标 None（未知学期），不瞎猜。
     """
-    if not (os.path.exists(FALL_SCHEDULE_PATH) and os.path.exists(SPRING_SCHEDULE_PATH)):
+    fall_paths = [p for p in FALL_SCHEDULE_PATHS if os.path.exists(p)]
+    if not fall_paths or not os.path.exists(SPRING_SCHEDULE_PATH):
         return {}
 
-    fall = json.load(open(FALL_SCHEDULE_PATH, encoding="utf-8"))
+    fall_names = set()
+    for path in fall_paths:
+        data = json.load(open(path, encoding="utf-8"))
+        for r in data["rows"]:
+            fall_names.add(normalize_course_name(r["name"]))
+
     spring = json.load(open(SPRING_SCHEDULE_PATH, encoding="utf-8"))
-
-    fall_by_code = {r["code"]: r["name"] for r in fall["rows"]}
-    spring_by_code = {r["code"]: r["name"] for r in spring["rows"]}
-
-    fall_codes = set(fall_by_code)
-    spring_codes = set(spring_by_code)
-    only_fall = fall_codes - spring_codes
-    only_spring = spring_codes - fall_codes
-    both = fall_codes & spring_codes
+    spring_names = {normalize_course_name(r["name"]) for r in spring["rows"]}
 
     season_by_name = {}
-    for c in only_fall:
-        season_by_name[normalize_course_name(fall_by_code[c])] = "秋季"
-    for c in only_spring:
-        season_by_name[normalize_course_name(spring_by_code[c])] = "春季"
-    for c in both:
-        season_by_name[normalize_course_name(fall_by_code[c])] = "秋春"
+    for name in fall_names - spring_names:
+        season_by_name[name] = "秋季"
+    for name in spring_names - fall_names:
+        season_by_name[name] = "春季"
+    for name in fall_names & spring_names:
+        season_by_name[name] = "秋春"
     return season_by_name
+
+
+def load_fall_2026_names():
+    """
+    2026-2027-1（当前学期，也就是这学期真正要开的课）课程清单里的专业选修课程名，
+    按名字归一化后去重。单独存一份，供只想看"这学期确定开"的场景用，不跟往年的
+    历史课表混在一起——历史课表能说明的是"这门课以前开过"，不能保证今年也开。
+    """
+    if not os.path.exists(FALL_2026_SCHEDULE_PATH):
+        return set()
+    data = json.load(open(FALL_2026_SCHEDULE_PATH, encoding="utf-8"))
+    return {normalize_course_name(r["name"]) for r in data["rows"]}
+
+
+def load_fall_2026_teachers():
+    """
+    同一门课这学期可能开了不止一个班、由不同老师教，按课程名把授课教师去重合并
+    （用'、'分隔），供页面显示用——反正只展示这学期确定开的课，学期本身不用再标了，
+    但上课老师是谁更有用。
+    """
+    if not os.path.exists(FALL_2026_SCHEDULE_PATH):
+        return {}
+    data = json.load(open(FALL_2026_SCHEDULE_PATH, encoding="utf-8"))
+    teachers_by_name = {}
+    for r in data["rows"]:
+        name = normalize_course_name(r["name"])
+        teacher = (r.get("teacher") or "").strip()
+        if not teacher:
+            continue
+        teachers_by_name.setdefault(name, [])
+        if teacher not in teachers_by_name[name]:
+            teachers_by_name[name].append(teacher)
+    return {name: "、".join(ts) for name, ts in teachers_by_name.items()}
 
 
 def pdftext(path):
@@ -159,6 +203,8 @@ def main():
     index = json.load(open(INDEX_PATH, encoding="utf-8"))
     campus_map = json.load(open(CAMPUS_MAP_PATH, encoding="utf-8"))["groups"]
     season_by_name = load_season_map()
+    fall_2026_names = load_fall_2026_names()
+    fall_2026_teachers = load_fall_2026_teachers()
 
     plans_out = []
     skipped_no_category = []
@@ -169,6 +215,7 @@ def main():
     stats_season_from_semester = 0
     stats_season_from_schedule = 0
     stats_season_unknown = 0
+    stats_open_fall_2026 = 0
 
     for entry in index:
         plan_path = os.path.join(PLANS_DIR, entry["json_file"])
@@ -195,19 +242,21 @@ def main():
             if exam_type is None:
                 stats_no_keyword += 1
 
-            if semester is not None:
+            # 真实课表（当前学期 2026-2027-1 + 2024-2025-1 秋季、2023-2024-2 春季）
+            # 查得到的话优先用，比培养方案里"第几学期"的奇偶推算更硬；查不到再退回推算。
+            schedule_season = season_by_name.get(normalize_course_name(c["name"]))
+            if schedule_season is not None:
+                season = schedule_season
+                season_is_guess = False
+                stats_season_from_schedule += 1
+            elif semester is not None:
                 season = "秋季" if semester % 2 == 1 else "春季"
                 season_is_guess = True
                 stats_season_from_semester += 1
             else:
-                # 极少数（全量测试里 2463 条只有 1 条）提取不到学期数字时，
-                # 退回按课程名匹配秋/春季课表的结果兜底。
-                season = season_by_name.get(normalize_course_name(c["name"]))
+                season = None
                 season_is_guess = False
-                if season is not None:
-                    stats_season_from_schedule += 1
-                else:
-                    stats_season_unknown += 1
+                stats_season_unknown += 1
 
             # 每份培养方案都有备注"*代表跨专业选修课程，#代表本研贯通课程"，但对"跨专业选修"
             # 类别本身的说明是"学生可修读其他专业的专业课程，带*课程为优先推荐修读的跨专业课程"——
@@ -216,6 +265,12 @@ def main():
             # 所以 cross_college（能不能选）看 restricted，recommended（是否官方推荐优先）看 *。
             cross_college = not restricted
             recommended = "*" in c["name"]
+
+            normalized_name = normalize_course_name(c["name"])
+            open_fall_2026 = normalized_name in fall_2026_names
+            if open_fall_2026:
+                stats_open_fall_2026 += 1
+            teacher = fall_2026_teachers.get(normalized_name)
 
             courses.append(
                 {
@@ -229,6 +284,8 @@ def main():
                     "season_is_guess": season_is_guess,  # True=按学期奇偶推算，False=按实际课表匹配
                     "cross_college": cross_college,  # True=其他专业学生可以选，False=表格里标了"限选"，仅本专业
                     "recommended": recommended,  # True=课程名带*，官方优先推荐的跨专业选修课程
+                    "open_fall_2026": open_fall_2026,  # True=在2026-2027-1（当前学期）课程清单里查到，确定开
+                    "teacher": teacher,  # 这学期的上课老师（多个班用"、"分隔），查不到是 None
                 }
             )
         stats_total_courses += len(courses)
@@ -252,14 +309,17 @@ def main():
                 "generated_note": "本文件由 scripts/build_elective_browse.py 从 plans/*.json + 原始 PDF 生成，"
                 "考核方式字段为本地 pdftotext 文本匹配得到的最佳猜测，未经过人工逐条核对，"
                 "标为 null 的表示没能可靠识别，浏览时请以 PDF 原文为准。"
-                "开课学期（season）绝大多数是按培养方案里标注的'第几学期'（semester字段）的奇偶推算的"
-                "（单数=秋季，双数=春季），是根据教学计划推出来的'推测'，不是从实际课表核实的"
-                "（season_is_guess=true）；极少数提取不到学期数字的课程会退回按课程名匹配"
-                "2024-2025-1/2025-2026-1秋季课表和2023-2024-2春季课表的结果（season_is_guess=false，"
-                "这部分是从实际课表里查到的，但覆盖面很有限）。两种情况都仅供参考，具体开课学期请以教务系统为准。"
+                "开课学期（season）优先按课程名匹配当前学期（2026-2027-1）+ 2024-2025-1 秋季课表、"
+                "2023-2024-2 春季课表查到的真实结果（season_is_guess=false）；查不到时才退回按培养方案里"
+                "标注的'第几学期'（semester字段）的奇偶推算（单数=秋季，双数=春季，season_is_guess=true，"
+                "是根据教学计划推出来的'推测'，不是从实际课表核实的）。两种情况都仅供参考，具体开课学期"
+                "请以教务系统为准。"
                 "cross_college 字段看的是表格里的'限选'标记，不是课程名里的*：标'限选'的课只对本专业"
                 "学生开放，其余默认其他专业学生都能选。recommended 字段才是课程名带*，代表官方推荐"
-                "优先修读的跨专业课程（不是'能不能选'，是'官方推不推荐'）。",
+                "优先修读的跨专业课程（不是'能不能选'，是'官方推不推荐'）。"
+                "open_fall_2026 字段是这门课的课程名是否在 2026-2027-1（当前学期）课程清单里出现过，"
+                "true 表示这学期确定开；false 不代表不开，只是这份清单里没查到，"
+                "可能是课程名对不上、也可能是这学期没排这门课。",
                 "plans": plans_out,
             },
             f,
@@ -283,6 +343,8 @@ def main():
           f"（{restricted_count/stats_total_courses:.1%}），其余默认其他专业学生都能选")
     print(f"官方推荐跨专业选修（课程名带*）：{recommended_count}/{stats_total_courses}"
           f"（{recommended_count/stats_total_courses:.1%}）")
+    print(f"2026-2027-1（当前学期）确定开课：{stats_open_fall_2026}/{stats_total_courses}"
+          f"（{stats_open_fall_2026/stats_total_courses:.1%}）")
 
 
 if __name__ == "__main__":

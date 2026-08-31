@@ -48,12 +48,6 @@
 #result-table td.exam-unknown {
   color: #999;
 }
-#result-table td.season-known {
-  color: #2a6ebb;
-}
-#result-table td.season-unknown {
-  color: #999;
-}
 #result-table td.cross-yes {
   color: #2a8f4c;
 }
