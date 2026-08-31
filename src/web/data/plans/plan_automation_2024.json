@@ -298,7 +298,7 @@
     },
     {
       "name": "实践环节",
-      "required_credits": 14.0,
+      "required_credits": 17.0,
       "open_pool": false,
       "courses": [
         {
@@ -320,6 +320,16 @@
           "code": "ZS804JQ24",
           "name": "微机应用系统综合 设计",
           "credits": 1.0
+        },
+        {
+          "code": "ZS105DQ24",
+          "name": "专业写作与科技交流",
+          "credits": 1.0
+        },
+        {
+          "code": "ZS106DQ24",
+          "name": "科研和生产实习",
+          "credits": 2.0
         },
         {
           "code": "ZS807JQ24",
