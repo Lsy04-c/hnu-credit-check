@@ -127,6 +127,24 @@ function buildElectivePools(category, matchedCodes) {
   return [...byGroup.entries()].map(([group, courses]) => ({ group, courses }));
 }
 
+// 有的培养方案里，专业选修+跨专业选修+国际化+创新创业这几个类别共属于一个"多元发展课程"模块，
+// 模块本身有一个合计最低学分要求，且往往比这几个类别各自的最低学分加起来还高——
+// 只看每个类别自己是否达标是不够的，还要看这几个类别加在一起是否修够模块要求的合计学分。
+function evaluateModules(planData, categories) {
+  return (planData.modules || []).map(mod => {
+    const memberCategories = categories.filter(c => mod.category_names.includes(c.name));
+    const achieved = sumCredits(memberCategories.flatMap(c => c.matchedCourses));
+    const required = mod.required_credits;
+    return {
+      name: mod.name,
+      required,
+      achieved,
+      gap: Math.max(0, required - achieved),
+      categoryNames: mod.category_names,
+    };
+  });
+}
+
 export function evaluatePlan(planData, transcriptCourses, supplementaryCatalogs, nameCatalogs) {
   const { matched, unmatched } = matchCourses(planData, transcriptCourses, supplementaryCatalogs, nameCatalogs);
 
@@ -159,6 +177,7 @@ export function evaluatePlan(planData, transcriptCourses, supplementaryCatalogs,
     totalRequired: planData.total_required_credits,
     totalAchieved: sumCredits(matched),
     categories,
+    modules: evaluateModules(planData, categories),
     unmatchedCourses: unmatched,
   };
 }

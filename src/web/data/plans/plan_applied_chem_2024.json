@@ -520,6 +520,18 @@
       ]
     }
   ],
+  "modules": [
+    {
+      "name": "多元发展课程",
+      "required_credits": 31.0,
+      "category_names": [
+        "专业选修",
+        "跨专业选修",
+        "国际化",
+        "创新创业"
+      ]
+    }
+  ],
   "verification": {
     "category_sum_matches_total": false,
     "category_sum": 145.0,

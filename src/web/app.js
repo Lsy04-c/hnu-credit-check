@@ -87,6 +87,17 @@ function renderResult(evalResult, unparsedLines, sishiCatalog) {
   summary.textContent = `培养方案要求总学分 ${evalResult.totalRequired}，本次匹配到已修学分 ${evalResult.totalAchieved}`;
   container.appendChild(summary);
 
+  for (const mod of evalResult.modules || []) {
+    const p = document.createElement('p');
+    p.className = mod.gap > 0 ? 'warning-inline' : 'note';
+    const status = mod.gap > 0 ? `还差 ${mod.gap} 学分` : '已达标';
+    p.textContent =
+      `模块「${mod.name}」（${mod.categoryNames.join('+')} 合计）要求至少 ${mod.required} 学分，` +
+      `已修合计 ${mod.achieved} 学分 —— ${status}（下表里这几个类别各自的学分要求只是最低门槛，` +
+      `加起来往往不够，需要以这里的模块合计为准）`;
+    container.appendChild(p);
+  }
+
   const table = document.createElement('table');
   const header = document.createElement('tr');
   ['类别', '要求学分', '已修学分', '缺口'].forEach(text => {
