@@ -39,42 +39,42 @@
           "credits": 3.0
         },
         {
-          "code": "TB007MY24 Ⅰ",
+          "code": "TB007MY24Ⅰ",
           "name": "形势与政策 Ⅰ",
           "credits": 0.25
         },
         {
-          "code": "TB007MY24 Ⅱ",
+          "code": "TB007MY24Ⅱ",
           "name": "形势与政策 Ⅱ",
           "credits": 0.25
         },
         {
-          "code": "TB007MY24 Ⅲ",
+          "code": "TB007MY24Ⅲ",
           "name": "形势与政策 Ⅲ",
           "credits": 0.25
         },
         {
-          "code": "TB007MY24 Ⅳ",
+          "code": "TB007MY24Ⅳ",
           "name": "形势与政策 Ⅳ",
           "credits": 0.25
         },
         {
-          "code": "TB007MY24 Ⅴ",
+          "code": "TB007MY24Ⅴ",
           "name": "形势与政策 Ⅴ",
           "credits": 0.25
         },
         {
-          "code": "TB007MY24 Ⅵ",
+          "code": "TB007MY24Ⅵ",
           "name": "形势与政策 Ⅵ",
           "credits": 0.25
         },
         {
-          "code": "TB007MY24 Ⅶ",
+          "code": "TB007MY24Ⅶ",
           "name": "形势与政策 Ⅶ",
           "credits": 0.25
         },
         {
-          "code": "TB007MY24 Ⅷ",
+          "code": "TB007MY24Ⅷ",
           "name": "形势与政策 Ⅷ",
           "credits": 0.25
         },
@@ -84,17 +84,17 @@
           "credits": 1.0
         },
         {
-          "code": "TB001WY24 Ⅰ",
+          "code": "TB001WY24Ⅰ",
           "name": "大学英语 Ⅰ",
           "credits": 2.0
         },
         {
-          "code": "TB001WY24 Ⅱ",
+          "code": "TB001WY24Ⅱ",
           "name": "大学英语 Ⅱ",
           "credits": 2.0
         },
         {
-          "code": "TB001WY24 Ⅲ",
+          "code": "TB001WY24Ⅲ",
           "name": "大学英语 Ⅲ",
           "credits": 2.0
         },
@@ -104,22 +104,22 @@
           "credits": 4.0
         },
         {
-          "code": "TB001TY24 Ⅰ",
+          "code": "TB001TY24Ⅰ",
           "name": "体育 Ⅰ",
           "credits": 1.0
         },
         {
-          "code": "TB001TY24 Ⅱ",
+          "code": "TB001TY24Ⅱ",
           "name": "体育 Ⅱ",
           "credits": 1.0
         },
         {
-          "code": "TB001TY24 Ⅲ",
+          "code": "TB001TY24Ⅲ",
           "name": "体育 Ⅲ",
           "credits": 1.0
         },
         {
-          "code": "TB001TY24 Ⅳ",
+          "code": "TB001TY24Ⅳ",
           "name": "体育 Ⅳ",
           "credits": 1.0
         },
@@ -166,12 +166,12 @@
       "open_pool": false,
       "courses": [
         {
-          "code": "ZJ001SX24AI",
+          "code": "ZJ001SX24AⅠ",
           "name": "高等数学AI",
           "credits": 5.0
         },
         {
-          "code": "ZJ001SX24AII",
+          "code": "ZJ001SX24AⅡ",
           "name": "高等数学AII",
           "credits": 5.0
         },
@@ -191,22 +191,22 @@
           "credits": 2.0
         },
         {
-          "code": "ZJ001WD24AI",
+          "code": "ZJ001WD24AⅠ",
           "name": "普通物理AI",
           "credits": 3.0
         },
         {
-          "code": "ZJ001WD24AII",
+          "code": "ZJ001WD24AⅡ",
           "name": "普通物理AII",
           "credits": 3.0
         },
         {
-          "code": "ZJ002WD24AI",
+          "code": "ZJ002WD24AⅠ",
           "name": "普通物理实验AI",
           "credits": 1.0
         },
         {
-          "code": "ZJ002WD24AII",
+          "code": "ZJ002WD24AⅡ",
           "name": "普通物理实验AII",
           "credits": 1.0
         },
