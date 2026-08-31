@@ -48,6 +48,11 @@ th, td {
   padding: 0.5rem;
   border-radius: 4px;
 }
+tr.module-row td {
+  background: #eaf2fb;
+  color: #1a5490;
+  font-weight: bold;
+}
 td.warning-inline {
   color: #a15c00;
   background: #fff6e5;

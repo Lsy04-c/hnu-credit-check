@@ -44,6 +44,27 @@ function appendNoteRow(table, text, className) {
   table.appendChild(row);
 }
 
+// "多元发展课程"这种模块只在页面最上方提示一次的话，等学生翻到专业选修那几行时早就
+// 忘了、或者要往上翻找，所以改成直接插在这几个类别的第一行上面，跟它们摆在一起，
+// 顺带把"这是几类加总算的、别被下面各类自己的最低门槛误导"说清楚。
+function appendModuleRow(table, mod) {
+  const row = document.createElement('tr');
+  row.className = 'module-row';
+  [`合计要求：${mod.name}`, mod.required, mod.achieved, mod.gap].forEach(v => appendCell(row, v));
+  table.appendChild(row);
+
+  const status = mod.gap > 0 ? `还差 ${mod.gap} 学分` : '已达标';
+  appendNoteRow(
+    table,
+    `　说明：下面 ${mod.categoryNames.join('＋')} 这 ${mod.categoryNames.length} 类课程，在官方培养方案里同属` +
+      `「${mod.name}」模块，模块本身另有一个合计最低学分要求，不等于这几类各自的学分要求加起来。` +
+      `算法：把 ${mod.categoryNames.join('＋')} 这几类已匹配到的课程学分加总，目前合计 ${mod.achieved} 学分，` +
+      `模块要求 ${mod.required} 学分 —— ${status}。下面这几类各自那一行的"要求学分"只是各自的最低门槛，` +
+      `每一类都单独达标也不代表这里已经够了`,
+    mod.gap > 0 ? 'warning-inline' : 'note'
+  );
+}
+
 function appendElectivePoolRow(table, pool) {
   const row = document.createElement('tr');
   const td = document.createElement('td');
@@ -87,17 +108,6 @@ function renderResult(evalResult, unparsedLines, sishiCatalog) {
   summary.textContent = `培养方案要求总学分 ${evalResult.totalRequired}，本次匹配到已修学分 ${evalResult.totalAchieved}`;
   container.appendChild(summary);
 
-  for (const mod of evalResult.modules || []) {
-    const p = document.createElement('p');
-    p.className = mod.gap > 0 ? 'warning-inline' : 'note';
-    const status = mod.gap > 0 ? `还差 ${mod.gap} 学分` : '已达标';
-    p.textContent =
-      `模块「${mod.name}」（${mod.categoryNames.join('+')} 合计）要求至少 ${mod.required} 学分，` +
-      `已修合计 ${mod.achieved} 学分 —— ${status}（下表里这几个类别各自的学分要求只是最低门槛，` +
-      `加起来往往不够，需要以这里的模块合计为准）`;
-    container.appendChild(p);
-  }
-
   const table = document.createElement('table');
   const header = document.createElement('tr');
   ['类别', '要求学分', '已修学分', '缺口'].forEach(text => {
@@ -107,7 +117,16 @@ function renderResult(evalResult, unparsedLines, sishiCatalog) {
   });
   table.appendChild(header);
 
+  const renderedModules = new Set();
   for (const category of evalResult.categories) {
+    const mod = (evalResult.modules || []).find(
+      m => m.categoryNames[0] === category.name && !renderedModules.has(m.name)
+    );
+    if (mod) {
+      renderedModules.add(mod.name);
+      appendModuleRow(table, mod);
+    }
+
     const row = document.createElement('tr');
     [category.name, category.required, category.achieved, category.gap].forEach(v => appendCell(row, v));
     table.appendChild(row);
